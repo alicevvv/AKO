@@ -30,7 +30,7 @@
                         <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
                     </ul>
                 </div>
-                <button class="logout-btn p-2">登出</button>
+                <button class="logout-btn p-2" id="logoutBtn">登出</button>
             </div>
         </div>
         <div class="modal fade" id="wordsSettingModal" tabindex="-1" aria-labelledby="wordsSettingModal"
@@ -393,6 +393,10 @@
 
         $("#editAccount1").on("click", function () {
             $("#editAccountModal").modal("show")
+        })
+
+        $("#logoutBtn").on("click", function () {
+            window.location.href = "./login.html";
         })
     </script>
 </body>
