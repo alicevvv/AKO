@@ -172,7 +172,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title">李OO</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <img src="../assets/modal-close.svg">
+                        <img src="./assets/modal-close.svg">
                     </button>
                 </div>
                 <div class="modal-body">
@@ -234,7 +234,7 @@
                                         aria-controls="basicInfoCollapse">
                                         <div class="collapse-title mb-0">
                                             基本資訊</div>
-                                        <img src="../assets/collapse-arrow.svg">
+                                        <img src="./assets/collapse-arrow.svg">
                                     </button>
                                     <div class="collapse" id="basicInfoCollapse">
                                         <div class="info-container container">
@@ -305,7 +305,7 @@
                                             <button class="btn btn-primary">進階質檢</button>
                                             <button class="btn btn-primary" id="customizeQualifyBtn">自訂質檢</button>
                                             <button class="btn btn-download">
-                                                <img src="../assets/download.svg">
+                                                <img src="./assets/download.svg">
                                             </button>
                                         </div>
                                     </div>
@@ -314,7 +314,7 @@
                                         aria-controls="abstractCollapse">
                                         <div class="collapse-title">
                                             摘要（1）</div>
-                                        <img src="../assets/collapse-arrow.svg">
+                                        <img src="./assets/collapse-arrow.svg">
                                     </button>
                                     <div class="collapse show" id="abstractCollapse">
                                         <div class="card card-body">
@@ -326,7 +326,7 @@
                                         aria-controls="advancedQualifyCollapse">
                                         <div class="collapse-title">
                                             進階質檢（1）</div>
-                                        <img src="../assets/collapse-arrow.svg">
+                                        <img src="./assets/collapse-arrow.svg">
                                     </button>
                                     <div class="collapse show" id="advancedQualifyCollapse">
                                         <div class="card card-body">
@@ -343,7 +343,7 @@
                                         aria-controls="customizeQualifyCollapse">
                                         <div class="collapse-title">
                                             自訂質檢（3）</div>
-                                        <img src="../assets/collapse-arrow.svg">
+                                        <img src="./assets/collapse-arrow.svg">
                                     </button>
                                     <div class="collapse show" id="customizeQualifyCollapse">
                                         <div class="card card-body">
@@ -366,7 +366,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title">自訂質檢</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <img src="../assets/modal-close.svg">
+                        <img src="./assets/modal-close.svg">
                     </button>
                 </div>
                 <div class="modal-body">
@@ -424,7 +424,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title">進階質檢</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <img src="../assets/modal-close.svg">
+                        <img src="./assets/modal-close.svg">
                     </button>
                 </div>
                 <div class="modal-body">
@@ -465,7 +465,7 @@
         $("#customizeQualifyBtn").on("click", function () {
             setTimeout(() => {
                 $("#loading").show()
-                $("#loading").load("../loading.html", () => {
+                $("#loading").load("./loading.html", () => {
                     setTimeout(() => {
                         $("#loading").hide();
                         $("#customizeQualifyModal").modal("show")
