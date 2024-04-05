@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./resultTable.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container pt-3">
+        <table class="result-table table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">專員</th>
+                    <th scope="col">電話號碼</th>
+                    <th scope="col">技能</th>
+                    <th scope="col">基本質檢</th>
+                    <th scope="col">敏感詞</th>
+                    <th scope="col">進階質檢</th>
+                    <th scope="col">自訂質檢</th>
+                    <th scope="col">日期 / 時間</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">李OO</th>
+                    <td><span class="text-bold">0922435001</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span>
+                    </td>
+                    <td><span class="warning-badge">NCC</span></td>
+                    <td><span class="text-bold">6 / 6 / 5</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 09:22</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">張OO</th>
+                    <td><span class="text-bold">09331120445</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-bold">7 / 8 / 7</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 09:35</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">陳OO</th>
+                    <td><span class="text-bold">0955125111</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-bold">7 / 7 / 7</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 09:44</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">李OO</th>
+                    <td><span class="text-bold">0988442331</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-bold">8 / 9 / 8</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 11:23</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">張OO</th>
+                    <td><span class="text-bold">091122334</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="warning-badge">金管會</span></td>
+                    <td><span class="text-bold">4 / 5 / 4</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 12:25</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">陳OO</th>
+                    <td><span class="text-bold">0932159876</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="warning-badge">找主管…</span></td>
+                    <td><span class="text-bold">6 / 5 / 7</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 14:25</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">李OO</th>
+                    <td><span class="text-bold">0223334567</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="warning-badge">申訴</span></td>
+                    <td><span class="text-red text-bold">3 / 2 / 3</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 16:52</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">張OO</th>
+                    <td><span class="text-bold">04356789</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-bold">8 / 6 / 7</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 19:38</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">陳OO</th>
+                    <td><span class="text-bold">0965277883</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-bold">6 / 6 / 6</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 21:21</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">林OO</th>
+                    <td><span class="text-bold">0925456988</span></td>
+                    <td>報修</td>
+                    <td><span class="qa-badge">正常</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-bold">7 / 9 / 8</span></td>
+                    <td><span class="no-data-text">無</span></td>
+                    <td><span class="text-time">2023/11/12 22:56</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="mr-2">找到共 285 筆</div>
+            <nav aria-label="Page navigation">
+                <ul class="result-pagination pagination mb-0">
+                    <li class="page-item disabled">
+                        <a class="page-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0DC66C"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0DC66C"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <select class="result-select mx-3">
+                <option value="10">10 / 頁</option>
+                <option value="20">20 / 頁</option>
+                <option value="50">50 / 頁</option>
+            </select>
+            <div class="page-input d-flex align-items-center">
+                <span>前往</span>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">李OO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../assets/modal-close.svg">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="conversation">
+                                <div class="flex-center">
+                                    <div class="gray-badge">
+                                        2022/08/25
+                                    </div>
+                                </div>
+                                <div class="flex-left">
+                                    <div class="badge">
+                                        您好
+                                    </div>
+                                    <div class="time">
+                                        PM 06:00
+                                    </div>
+                                </div>
+                                <div class="flex-right">
+                                    <div class="badge">
+                                        您好
+                                    </div>
+                                    <div class="time">
+                                        PM 06:00
+                                    </div>
+                                </div>
+                                <div class="flex-left">
+                                    <div class="badge">
+                                        有問題想找你們<span class="high-light">主管</span>問
+                                    </div>
+                                    <div class="time">
+                                        PM 06:01
+                                    </div>
+                                </div>
+                                <div class="flex-right">
+                                    <div class="badge">
+                                        有什麼問題嗎
+                                    </div>
+                                    <div class="time">
+                                        PM 06:01
+                                    </div>
+                                </div>
+                                <div class="flex-left">
+                                    <div class="badge">
+                                        有問題想找你們<span class="high-light">主管</span>問
+                                    </div>
+                                    <div class="time">
+                                        PM 06:02
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse-container">
+                                <div class="basic-info-container">
+                                    <button class="btn collapse-button" type="button" data-toggle="collapse"
+                                        data-target="#basicInfoCollapse" aria-expanded="false"
+                                        aria-controls="basicInfoCollapse">
+                                        <div class="collapse-title mb-0">
+                                            基本資訊</div>
+                                        <img src="../assets/collapse-arrow.svg">
+                                    </button>
+                                    <div class="collapse" id="basicInfoCollapse">
+                                        <div class="info-container container">
+                                            <div class="row px-3">
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="col-5">
+                                                            <div>
+                                                                <span class="text-bold">專員：</span>
+                                                                李ＯＯ 0234
+                                                            </div>
+                                                            <div>
+                                                                <span class="text-bold">長度：</span>
+                                                                02”45
+                                                            </div>
+                                                            <div>
+                                                                <span class="text-bold">技能：</span>
+                                                                報修
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div>
+                                                                <span class="text-bold">電話：</span>
+                                                                0968251203
+                                                            </div>
+                                                            <div>
+                                                                <span class="text-bold">日期：</span>
+                                                                2022/08/05
+                                                            </div>
+                                                            <div>
+                                                                <span class="text-bold">時間：</span>
+                                                                08:10
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="quantity">
+                                                    <div class="collapse-title">基本質檢</div>
+                                                    <span class="qa-badge">正常</span>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <div class="collapse-title">敏感詞</div>
+                                                    <div class="words-container">
+                                                        <span class="warning-badge">金管會</span>
+                                                        <span class="warning-badge">NCC</span>
+                                                        <span class="warning-badge">找主管</span>
+                                                        <span class="warning-badge">消保官</span>
+                                                        <span class="warning-badge">很爛</span>
+                                                        <span class="warning-badge">客訴</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="collapse-title">關鍵詞</div>
+                                                    <div>斷線、不能看、網路不通、保證獲利</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qualify-container mt-2">
+                                    <div class="qualify-header">
+                                        <div class="collapse-title mb-0">
+                                            質檢資訊</div>
+                                        <div class="buttons-group">
+                                            <button class="btn btn-primary">進階質檢</button>
+                                            <button class="btn btn-primary" id="customizeQualifyBtn">自訂質檢</button>
+                                            <button class="btn btn-download">
+                                                <img src="../assets/download.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="btn advanced-collapse-btn" type="button" data-toggle="collapse"
+                                        data-target="#abstractCollapse" aria-expanded="false"
+                                        aria-controls="abstractCollapse">
+                                        <div class="collapse-title">
+                                            摘要（1）</div>
+                                        <img src="../assets/collapse-arrow.svg">
+                                    </button>
+                                    <div class="collapse show" id="abstractCollapse">
+                                        <div class="card card-body">
+                                            A客服在對話中展現了良好的服務態度和業務知識，有效地處理了B客戶的查詢，包括地址確認、帳單繳費周期及金額說明。然而，對話中也顯示出A客服在處理查詢時的效率有待提升。整體而言，客戶對於服務表現感到滿意，但仍有改善空間。
+                                        </div>
+                                    </div>
+                                    <button class="btn advanced-collapse-btn" type="button" data-toggle="collapse"
+                                        data-target="#advancedQualifyCollapse" aria-expanded="false"
+                                        aria-controls="advancedQualifyCollapse">
+                                        <div class="collapse-title">
+                                            進階質檢（1）</div>
+                                        <img src="../assets/collapse-arrow.svg">
+                                    </button>
+                                    <div class="collapse show" id="advancedQualifyCollapse">
+                                        <div class="card card-body">
+                                            [1] A客服的質檢項目如下 a~e, 若有請舉出實例說明
+                                            a. 服務態度：A客服在對話中始終保持禮貌，例如在對話開
+                                            始時使用“你好”作為問候，並在結束時說“謝謝你的來電祝
+                                            你順心再見”，展現了良好的服務態度。
+                                            b. 問題解決能力：A客服有效地處理了B客戶的查詢...<span class="more-content-btn"
+                                                id="moreContentBtn">更多</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn advanced-collapse-btn" type="button" data-toggle="collapse"
+                                        data-target="#customizeQualifyCollapse" aria-expanded="false"
+                                        aria-controls="customizeQualifyCollapse">
+                                        <div class="collapse-title">
+                                            自訂質檢（3）</div>
+                                        <img src="../assets/collapse-arrow.svg">
+                                    </button>
+                                    <div class="collapse show" id="customizeQualifyCollapse">
+                                        <div class="card card-body">
+                                            自訂質檢內容
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="customizeQualifyModal" tabindex="-1" aria-labelledby="customizeQualifyModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">自訂質檢</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../assets/modal-close.svg">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox0">
+                                    <label class="custom-control-label" for="checkbox0">全部
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox3">
+                                    <label class="custom-control-label" for="checkbox3">自訂質檢2
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox1">
+                                    <label class="custom-control-label" for="checkbox1">自訂質檢1
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox4">
+                                    <label class="custom-control-label" for="checkbox4">自訂質檢3
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                    <label class="custom-control-label" for="checkbox2">自訂質檢2
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox5">
+                                    <label class="custom-control-label" for="checkbox5">自訂質檢4
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="moreContentModal" tabindex="-1" aria-labelledby="moreContentModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title">進階質檢</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../assets/modal-close.svg">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>[1] A客服的質檢項目如下 a~e, 若有請舉出實例說明
+                        a. 服務態度：A客服在對話中始終保持禮貌，例如在對話開始時使
+                        用“你好”作為問候，並在結束時說“謝謝你的來電祝你順心再
+                        見”，展現了良好的服務態度。
+                        b. 問題解決能力：A客服有效地處理了B客戶的查詢，從查詢地址
+                        到確認帳單繳費情況，並提供了繳費的具體指導。
+                        c. 業務知識：A客服對於帳單繳費周期、金額以及繳費方式有清晰
+                        的解釋，顯示出對業務的熟悉。
+                        d. 客戶有無申訴：對話中沒有提及客戶的申訴。
+                        e. 銷售技巧有何具體表現：對話中沒有直接的銷售行為，因此無法
+                        評估銷售技巧。
+                    </p>
+                    <p>[2] 可以再提升的地方有哪些例如? 請舉實例說明 A客服在處理客戶查
+                        詢時的效率可以進一步提升。例如，在對話中，A客服在查詢地址和
+                        確認帳單繳費情況時，回應速度較慢，可能需要簡化內部查詢流程或
+                        提高對系統的熟悉度，以加快回應速度，提升客戶滿意度。</p>
+                    <p>
+                        [3] 給客服A的服務態度一個1到10分的綜合分數，純數字即可; 8
+                    </p>
+                    <p>[4] 給客服A的表現一個1到10分的綜合分數，純數字即可; 7</p>
+                    <p>[5] 客戶的整體滿意度指數 1~10; 7</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('tbody tr').on("click", function () {
+            $("#detailModal").modal("show")
+        })
+
+        $("#customizeQualifyBtn").on("click", function () {
+            setTimeout(() => {
+                $("#loading").show()
+                $("#loading").load("../loading.html", () => {
+                    setTimeout(() => {
+                        $("#loading").hide();
+                        $("#customizeQualifyModal").modal("show")
+                    }, 2000);
+                });
+            }, 50);
+        })
+
+        $("#moreContentBtn").on("click", function () {
+            $("#moreContentModal").modal("show")
+        })
+
+        $(".collapse").each(function () {
+            if ($(this).hasClass("show")) {
+                var arrowIcon = $(this).prev('button').find("img")
+                arrowIcon.css({
+                    'transform': 'rotate(180deg)',
+                    'transition': 'transform 0.3s ease'
+                })
+            } else {
+                $(this).prev('button').find("img").css('transform', '');
+            }
+        })
+
+        $(".collapse-button").on("click", function () {
+            if (!$(this).next("div").hasClass("show")) {
+                var arrowIcon = $(this).find("img")
+                arrowIcon.css({
+                    'transform': 'rotate(180deg)',
+                    'transition': 'transform 0.3s ease'
+                })
+            } else {
+                $(this).find("img").css('transform', '');
+            }
+        })
+
+        $(".advanced-collapse-btn").on("click", function () {
+            if (!$(this).next("div").hasClass("show")) {
+                var arrowIcon = $(this).find("img")
+                arrowIcon.css({
+                    'transform': 'rotate(180deg)',
+                    'transition': 'transform 0.3s ease'
+                })
+            } else {
+                $(this).find("img").css('transform', '');
+            }
+        })
+    </script>
+</body>
+
+</html>

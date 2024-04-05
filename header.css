@@ -1,0 +1,137 @@
+header {
+    background-color: var(--white);
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.drop-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.drop-btn:hover {
+    color: var(--primary);
+    opacity: 0.6;
+}
+
+.drop-btn:focus {
+    color: var(--primary);
+}
+
+.drop-btn:focus-visible {
+    color: var(--primary);
+}
+
+.drop-btn:active {
+    color: var(--primary) !important;
+}
+
+.logout-btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 12px;
+    background-color: var(--light);
+    color: var(--primary);
+    border-radius: 4px;
+    border: none;
+}
+
+.logout-btn:hover {
+    opacity: 0.7;
+}
+
+
+.header .dropdown button {
+    color: var(--primary);
+}
+
+.header .dropdown button::after {
+    display: none;
+}
+
+.header .dropdown-menu {
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 4px 2px rgba(134, 134, 134, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    cursor: pointer;
+}
+
+.modal-body .input-group {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.modal-body .password-input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 24px;
+    margin-bottom: 12px;
+}
+
+.modal-body .password-input-group > div{
+    width: 120px;
+    font-weight: bold;
+}
+
+.modal-body .password-input-group > input{
+    width: 260px;
+    height: 40px;
+}
+
+.modal-body .input-group input {
+    flex-grow: 1;
+    height: 36px;
+}
+
+.badge-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.badge-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+.badge-container .yellow-badge {
+    background-color: var(--bs-warning);
+    display: flex;
+    align-items: center;
+    padding: 8px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+    gap: 4px;
+    text-wrap: nowrap;
+}
+
+.badge-container .gray-badge {
+    background-color: var(--bg-light-gray);
+    display: flex;
+    align-items: center;
+    padding: 8px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+    gap: 4px;
+    text-wrap: nowrap;
+}

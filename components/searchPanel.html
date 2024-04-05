@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./searchPanel.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="search-panel container">
+        <div class="row" style="width: 100%">
+            <div class="col">
+                <div class="search-input input-group mb-3">
+                    <span class="search-input-icon input-group-text" id="basic-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D5D5D5"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <button class="btn">搜尋</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="filter-container">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            時間區間
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">當前月份</a>
+                            <a class="dropdown-item" href="#">上個月</a>
+                            <a class="dropdown-item" href="#">近 30 天</a>
+                            <a class="dropdown-item" href="#">近 90 天</a>
+                            <a class="dropdown-item" href="#">今年以來</a>
+                            <a class="dropdown-item" href="#">全部期間</a>
+                            <a class="dropdown-item" href="#" id="customizePeriodBtn">自訂期間</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            質檢
+                        </button>
+                        <div class="dropdown-menu">
+                            <form>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="qualifyCheckbox0">
+                                        <label class="custom-control-label" for="qualifyCheckbox0">全部
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="qualifyCheckbox1">
+                                        <label class="custom-control-label" for="qualifyCheckbox1">基本質檢異常
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="qualifyCheckbox2">
+                                        <label class="custom-control-label" for="qualifyCheckbox2">進階質檢異常
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="qualifyCheckbox3">
+                                        <label class="custom-control-label" for="qualifyCheckbox3">自訂質檢
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="qualifyCheckbox4">
+                                        <label class="custom-control-label" for="qualifyCheckbox4">[自訂1]
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="qualifyCheckbox5">
+                                        <label class="custom-control-label" for="qualifyCheckbox5">[自訂2]
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            專員
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">全部</a>
+                            <a class="dropdown-item" href="#">林OO 0001</a>
+                            <a class="dropdown-item" href="#">江OO 0002</a>
+                            <a class="dropdown-item" href="#">劉OO 0003</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            敏感詞
+                        </button>
+                        <div class="dropdown-menu">
+                            <form>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="wordsCheckbox0">
+                                        <label class="custom-control-label" for="wordsCheckbox0">全部
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="wordsCheckbox1">
+                                        <label class="custom-control-label" for="wordsCheckbox1">金管會
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="wordsCheckbox2">
+                                        <label class="custom-control-label" for="wordsCheckbox2">NCC
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="wordsCheckbox3">
+                                        <label class="custom-control-label" for="wordsCheckbox3">找主管
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="advanced-search-btn btn" id="advancedSearchBtn">進階搜尋</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="search-result col">
+                <button class="remit-btn btn">匯出</button>
+                <div class="search-result-text">
+                    共
+                    <span class="">285</span>
+                    筆資料
+                </div>
+                <div>全部</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="advancedSearchModal" tabindex="-1" aria-labelledby="advancedSearchModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">進階搜尋</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../assets/modal-close.svg">
+                    </button>
+                </div>
+                <div class="advanced-modal modal-body px-4">
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">開始時間</div>
+                        <div class="input-group date" id="startDatePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#startDatePicker" />
+                            <div class="input-group-append" data-target="#startDatePicker" data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/calendar.svg"></div>
+                            </div>
+                        </div>
+                        <div class="input-group date" id="startTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#startTimePicker" />
+                            <div class="input-group-append" data-target="#startTimePicker" data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                        -
+                        <div class="input-group date" id="endDatePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#endDatePicker" />
+                            <div class="input-group-append" data-target="#endDatePicker" data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/calendar.svg"></div>
+                            </div>
+                        </div>
+                        <div class="input-group date" id="endTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#endTimePicker" />
+                            <div class="input-group-append" data-target="#endTimePicker" data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">電話結束時間</div>
+                        <div class="input-group date" id="phoneStartDatePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#phoneStartDatePicker" />
+                            <div class="input-group-append" data-target="#phoneStartDatePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/calendar.svg"></div>
+                            </div>
+                        </div>
+                        <div class="input-group date" id="phoneStartTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#phoneStartTimePicker" />
+                            <div class="input-group-append" data-target="#phoneStartTimePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                        -
+                        <div class="input-group date" id="phoneEndDatePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#phoneEndDatePicker" />
+                            <div class="input-group-append" data-target="#phoneEndDatePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/calendar.svg"></div>
+                            </div>
+                        </div>
+                        <div class="input-group date" id="phoneEndTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#phoneEndTimePicker" />
+                            <div class="input-group-append" data-target="#phoneEndTimePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">錄音時間</div>
+                        <div class="input-group date" id="recordStartTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#recordStartTimePicker" />
+                            <div class="input-group-append" data-target="#recordStartTimePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                        <img src="../assets/arrow-right.svg">
+                        <div class="input-group date" id="recordEndTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#recordEndTimePicker" />
+                            <div class="input-group-append" data-target="#recordEndTimePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">客服專員代碼</div>
+                        <select>
+                            <option value="0101">0101</option>
+                            <option value="0102">0102</option>
+                            <option value="0103">0103</option>
+                        </select>
+                    </div>
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">技能</div>
+                        <select>
+                            <option value="報修1">報修1</option>
+                            <option value="報修2">報修2</option>
+                        </select>
+                    </div>
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">主叫號碼</div>
+                        <input type="text">
+                    </div>
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">IB/OB</div>
+                        <select>
+                            <option value="000">000</option>
+                            <option value="001">001</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">搜尋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="customizePeriodModal" tabindex="-1" aria-labelledby="customizePeriodModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">自訂期間</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../assets/modal-close.svg">
+                    </button>
+                </div>
+                <div class="advanced-modal modal-body px-4">
+                    <div class="advanced-form-group">
+                        <div class="advanced-title">開始時間</div>
+                        <div class="input-group date" id="customizeStartDatePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#customizeStartDatePicker" />
+                            <div class="input-group-append" data-target="#customizeStartDatePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/calendar.svg"></div>
+                            </div>
+                        </div>
+                        <div class="input-group date" id="customizeStartTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#customizeStartTimePicker" />
+                            <div class="input-group-append" data-target="#customizeStartTimePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                        -
+                        <div class="input-group date" id="customizeEndDatePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#customizeEndDatePicker" />
+                            <div class="input-group-append" data-target="#customizeEndDatePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/calendar.svg"></div>
+                            </div>
+                        </div>
+                        <div class="input-group date" id="customizeEndTimePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input"
+                                data-target="#customizeEndTimePicker" />
+                            <div class="input-group-append" data-target="#customizeEndTimePicker"
+                                data-toggle="datetimepicker">
+                                <div class="input-group-text"><img src="../assets/clock.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

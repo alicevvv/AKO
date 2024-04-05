@@ -1,0 +1,159 @@
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.search-input-icon {
+  background-color: var(--white);
+  border: 2px solid var(--bg-light-gray);
+  border-right-width: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-input input {
+  border-top: 2px solid var(--bg-light-gray);
+  border-bottom: 2px solid var(--bg-light-gray);
+  border-left: 0;
+  border-right: 0;
+  height: 40px;
+}
+
+.search-input input:focus {
+  box-shadow: 0 0 0 0.25rem var(--bg-light-gray);
+  border-color: var(--bg-light-gray);
+}
+
+.search-input button,
+.search-input button:hover,
+.search-input button:active,
+.search-input button:focus {
+  border-radius: 0 4px 4px 0;
+  background-color: var(--white);
+  font-weight: 700;
+  border: 2px solid var(--bg-light-gray);
+  border-left: none;
+}
+
+.search-input button:active {
+  color: var(--primary) !important;
+  border-color: var(--bg-light-gray) !important;
+}
+
+.filter-container {
+  display: flex;
+  gap: 12px;
+}
+
+.search-panel .dropdown button {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.advanced-search-btn {
+  font-weight: bold;
+  font-size: 16px;
+  background-color: var(--bg-light-gray);
+  border-radius: 4px;
+}
+
+.remit-btn {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 200px;
+}
+
+.remit-btn:hover,
+.remit-btn:focus {
+  color: white;
+}
+
+.search-result {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.search-result-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.search-result-text span {
+  color: var(--primary);
+}
+
+.advanced-modal .input-group input {
+  flex-grow: 0;
+}
+
+.advanced-modal .advanced-form-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.advanced-modal .advanced-form-group input,
+.advanced-modal .advanced-form-group select{
+    width: 250px;
+    height: 32px;
+    border: 1px solid var(--bs-gray-400);
+}
+
+.advanced-modal .advanced-form-group .advanced-title{
+    width: 112px;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.advanced-modal .input-group.date {
+  width: 148px;
+  height: 32px;
+  gap: 0px;
+  margin-bottom: 0;
+  flex-wrap: nowrap;
+}
+
+.advanced-modal .input-group.date input {
+  height: 32px;
+  background-color: white;
+  border-right: none;
+}
+
+.advanced-modal .input-group.date .input-group-append {
+    border-left: none;
+}
+.advanced-modal .input-group.date .input-group-text {
+    height: 32px;
+  background-color: white;
+}
+
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover,.bootstrap-datetimepicker-widget table td span.active{
+    background-color: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today:before{
+    border-bottom-color: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td,
+.bootstrap-datetimepicker-widget table td span{
+    height: 32px;
+    line-height: 32px;
+}
+
+.fa-chevron-left:before{content:"<"}
+.fa-chevron-right:before{content:">"}
+.fa-arrow-up:before{
+    content: url("./assets/arrow-up.svg");
+    height: 24px;
+    line-height: 24px;
+}
+.fa-arrow-down:before{
+    content: url("./assets/arrow-down.svg");
+    height: 24px;
+    line-height: 24px;
+}
