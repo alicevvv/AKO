@@ -12,6 +12,9 @@
         integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg=="
         crossorigin="anonymous" />
     <link href="./global.css" rel="stylesheet">
+    <link href="./header.css" rel="stylesheet">
+    <link href="./searchPanel.css" rel="stylesheet">
+    <link href="./resultTable.css" rel="stylesheet">
     <script src="jquery-3.7.1.min.js"></script>
 
 </head>
@@ -19,10 +22,1162 @@
 <body>
     <main>
         <div id="header">
+            <header>
+                <div class="header py-1 px-3 d-flex justify-content-between">
+                    <img src="./assets/logo-sm.svg" alt="logo">
+                    <div class="panel">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                    class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-item" id="wordsSettingBtn">設定敏感詞與關鍵字</li>
+                                <li class="dropdown-item" id="customizeWordsSettingBtn">自訂質檢</li>
+                                <li class="dropdown-item" id="commissionersBtn">專員代碼姓名</li>
+                                <li class="dropdown-item" id="skillMaintainBtn">維護技能</li>
+                                <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
+                                <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
+                            </ul>
+                        </div>
+                        <button class="logout-btn p-2" id="logoutBtn">登出</button>
+                    </div>
+                </div>
+                <div class="modal fade" id="wordsSettingModal" tabindex="-1" aria-labelledby="wordsSettingModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">設定敏感詞與關鍵字</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <input type="text">
+                                    <button class="btn btn-primary">新增敏感詞</button>
+                                    <button class="btn btn-primary">新增關鍵詞</button>
+                                </div>
+                                <div class="badge-title">
+                                    敏感詞
+                                </div>
+                                <div class="badge-container">
+                                    <div class="yellow-badge">
+                                        壞掉
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="yellow-badge">
+                                        金管會
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="badge-title">
+                                    關鍵詞
+                                </div>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        NCC
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        申訴
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="customizeWordsSettingModal" tabindex="-1"
+                    aria-labelledby="customizeWordsSettingModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">自訂質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <input type="text">
+                                    <button class="btn btn-primary">新增敏感詞</button>
+                                </div>
+                                <div class="badge-container">
+                                    <div class="yellow-badge">
+                                        自訂1
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="yellow-badge">
+                                        自訂2
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="commissionersModal" tabindex="-1" aria-labelledby="commissionersModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">專員代碼姓名</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>專員姓名</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                    <div style="flex-grow: 1;">
+                                        <div>專員代碼</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                    <button class="btn btn-primary">新增專員</button>
+                                </div>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        member01 2578
+                                        <button class="btn p-0" id="editCommissioner0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        member02 5432
+                                        <button class="btn p-0" id="editCommissioner1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editCommissionerModal" tabindex="-1" aria-labelledby="editCommissionerModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯專員代碼姓名</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>專員姓名</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                    <div style="flex-grow: 1;">
+                                        <div>專員代碼</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="skillMaintainModal" tabindex="-1" aria-labelledby="skillMaintainModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">維護技能</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <input type="text">
+                                    <button class="btn btn-primary">新增</button>
+                                </div>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        報修
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        報修2
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-labelledby="editPasswordModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">更改密碼</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="password-input-group">
+                                    <div>舊密碼：</div>
+                                    <input type="text">
+                                </div>
+                                <div class="password-input-group">
+                                    <div>新密碼：</div>
+                                    <input type="text">
+                                </div>
+                                <div class="password-input-group">
+                                    <div>確認新密碼：</div>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">管理帳號</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <button class="btn btn-primary" id="addAccountBtn">新增帳號</button>
+                                </div>
+                                <hr>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        member01
+                                        <button class="btn p-0" id="editAccount0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        member02
+                                        <button class="btn p-0" id="editAccount1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="addAccountModal" tabindex="-1" aria-labelledby="addAccountModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">新增帳號</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="password-input-group">
+                                    <div>帳號：</div>
+                                    <input type="text">
+                                </div>
+                                <div class="password-input-group">
+                                    <div>密碼：</div>
+                                    <input type="text">
+                                </div>
+                                <div class="password-input-group">
+                                    <div>確認密碼：</div>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">新增</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editAccountModal" tabindex="-1" aria-labelledby="editAccountModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯帳號</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>專員姓名</div>
+                                        <input type="text" style="width: 100%;" value="李曉芬">
+                                    </div>
+                                    <div style="flex-grow: 1;">
+                                        <div>專員代碼</div>
+                                        <input type="text" style="width: 100%;" value="2578">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">新增</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
         </div>
         <div class="content">
-            <div id="searchPanel"></div>
-            <div id="resultTable"></div>
+            <div id="searchPanel">
+                <div class="search-panel container">
+                    <div class="row" style="width: 100%">
+                        <div class="col">
+                            <div class="search-input input-group mb-3">
+                                <span class="search-input-icon input-group-text" id="basic-addon1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D5D5D5"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                                <button class="btn">搜尋</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="filter-container">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        時間區間
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">當前月份</a>
+                                        <a class="dropdown-item" href="#">上個月</a>
+                                        <a class="dropdown-item" href="#">近 30 天</a>
+                                        <a class="dropdown-item" href="#">近 90 天</a>
+                                        <a class="dropdown-item" href="#">今年以來</a>
+                                        <a class="dropdown-item" href="#">全部期間</a>
+                                        <a class="dropdown-item" href="#" id="customizePeriodBtn">自訂期間</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        質檢
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox0">
+                                                    <label class="custom-control-label" for="qualifyCheckbox0">全部
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox1">
+                                                    <label class="custom-control-label" for="qualifyCheckbox1">基本質檢異常
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox2">
+                                                    <label class="custom-control-label" for="qualifyCheckbox2">進階質檢異常
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox3">
+                                                    <label class="custom-control-label" for="qualifyCheckbox3">自訂質檢
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox4">
+                                                    <label class="custom-control-label" for="qualifyCheckbox4">[自訂1]
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox5">
+                                                    <label class="custom-control-label" for="qualifyCheckbox5">[自訂2]
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        專員
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">全部</a>
+                                        <a class="dropdown-item" href="#">林OO 0001</a>
+                                        <a class="dropdown-item" href="#">江OO 0002</a>
+                                        <a class="dropdown-item" href="#">劉OO 0003</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        敏感詞
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="wordsCheckbox0">
+                                                    <label class="custom-control-label" for="wordsCheckbox0">全部
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="wordsCheckbox1">
+                                                    <label class="custom-control-label" for="wordsCheckbox1">金管會
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="wordsCheckbox2">
+                                                    <label class="custom-control-label" for="wordsCheckbox2">NCC
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="wordsCheckbox3">
+                                                    <label class="custom-control-label" for="wordsCheckbox3">找主管
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button class="advanced-search-btn btn" id="advancedSearchBtn">進階搜尋</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="search-result col">
+                            <button class="remit-btn btn">匯出</button>
+                            <div class="search-result-text">
+                                共
+                                <span class="">285</span>
+                                筆資料
+                            </div>
+                            <div>全部</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="advancedSearchModal" tabindex="-1" aria-labelledby="advancedSearchModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">進階搜尋</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="advanced-modal modal-body px-4">
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">開始時間</div>
+                                    <div class="input-group date" id="startDatePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#startDatePicker" />
+                                        <div class="input-group-append" data-target="#startDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group date" id="startTimePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#startTimePicker" />
+                                        <div class="input-group-append" data-target="#startTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                    -
+                                    <div class="input-group date" id="endDatePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#endDatePicker" />
+                                        <div class="input-group-append" data-target="#endDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group date" id="endTimePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#endTimePicker" />
+                                        <div class="input-group-append" data-target="#endTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">電話結束時間</div>
+                                    <div class="input-group date" id="phoneStartDatePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#phoneStartDatePicker" />
+                                        <div class="input-group-append" data-target="#phoneStartDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group date" id="phoneStartTimePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#phoneStartTimePicker" />
+                                        <div class="input-group-append" data-target="#phoneStartTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                    -
+                                    <div class="input-group date" id="phoneEndDatePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#phoneEndDatePicker" />
+                                        <div class="input-group-append" data-target="#phoneEndDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group date" id="phoneEndTimePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#phoneEndTimePicker" />
+                                        <div class="input-group-append" data-target="#phoneEndTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">錄音時間</div>
+                                    <div class="input-group date" id="recordStartTimePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#recordStartTimePicker" />
+                                        <div class="input-group-append" data-target="#recordStartTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/arrow-right.svg">
+                                    <div class="input-group date" id="recordEndTimePicker" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#recordEndTimePicker" />
+                                        <div class="input-group-append" data-target="#recordEndTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">客服專員代碼</div>
+                                    <select>
+                                        <option value="0101">0101</option>
+                                        <option value="0102">0102</option>
+                                        <option value="0103">0103</option>
+                                    </select>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">技能</div>
+                                    <select>
+                                        <option value="報修1">報修1</option>
+                                        <option value="報修2">報修2</option>
+                                    </select>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">主叫號碼</div>
+                                    <input type="text">
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">IB/OB</div>
+                                    <select>
+                                        <option value="000">000</option>
+                                        <option value="001">001</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">搜尋</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="customizePeriodModal" tabindex="-1" aria-labelledby="customizePeriodModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">自訂期間</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="advanced-modal modal-body px-4">
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">開始時間</div>
+                                    <div class="input-group date" id="customizeStartDatePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeStartDatePicker" />
+                                        <div class="input-group-append" data-target="#customizeStartDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group date" id="customizeStartTimePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeStartTimePicker" />
+                                        <div class="input-group-append" data-target="#customizeStartTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                    -
+                                    <div class="input-group date" id="customizeEndDatePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeEndDatePicker" />
+                                        <div class="input-group-append" data-target="#customizeEndDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group date" id="customizeEndTimePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeEndTimePicker" />
+                                        <div class="input-group-append" data-target="#customizeEndTimePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/clock.svg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="resultTable">
+                <div class="container pt-3">
+                    <table class="result-table table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">專員</th>
+                                <th scope="col">電話號碼</th>
+                                <th scope="col">技能</th>
+                                <th scope="col">基本質檢</th>
+                                <th scope="col">敏感詞</th>
+                                <th scope="col">進階質檢</th>
+                                <th scope="col">自訂質檢</th>
+                                <th scope="col">日期 / 時間</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">李OO</th>
+                                <td><span class="text-bold">0922435001</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span>
+                                </td>
+                                <td><span class="warning-badge">NCC</span></td>
+                                <td><span class="text-bold">6 / 6 / 5</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 09:22</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">張OO</th>
+                                <td><span class="text-bold">09331120445</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">7 / 8 / 7</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 09:35</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">陳OO</th>
+                                <td><span class="text-bold">0955125111</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">7 / 7 / 7</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 09:44</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">李OO</th>
+                                <td><span class="text-bold">0988442331</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">8 / 9 / 8</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 11:23</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">張OO</th>
+                                <td><span class="text-bold">091122334</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="warning-badge">金管會</span></td>
+                                <td><span class="text-bold">4 / 5 / 4</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 12:25</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">陳OO</th>
+                                <td><span class="text-bold">0932159876</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="warning-badge">找主管…</span></td>
+                                <td><span class="text-bold">6 / 5 / 7</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 14:25</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">李OO</th>
+                                <td><span class="text-bold">0223334567</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="warning-badge">申訴</span></td>
+                                <td><span class="text-red text-bold">3 / 2 / 3</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 16:52</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">張OO</th>
+                                <td><span class="text-bold">04356789</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">8 / 6 / 7</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 19:38</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">陳OO</th>
+                                <td><span class="text-bold">0965277883</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">6 / 6 / 6</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 21:21</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">林OO</th>
+                                <td><span class="text-bold">0925456988</span></td>
+                                <td>報修</td>
+                                <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">7 / 9 / 8</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-time">2023/11/12 22:56</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="mr-2">找到共 285 筆</div>
+                        <nav aria-label="Page navigation">
+                            <ul class="result-pagination pagination mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0DC66C"
+                                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0DC66C"
+                                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <select class="result-select mx-3">
+                            <option value="10">10 / 頁</option>
+                            <option value="20">20 / 頁</option>
+                            <option value="50">50 / 頁</option>
+                        </select>
+                        <div class="page-input d-flex align-items-center">
+                            <span>前往</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">李OO</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="conversation">
+                                            <div class="flex-center">
+                                                <div class="gray-badge">
+                                                    2022/08/25
+                                                </div>
+                                            </div>
+                                            <div class="flex-left">
+                                                <div class="badge">
+                                                    您好
+                                                </div>
+                                                <div class="time">
+                                                    PM 06:00
+                                                </div>
+                                            </div>
+                                            <div class="flex-right">
+                                                <div class="badge">
+                                                    您好
+                                                </div>
+                                                <div class="time">
+                                                    PM 06:00
+                                                </div>
+                                            </div>
+                                            <div class="flex-left">
+                                                <div class="badge">
+                                                    有問題想找你們<span class="high-light">主管</span>問
+                                                </div>
+                                                <div class="time">
+                                                    PM 06:01
+                                                </div>
+                                            </div>
+                                            <div class="flex-right">
+                                                <div class="badge">
+                                                    有什麼問題嗎
+                                                </div>
+                                                <div class="time">
+                                                    PM 06:01
+                                                </div>
+                                            </div>
+                                            <div class="flex-left">
+                                                <div class="badge">
+                                                    有問題想找你們<span class="high-light">主管</span>問
+                                                </div>
+                                                <div class="time">
+                                                    PM 06:02
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="collapse-container">
+                                            <div class="basic-info-container">
+                                                <button class="btn collapse-button" type="button" data-toggle="collapse"
+                                                    data-target="#basicInfoCollapse" aria-expanded="false"
+                                                    aria-controls="basicInfoCollapse">
+                                                    <div class="collapse-title mb-0">
+                                                        基本資訊</div>
+                                                    <img src="./assets/collapse-arrow.svg">
+                                                </button>
+                                                <div class="collapse" id="basicInfoCollapse">
+                                                    <div class="info-container container">
+                                                        <div class="row px-3">
+                                                            <div class="info">
+                                                                <div class="row">
+                                                                    <div class="col-5">
+                                                                        <div>
+                                                                            <span class="text-bold">專員：</span>
+                                                                            李ＯＯ 0234
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="text-bold">長度：</span>
+                                                                            02”45
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="text-bold">技能：</span>
+                                                                            報修
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-7">
+                                                                        <div>
+                                                                            <span class="text-bold">電話：</span>
+                                                                            0968251203
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="text-bold">日期：</span>
+                                                                            2022/08/05
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="text-bold">時間：</span>
+                                                                            08:10
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="quantity">
+                                                                <div class="collapse-title">基本質檢</div>
+                                                                <span class="qa-badge">正常</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-7">
+                                                                <div class="collapse-title">敏感詞</div>
+                                                                <div class="words-container">
+                                                                    <span class="warning-badge">金管會</span>
+                                                                    <span class="warning-badge">NCC</span>
+                                                                    <span class="warning-badge">找主管</span>
+                                                                    <span class="warning-badge">消保官</span>
+                                                                    <span class="warning-badge">很爛</span>
+                                                                    <span class="warning-badge">客訴</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <div class="collapse-title">關鍵詞</div>
+                                                                <div>斷線、不能看、網路不通、保證獲利</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="qualify-container mt-2">
+                                                <div class="qualify-header">
+                                                    <div class="collapse-title mb-0">
+                                                        質檢資訊</div>
+                                                    <div class="buttons-group">
+                                                        <button class="btn btn-primary">進階質檢</button>
+                                                        <button class="btn btn-primary"
+                                                            id="customizeQualifyBtn">自訂質檢</button>
+                                                        <button class="btn btn-download">
+                                                            <img src="./assets/download.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <button class="btn advanced-collapse-btn" type="button"
+                                                    data-toggle="collapse" data-target="#abstractCollapse"
+                                                    aria-expanded="false" aria-controls="abstractCollapse">
+                                                    <div class="collapse-title">
+                                                        摘要（1）</div>
+                                                    <img src="./assets/collapse-arrow.svg">
+                                                </button>
+                                                <div class="collapse show" id="abstractCollapse">
+                                                    <div class="card card-body">
+                                                        A客服在對話中展現了良好的服務態度和業務知識，有效地處理了B客戶的查詢，包括地址確認、帳單繳費周期及金額說明。然而，對話中也顯示出A客服在處理查詢時的效率有待提升。整體而言，客戶對於服務表現感到滿意，但仍有改善空間。
+                                                    </div>
+                                                </div>
+                                                <button class="btn advanced-collapse-btn" type="button"
+                                                    data-toggle="collapse" data-target="#advancedQualifyCollapse"
+                                                    aria-expanded="false" aria-controls="advancedQualifyCollapse">
+                                                    <div class="collapse-title">
+                                                        進階質檢（1）</div>
+                                                    <img src="./assets/collapse-arrow.svg">
+                                                </button>
+                                                <div class="collapse show" id="advancedQualifyCollapse">
+                                                    <div class="card card-body">
+                                                        [1] A客服的質檢項目如下 a~e, 若有請舉出實例說明
+                                                        a. 服務態度：A客服在對話中始終保持禮貌，例如在對話開
+                                                        始時使用“你好”作為問候，並在結束時說“謝謝你的來電祝
+                                                        你順心再見”，展現了良好的服務態度。
+                                                        b. 問題解決能力：A客服有效地處理了B客戶的查詢...<span class="more-content-btn"
+                                                            id="moreContentBtn">更多</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn advanced-collapse-btn" type="button"
+                                                    data-toggle="collapse" data-target="#customizeQualifyCollapse"
+                                                    aria-expanded="false" aria-controls="customizeQualifyCollapse">
+                                                    <div class="collapse-title">
+                                                        自訂質檢（3）</div>
+                                                    <img src="./assets/collapse-arrow.svg">
+                                                </button>
+                                                <div class="collapse show" id="customizeQualifyCollapse">
+                                                    <div class="card card-body">
+                                                        自訂質檢內容
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="customizeQualifyModal" tabindex="-1" aria-labelledby="customizeQualifyModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">自訂質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox0">
+                                                <label class="custom-control-label" for="checkbox0">全部
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox3">
+                                                <label class="custom-control-label" for="checkbox3">自訂質檢2
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox1">
+                                                <label class="custom-control-label" for="checkbox1">自訂質檢1
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox4">
+                                                <label class="custom-control-label" for="checkbox4">自訂質檢3
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                                <label class="custom-control-label" for="checkbox2">自訂質檢2
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox5">
+                                                <label class="custom-control-label" for="checkbox5">自訂質檢4
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="moreContentModal" tabindex="-1" aria-labelledby="moreContentModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content modal-lg">
+                            <div class="modal-header">
+                                <h5 class="modal-title">進階質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>[1] A客服的質檢項目如下 a~e, 若有請舉出實例說明
+                                    a. 服務態度：A客服在對話中始終保持禮貌，例如在對話開始時使
+                                    用“你好”作為問候，並在結束時說“謝謝你的來電祝你順心再
+                                    見”，展現了良好的服務態度。
+                                    b. 問題解決能力：A客服有效地處理了B客戶的查詢，從查詢地址
+                                    到確認帳單繳費情況，並提供了繳費的具體指導。
+                                    c. 業務知識：A客服對於帳單繳費周期、金額以及繳費方式有清晰
+                                    的解釋，顯示出對業務的熟悉。
+                                    d. 客戶有無申訴：對話中沒有提及客戶的申訴。
+                                    e. 銷售技巧有何具體表現：對話中沒有直接的銷售行為，因此無法
+                                    評估銷售技巧。
+                                </p>
+                                <p>[2] 可以再提升的地方有哪些例如? 請舉實例說明 A客服在處理客戶查
+                                    詢時的效率可以進一步提升。例如，在對話中，A客服在查詢地址和
+                                    確認帳單繳費情況時，回應速度較慢，可能需要簡化內部查詢流程或
+                                    提高對系統的熟悉度，以加快回應速度，提升客戶滿意度。</p>
+                                <p>
+                                    [3] 給客服A的服務態度一個1到10分的綜合分數，純數字即可; 8
+                                </p>
+                                <p>[4] 給客服A的表現一個1到10分的綜合分數，純數字即可; 7</p>
+                                <p>[5] 客戶的整體滿意度指數 1~10; 7</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -41,58 +1196,161 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $("#header").load("./components/header.html")
-            $("#searchPanel").load("./components/searchPanel.html", function () {
-                $("#advancedSearchBtn").on("click", function () {
-                    $("#advancedSearchModal").modal("show")
-                })
-                $('#startDatePicker').datetimepicker({
-                    format: 'L'
-                });
-                $('#startTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $('#endDatePicker').datetimepicker({
-                    format: 'L'
-                });
-                $('#endTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $('#phoneStartDatePicker').datetimepicker({
-                    format: 'L'
-                });
-                $('#phoneStartTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $('#phoneEndDatePicker').datetimepicker({
-                    format: 'L'
-                });
-                $('#phoneEndTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $('#recordStartTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $('#recordEndTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $("#customizePeriodBtn").on("click", function () {
-                    $("#customizePeriodModal").modal("show")
-                })
-                $('#customizeStartDatePicker').datetimepicker({
-                    format: 'L'
-                });
-                $('#customizeStartTimePicker').datetimepicker({
-                    format: 'LT'
-                });
-                $('#customizeEndDatePicker').datetimepicker({
-                    format: 'L'
-                });
-                $('#customizeEndTimePicker').datetimepicker({
-                    format: 'LT'
-                });
+            // header
+            $("#wordsSettingBtn").on("click", function () {
+                $("#wordsSettingModal").modal("show")
             })
-            $("#resultTable").load("./components/resultTable.html")
+
+            $("#customizeWordsSettingBtn").on("click", function () {
+                $("#customizeWordsSettingModal").modal("show")
+            })
+
+            $("#commissionersBtn").on("click", function () {
+                $("#commissionersModal").modal("show")
+            })
+
+            $("#editCommissioner0").on("click", function () {
+                $("#editCommissionerModal").modal("show")
+            })
+
+            $("#editCommissioner1").on("click", function () {
+                $("#editCommissionerModal").modal("show")
+            })
+
+            $("#skillMaintainBtn").on("click", function () {
+                $("#skillMaintainModal").modal("show")
+            })
+
+            $("#editPasswordBtn").on("click", function () {
+                $("#editPasswordModal").modal("show")
+            })
+
+            $("#manageAccountsBtn").on("click", function () {
+                $("#manageAccountsModal").modal("show")
+            })
+
+            $("#addAccountBtn").on("click", function () {
+                $("#addAccountModal").modal("show")
+            })
+
+            $("#editAccount0").on("click", function () {
+                $("#editAccountModal").modal("show")
+            })
+
+            $("#editAccount1").on("click", function () {
+                $("#editAccountModal").modal("show")
+            })
+
+            $("#logoutBtn").on("click", function () {
+                window.location.href = "./login.html";
+            })
+
+            // search panel
+            $("#advancedSearchBtn").on("click", function () {
+                $("#advancedSearchModal").modal("show")
+            })
+            $('#startDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#startTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#endDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#endTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#phoneStartDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#phoneStartTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#phoneEndDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#phoneEndTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#recordStartTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#recordEndTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $("#customizePeriodBtn").on("click", function () {
+                $("#customizePeriodModal").modal("show")
+            })
+            $('#customizeStartDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#customizeStartTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#customizeEndDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#customizeEndTimePicker').datetimepicker({
+                format: 'LT'
+            });
+
+            // result table
+            $('tbody tr').on("click", function () {
+                $("#detailModal").modal("show")
+            })
+
+            $("#customizeQualifyBtn").on("click", function () {
+                setTimeout(() => {
+                    $("#loading").show()
+                    $("#loading").load("./loading.html", () => {
+                        setTimeout(() => {
+                            $("#loading").hide();
+                            $("#customizeQualifyModal").modal("show")
+                        }, 2000);
+                    });
+                }, 50);
+            })
+
+            $("#moreContentBtn").on("click", function () {
+                $("#moreContentModal").modal("show")
+            })
+
+            $(".collapse").each(function () {
+                if ($(this).hasClass("show")) {
+                    var arrowIcon = $(this).prev('button').find("img")
+                    arrowIcon.css({
+                        'transform': 'rotate(180deg)',
+                        'transition': 'transform 0.3s ease'
+                    })
+                } else {
+                    $(this).prev('button').find("img").css('transform', '');
+                }
+            })
+
+            $(".collapse-button").on("click", function () {
+                if (!$(this).next("div").hasClass("show")) {
+                    var arrowIcon = $(this).find("img")
+                    arrowIcon.css({
+                        'transform': 'rotate(180deg)',
+                        'transition': 'transform 0.3s ease'
+                    })
+                } else {
+                    $(this).find("img").css('transform', '');
+                }
+            })
+
+            $(".advanced-collapse-btn").on("click", function () {
+                if (!$(this).next("div").hasClass("show")) {
+                    var arrowIcon = $(this).find("img")
+                    arrowIcon.css({
+                        'transform': 'rotate(180deg)',
+                        'transition': 'transform 0.3s ease'
+                    })
+                } else {
+                    $(this).find("img").css('transform', '');
+                }
+            })
         })
     </script>
 </body>
