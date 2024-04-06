@@ -192,6 +192,11 @@ select{
     justify-content: flex-end;
 }
 
+.flex-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .custom-control-input:checked~.custom-control-label::before{
     background-color: var(--primary);
     border-top-color: var(--primary);
