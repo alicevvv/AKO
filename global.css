@@ -98,6 +98,9 @@ main {
 .btn:hover,
 .btn:active,
 .btn:focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     outline: none;
     color: var(--primary);
@@ -212,4 +215,8 @@ select{
 .custom-control-input:not(:disabled):active~.custom-control-label::before{
     background-color: var(--light-green);
     border-color: var(--light-green);
+}
+
+tbody tr:hover, .yellow-badge img:hover, .gray-badge img:hover {
+    cursor: pointer;
 }
