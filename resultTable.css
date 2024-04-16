@@ -22,6 +22,10 @@
   font-weight: bold;
 }
 
+.qa-badge-error {
+  background-color: var(--bs-danger);
+}
+
 .warning-badge {
   background-color: var(--bs-warning);
   border-radius: 8px;
