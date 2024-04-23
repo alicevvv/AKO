@@ -391,7 +391,7 @@
                                         時間區間
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">當前月份</a>
+                                        <a class="dropdown-item active" href="#">當前月份</a>
                                         <a class="dropdown-item" href="#">上個月</a>
                                         <a class="dropdown-item" href="#">近 30 天</a>
                                         <a class="dropdown-item" href="#">近 90 天</a>
@@ -464,7 +464,7 @@
                                         專員
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">全部</a>
+                                        <a class="dropdown-item active" href="#">全部</a>
                                         <a class="dropdown-item" href="#">林OO 0001</a>
                                         <a class="dropdown-item" href="#">江OO 0002</a>
                                         <a class="dropdown-item" href="#">劉OO 0003</a>
@@ -524,7 +524,10 @@
                                 <span class="">285</span>
                                 筆資料
                             </div>
-                            <div>全部</div>
+                            <div class="search-filter">
+                                當前月份 / 基本質檢異常、進階質檢異常 / 林OO 0001 / 金管會、NCC、找主管
+                                <button class="btn">取消搜尋</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -727,7 +730,7 @@
                 </div>
             </div>
             <div id="resultTable">
-                <div class="container pt-3">
+                <div class="container pt-2">
                     <table class="result-table table table-hover">
                         <thead>
                             <tr>
