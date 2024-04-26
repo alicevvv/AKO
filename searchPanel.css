@@ -116,6 +116,10 @@
     border: 1px solid var(--bs-gray-400);
 }
 
+.customize-period-modal .advanced-form-group input {
+    width: 262;
+}
+
 .advanced-modal .advanced-form-group .advanced-title{
     width: 112px;
     font-weight: bold;
@@ -128,6 +132,10 @@
   gap: 0px;
   margin-bottom: 0;
   flex-wrap: nowrap;
+}
+
+.advanced-modal .input-group.date {
+    width: 160px;
 }
 
 .advanced-modal .input-group.date input {
