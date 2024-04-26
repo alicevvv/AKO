@@ -7,6 +7,9 @@
 .result-table thead tr th {
     padding: 6px 12px;
     border-bottom-width: 1px;
+}
+
+.result-table thead tr th.sort-available:hover {
     cursor: pointer;
 }
 
