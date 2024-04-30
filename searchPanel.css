@@ -170,12 +170,12 @@
 .fa-chevron-left:before{content:"<"}
 .fa-chevron-right:before{content:">"}
 .fa-arrow-up:before{
-    content: url("./assets/arrow-up.svg");
+    content: url("../assets/arrow-up.svg");
     height: 24px;
     line-height: 24px;
 }
 .fa-arrow-down:before{
-    content: url("./assets/arrow-down.svg");
+    content: url("../assets/arrow-down.svg");
     height: 24px;
     line-height: 24px;
 }
