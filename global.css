@@ -94,13 +94,16 @@ main {
     padding-top: 1rem;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn,
 .btn:hover,
 .btn:active,
 .btn:focus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: none;
     outline: none;
     color: var(--primary);

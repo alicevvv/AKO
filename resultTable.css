@@ -278,10 +278,6 @@
   cursor: pointer;
 }
 
-.qualify-container #advancedQualifyCollapse .card {
-  display: inline-block;
-}
-
 #moreContentModal .modal-body {
   max-height: 75vh;
   overflow-y: auto;
