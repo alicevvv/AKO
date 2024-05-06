@@ -45,6 +45,12 @@
   gap: 12px;
 }
 
+@media (max-width: 1024px) {
+  .filter-container {
+    gap: 4px;
+  }
+}
+
 .search-panel .dropdown button {
   color: #444;
   font-size: 18px;
@@ -56,6 +62,7 @@
   font-size: 16px;
   background-color: var(--bg-light-gray);
   border-radius: 4px;
+  text-wrap: nowrap;
 }
 
 .remit-btn {
@@ -103,27 +110,27 @@
 }
 
 .advanced-modal .advanced-form-group {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
 }
 
 .advanced-modal .advanced-form-group input,
-.advanced-modal .advanced-form-group select{
-    width: 250px;
-    height: 32px;
-    border: 1px solid var(--bs-gray-400);
+.advanced-modal .advanced-form-group select {
+  width: 250px;
+  height: 32px;
+  border: 1px solid var(--bs-gray-400);
 }
 
 .customize-period-modal .advanced-form-group input {
-    width: 262;
+  width: 262;
 }
 
-.advanced-modal .advanced-form-group .advanced-title{
-    width: 112px;
-    font-weight: bold;
-    text-wrap: nowrap;
+.advanced-modal .advanced-form-group .advanced-title {
+  width: 112px;
+  font-weight: bold;
+  text-wrap: nowrap;
 }
 
 .advanced-modal .input-group.date {
@@ -135,7 +142,7 @@
 }
 
 .advanced-modal .input-group.date {
-    width: 160px;
+  width: 160px;
 }
 
 .advanced-modal .input-group.date input {
@@ -145,37 +152,42 @@
 }
 
 .advanced-modal .input-group.date .input-group-append {
-    border-left: none;
+  border-left: none;
 }
 .advanced-modal .input-group.date .input-group-text {
-    height: 32px;
+  height: 32px;
   background-color: white;
 }
 
-
-.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover,.bootstrap-datetimepicker-widget table td span.active{
-    background-color: var(--primary);
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover,
+.bootstrap-datetimepicker-widget table td span.active {
+  background-color: var(--primary);
 }
 
-.bootstrap-datetimepicker-widget table td.today:before{
-    border-bottom-color: var(--primary);
+.bootstrap-datetimepicker-widget table td.today:before {
+  border-bottom-color: var(--primary);
 }
 
 .bootstrap-datetimepicker-widget table td,
-.bootstrap-datetimepicker-widget table td span{
-    height: 32px;
-    line-height: 32px;
+.bootstrap-datetimepicker-widget table td span {
+  height: 32px;
+  line-height: 32px;
 }
 
-.fa-chevron-left:before{content:"<"}
-.fa-chevron-right:before{content:">"}
-.fa-arrow-up:before{
-    content: url("../assets/arrow-up.svg");
-    height: 24px;
-    line-height: 24px;
+.fa-chevron-left:before {
+  content: "<";
 }
-.fa-arrow-down:before{
-    content: url("../assets/arrow-down.svg");
-    height: 24px;
-    line-height: 24px;
+.fa-chevron-right:before {
+  content: ">";
+}
+.fa-arrow-up:before {
+  content: url("../assets/arrow-up.svg");
+  height: 24px;
+  line-height: 24px;
+}
+.fa-arrow-down:before {
+  content: url("../assets/arrow-down.svg");
+  height: 24px;
+  line-height: 24px;
 }

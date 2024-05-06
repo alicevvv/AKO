@@ -736,6 +736,9 @@
                                     <div class="table-head-container">進階質檢</div>
                                 </th>
                                 <th scope="col">
+                                    <div class="table-head-container">平均分數</div>
+                                </th>
+                                <th scope="col">
                                     <div class="table-head-container">自訂質檢</div>
                                 </th>
                                 <th scope="col" class="sort-available">日期 / 時間 <img src="./assets/arrow-up-active.svg">
@@ -751,6 +754,7 @@
                                 </td>
                                 <td><span class="warning-badge">NCC</span></td>
                                 <td><span class="text-bold">6 / 6 / 5</span></td>
+                                <td><span class="text-bold">5.1</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 09:22</span></td>
                             </tr>
@@ -761,6 +765,7 @@
                                 <td><span class="qa-badge qa-badge-error">不正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 8 / 7</span></td>
+                                <td><span class="text-bold">7.3</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 09:35</span></td>
                             </tr>
@@ -771,6 +776,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 7 / 7</span></td>
+                                <td><span class="text-bold">7</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 09:44</span></td>
                             </tr>
@@ -781,6 +787,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">8 / 9 / 8</span></td>
+                                <td><span class="text-bold">8.3</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 11:23</span></td>
                             </tr>
@@ -791,6 +798,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="warning-badge">金管會</span></td>
                                 <td><span class="text-bold">4 / 5 / 4</span></td>
+                                <td><span class="text-bold">4.3</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 12:25</span></td>
                             </tr>
@@ -801,6 +809,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="warning-badge">找主管…</span></td>
                                 <td><span class="text-bold">6 / 5 / 7</span></td>
+                                <td><span class="text-bold">6</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 14:25</span></td>
                             </tr>
@@ -811,6 +820,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="warning-badge">申訴</span></td>
                                 <td><span class="text-red text-bold">3 / 2 / 3</span></td>
+                                <td><span class="text-red text-bold">2.7</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 16:52</span></td>
                             </tr>
@@ -821,6 +831,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">8 / 6 / 7</span></td>
+                                <td><span class="text-bold">7</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 19:38</span></td>
                             </tr>
@@ -831,6 +842,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">6 / 6 / 6</span></td>
+                                <td><span class="text-bold">6</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 21:21</span></td>
                             </tr>
@@ -841,6 +853,7 @@
                                 <td><span class="qa-badge">正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 9 / 8</span></td>
+                                <td><span class="text-bold">8</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-time">2023/11/12 22:56</span></td>
                             </tr>
@@ -1118,7 +1131,20 @@
                                                 </button>
                                                 <div class="collapse show" id="customizeQualifyCollapse">
                                                     <div class="card card-body">
-                                                        <span>自訂質檢內容</span>
+                                                        <select class="customize-qualify-select">
+                                                            <option value="自訂質檢1">自訂質檢1</option>
+                                                            <option value="自訂質檢2">自訂質檢2</option>
+                                                            <option value="自訂質檢3">自訂質檢3</option>
+                                                            <option value="自訂質檢4">自訂質檢4</option>
+                                                            <option value="自訂質檢5">自訂質檢5</option>
+                                                            <option value="自訂質檢6">自訂質檢6</option>
+                                                            <option value="自訂質檢7">自訂質檢7</option>
+                                                            <option value="自訂質檢8">自訂質檢8</option>
+                                                            <option value="自訂質檢9">自訂質檢9</option>
+                                                            <option value="自訂質檢10">自訂質檢10</option>
+                                                        </select>
+                                                        <span>
+                                                            在這段對話中，沒有出現明顯的不禮貌語言。客戶和客服之間的對話主要圍繞技術問題和解決方案，雖然客戶表現出一些焦急和不耐煩，但沒有使用粗魯或不適當的語言。因此，可以說這段對話中沒有不禮貌的語言。</span>
                                                     </div>
                                                 </div>
                                             </div>

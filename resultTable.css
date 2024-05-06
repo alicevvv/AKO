@@ -5,21 +5,21 @@
 }
 
 .result-table thead tr th {
-    padding: 6px 12px;
-    border-bottom-width: 1px;
+  padding: 6px 12px;
+  border-bottom-width: 1px;
 }
 
 .result-table thead tr th.sort-available:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .result-table thead tr th:hover {
-    opacity: 0.65;
+  opacity: 0.65;
 }
 
-.result-table thead tr th .table-head-container{
-    display: flex;
-    justify-content: space-between;
+.result-table thead tr th .table-head-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .result-table tr th:last-child,
@@ -261,6 +261,13 @@
   font-weight: bold;
   background-color: var(--bg-light-gray);
   border-radius: 4px 4px 0 0;
+}
+
+.customize-qualify-select {
+  width: 240px;
+  height: 36px;
+  border: var(--gray) 1px solid;
+  margin-bottom: 12px;
 }
 
 .qualify-container .card {
