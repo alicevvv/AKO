@@ -192,6 +192,10 @@ select{
     border-radius: 4px;
 }
 
+.flex {
+    display: flex;
+}
+
 .flex-center{
     display: flex;
     justify-content: center;
@@ -210,6 +214,11 @@ select{
 .flex-reverse{
     display: flex;
     flex-direction: row-reverse;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .custom-control-input:checked~.custom-control-label::before{
