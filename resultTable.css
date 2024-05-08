@@ -293,6 +293,17 @@
   padding: 6px 12px;
 }
 
+.qualify-header #advancedQualifyBtn,
+.qualify-header #customizeQualifyBtn {
+  width: 88px;
+}
+
+.qualify-header #advancedQualifyBtn img,
+.qualify-header #customizeQualifyBtn img {
+  width: 20px;
+  height: 20px;
+}
+
 .qualify-header .buttons-group {
   display: flex;
   gap: 16px;

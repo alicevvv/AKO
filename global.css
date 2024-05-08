@@ -241,3 +241,16 @@ select{
 tbody tr:hover, .yellow-badge img:hover, .gray-badge img:hover {
     cursor: pointer;
 }
+
+.loading-icon{
+    animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

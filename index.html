@@ -1255,7 +1255,8 @@
                                                     <div class="collapse-title mb-0">
                                                         質檢資訊</div>
                                                     <div class="buttons-group">
-                                                        <button class="btn btn-primary">進階質檢</button>
+                                                        <button class="btn btn-primary"
+                                                            id="advancedQualifyBtn">進階質檢</button>
                                                         <button class="btn btn-primary"
                                                             id="customizeQualifyBtn">自訂質檢</button>
                                                         <button class="btn btn-download">
@@ -1607,16 +1608,24 @@
                 $("#detailModal").modal("show")
             })
 
+            $("#advancedQualifyBtn").on("click", function () {
+                var originalText = $(this).text();
+                $(this).html('<img src="./assets/loading.svg" class="loading-icon" alt="loading">');
+
+                setTimeout(function () {
+                    $("#advancedQualifyBtn").text(originalText);
+                }, 2000);
+            })
+
             $("#customizeQualifyBtn").on("click", function () {
-                setTimeout(() => {
-                    $("#loading").show()
-                    $("#loading").load("./loading.html", () => {
-                        setTimeout(() => {
-                            $("#loading").hide();
-                            $("#customizeQualifyModal").modal("show")
-                        }, 2000);
-                    });
-                }, 50);
+                var originalText = $(this).text();
+                $(this).html('<img src="./assets/loading.svg" class="loading-icon" alt="loading">');
+
+                setTimeout(function () {
+                    $("#customizeQualifyBtn").text(originalText);
+                    $("#customizeQualifyModal").modal("show")
+                }, 2000);
+
             })
 
             $("#moreContentBtn").on("click", function () {
