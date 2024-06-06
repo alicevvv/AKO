@@ -7,6 +7,8 @@
 .result-table thead tr th {
   padding: 6px 12px;
   border-bottom-width: 1px;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .result-table thead tr th.sort-available:hover {
@@ -27,12 +29,27 @@
   text-align: end;
 }
 
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+}
+
 .qa-badge {
+  display: block;
+  width: fit-content;
   background-color: var(--bs-success);
   border-radius: 8px;
   color: white;
   padding: 8px 10px;
   font-weight: bold;
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.qa-badge-normal {
+  background-color: var(--bg-gray);
 }
 
 .qa-badge-error {
@@ -40,12 +57,16 @@
 }
 
 .warning-badge {
+  display: block;
+  width: fit-content;
   background-color: var(--bs-warning);
   border-radius: 8px;
   color: var(--dark);
   height: fit-content;
   padding: 8px 10px;
   font-weight: bold;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .no-data-text {

@@ -720,8 +720,11 @@
                                     <div class="table-head-container">專員<img src="./assets/arrow-up-active.svg"></div>
                                 </th>
                                 <th scope="col" class="sort-available">
-                                    <div class="table-head-container">電話號碼<img src="./assets/arrow-down-active.svg">
+                                    <div class="table-head-container">被叫號<img src="./assets/arrow-down-active.svg">
                                     </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">IB/OB</div>
                                 </th>
                                 <th scope="col">
                                     <div class="table-head-container">技能</div>
@@ -732,6 +735,9 @@
                                 <th scope="col">
                                     <div class="table-head-container">敏感詞</div>
                                 </th>
+                                <th scope="col" style="min-width:120px;max-width: 200px;">
+                                    <div class="table-head-container">關鍵詞</div>
+                                </th>
                                 <th scope="col">
                                     <div class="table-head-container">進階質檢</div>
                                 </th>
@@ -741,6 +747,9 @@
                                 <th scope="col">
                                     <div class="table-head-container">自訂質檢</div>
                                 </th>
+                                <th scope="col">
+                                    <div class="table-head-container">長度</div>
+                                </th>
                                 <th scope="col" class="sort-available">日期 / 時間 <img src="./assets/arrow-up-active.svg">
                                 </th>
                             </tr>
@@ -748,113 +757,150 @@
                         <tbody>
                             <tr>
                                 <th scope="row">李OO</th>
-                                <td><span class="text-bold">0922435001</span></td>
-                                <td>報修</td>
-                                <td><span class="qa-badge">正常</span>
+                                <td><span class="text-bold">callee-A-2</span></td>
+                                <td><span class="text-bold">IB</span></td>
+                                <td><span class="text-bold">技能-A-1</span></td>
+                                <td><span class="qa-badge qa-badge-normal">有疊話</span></td>
+                                <td>
+                                    <span class="warning-badge">敏感詞-A-1</span>
                                 </td>
-                                <td><span class="warning-badge">NCC</span></td>
+                                <td>
+                                    <div class="badge-group">
+                                        <span class="qa-badge qa-badge-normal">斷線</span>
+                                        <span class="qa-badge qa-badge-normal">金管會</span>
+                                        <span>...</span>
+                                    </div>
+                                </td>
                                 <td><span class="text-bold">6 / 6 / 5</span></td>
                                 <td><span class="text-bold">5.1</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">02"00</span></td>
                                 <td><span class="text-time">2023/11/12 09:22</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">張OO</th>
-                                <td><span class="text-bold">09331120445</span></td>
-                                <td>報修</td>
-                                <td><span class="qa-badge qa-badge-error">不正常</span></td>
+                                <td><span class="text-bold">callee-A-3</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
+                                <td><span class="qa-badge qa-badge-error" id="unusualModalBtn">不正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 8 / 7</span></td>
                                 <td><span class="text-bold">7.3</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">01"00</span></td>
                                 <td><span class="text-time">2023/11/12 09:35</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">陳OO</th>
-                                <td><span class="text-bold">0955125111</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 7 / 7</span></td>
                                 <td><span class="text-bold">7</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"45</span></td>
                                 <td><span class="text-time">2023/11/12 09:44</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">李OO</th>
-                                <td><span class="text-bold">0988442331</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">8 / 9 / 8</span></td>
                                 <td><span class="text-bold">8.3</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"45</span></td>
                                 <td><span class="text-time">2023/11/12 11:23</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">張OO</th>
-                                <td><span class="text-bold">091122334</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
-                                <td><span class="warning-badge">金管會</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="qa-badge qa-badge-normal">金管會</span></td>
                                 <td><span class="text-bold">4 / 5 / 4</span></td>
                                 <td><span class="text-bold">4.3</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"32</span></td>
                                 <td><span class="text-time">2023/11/12 12:25</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">陳OO</th>
-                                <td><span class="text-bold">0932159876</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">IB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
-                                <td><span class="warning-badge">找主管…</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="qa-badge qa-badge-normal">找主管…</span></td>
                                 <td><span class="text-bold">6 / 5 / 7</span></td>
                                 <td><span class="text-bold">6</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"55</span></td>
                                 <td><span class="text-time">2023/11/12 14:25</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">李OO</th>
-                                <td><span class="text-bold">0223334567</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
-                                <td><span class="warning-badge">申訴</span></td>
+                                <td><span class="no-data-text">無</span></td>
+                                <td><span class="qa-badge qa-badge-normal">申訴</span></td>
                                 <td><span class="text-red text-bold">3 / 2 / 3</span></td>
                                 <td><span class="text-red text-bold">2.7</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"55</span></td>
                                 <td><span class="text-time">2023/11/12 16:52</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">張OO</th>
-                                <td><span class="text-bold">04356789</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">8 / 6 / 7</span></td>
                                 <td><span class="text-bold">7</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"55</span></td>
                                 <td><span class="text-time">2023/11/12 19:38</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">陳OO</th>
-                                <td><span class="text-bold">0965277883</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">IB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">6 / 6 / 6</span></td>
                                 <td><span class="text-bold">6</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"55</span></td>
                                 <td><span class="text-time">2023/11/12 21:21</span></td>
                             </tr>
                             <tr>
                                 <th scope="row">林OO</th>
-                                <td><span class="text-bold">0925456988</span></td>
-                                <td>報修</td>
+                                <td><span class="text-bold">callee-A-4</span></td>
+                                <td><span class="text-bold">OB</span></td>
+                                <td><span class="text-bold">技能-A-2</span></td>
                                 <td><span class="qa-badge">正常</span></td>
+                                <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 9 / 8</span></td>
                                 <td><span class="text-bold">8</span></td>
                                 <td><span class="no-data-text">無</span></td>
+                                <td><span class="text-bold">00"55</span></td>
                                 <td><span class="text-time">2023/11/12 22:56</span></td>
                             </tr>
                         </tbody>
@@ -1638,6 +1684,10 @@
 
             $("#moreContentBtn").on("click", function () {
                 $("#moreContentModal").modal("show")
+            })
+
+            $("#unusualModalBtn").on("click", function (event) {
+                event.stopPropagation()
             })
 
             $(".collapse").each(function () {
