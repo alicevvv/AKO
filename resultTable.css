@@ -56,6 +56,10 @@
   background-color: var(--bs-danger);
 }
 
+.qa-badge-error.btn:hover {
+  color: white;
+}
+
 .warning-badge {
   display: block;
   width: fit-content;
@@ -381,4 +385,14 @@
 #moreContentModal .modal-body {
   max-height: 75vh;
   overflow-y: auto;
+}
+
+.unusual-container {
+  padding: 8px 0;
+}
+
+.unusual-container ul li {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }

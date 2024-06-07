@@ -782,7 +782,7 @@
                                 <td><span class="text-bold">callee-A-3</span></td>
                                 <td><span class="text-bold">OB</span></td>
                                 <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge qa-badge-error" id="unusualModalBtn">不正常</span></td>
+                                <td><span class="qa-badge qa-badge-error btn" id="unusualModalBtn">不正常</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="no-data-text">無</span></td>
                                 <td><span class="text-bold">7 / 8 / 7</span></td>
@@ -1388,6 +1388,54 @@
                     </div>
                 </div>
 
+                <div class="modal fade" id="unusualModal" tabindex="-1" aria-labelledby="unusualModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">張OO</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="unusual-container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><span class="label">疊話</span></li>
+                                                        <li><span class="label">敏感</span></li>
+                                                        <li><span class="label">未3</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><span class="label">開頭</span></li>
+                                                        <li><span class="label">未1</span></li>
+                                                        <li><span class="label">未4</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><span class="label">結尾</span></li>
+                                                        <li><span class="label">未2</span></li>
+                                                        <li><span class="label">未5</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="modal fade" id="customizeQualifyModal" tabindex="-1" aria-labelledby="customizeQualifyModal"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -1688,6 +1736,7 @@
 
             $("#unusualModalBtn").on("click", function (event) {
                 event.stopPropagation()
+                $("#unusualModal").modal("show")
             })
 
             $(".collapse").each(function () {
