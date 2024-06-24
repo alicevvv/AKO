@@ -273,6 +273,11 @@
   border-left: 2px solid var(--bg-light-gray);
 }
 
+.basic-info-container .file-name-container {
+  display: flex;
+  align-items: center;
+}
+
 .basic-info-container .quantity {
   padding-left: 16px;
 }
@@ -413,7 +418,6 @@
 }
 
 .unusual-info-detail ul {
-  /* width: 33.3%; */
   margin-bottom: 0;
 }
 

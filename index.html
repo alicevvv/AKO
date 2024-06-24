@@ -418,6 +418,14 @@
                                             <div class="dropdown-item">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input"
+                                                        id="qualifyCheckbox6">
+                                                    <label class="custom-control-label" for="qualifyCheckbox6">進階質檢全部
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
                                                         id="qualifyCheckbox1">
                                                     <label class="custom-control-label" for="qualifyCheckbox1">基本質檢異常
                                                     </label>
@@ -1307,6 +1315,16 @@
                                                                             08:10
                                                                         </div>
                                                                     </div>
+                                                                    <div class="col-12">
+                                                                        <div class="file-name-container">
+                                                                            <span class="text-bold">檔名：</span>
+                                                                            <span id="copyFileName">2024-06-01</span>
+                                                                            <button class="btn" id="copyButton">
+                                                                                <img src="./assets/copy.svg"
+                                                                                    alt="copy-file-name" />
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="quantity">
@@ -1788,6 +1806,11 @@
                 } else {
                     $(this).find("img").css('transform', '');
                 }
+            })
+
+            $("#copyButton").on("click", function () {
+                var textToCopy = $('#copyFileName').text();
+                navigator.clipboard.writeText(textToCopy)
             })
         })
     </script>
