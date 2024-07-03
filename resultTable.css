@@ -5,14 +5,10 @@
 }
 
 .result-table thead tr th {
-  padding: 6px 12px;
+  padding: 6px 8px;
   border-bottom-width: 1px;
   text-wrap: nowrap;
   white-space: nowrap;
-}
-
-.result-table thead tr th.sort-available:hover {
-  cursor: pointer;
 }
 
 .result-table thead tr th:hover {
@@ -22,6 +18,22 @@
 .result-table thead tr th .table-head-container {
   display: flex;
   justify-content: space-between;
+}
+
+.result-table thead tr th .table-head-container.align-left {
+  justify-content: end;
+}
+
+.table-head-container .sort-icon-group {
+  display: inline-table;
+}
+
+.table-head-container .sort-icon-group img {
+  fill: var(--primary);
+}
+
+.table-head-container .sort-icon-group img.active {
+  fill: var(--gray);
 }
 
 .result-table tr th:last-child,
