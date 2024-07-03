@@ -18,6 +18,7 @@
 .result-table thead tr th .table-head-container {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .result-table thead tr th .table-head-container.align-left {

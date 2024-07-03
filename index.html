@@ -40,6 +40,7 @@
                                 <li class="dropdown-item" id="customizeWordsSettingBtn">自訂質檢</li>
                                 <li class="dropdown-item" id="commissionersBtn">專員代碼姓名</li>
                                 <li class="dropdown-item" id="skillMaintainBtn">維護技能</li>
+                                <li class="dropdown-item" id="startEndWordsBtn">開頭結尾語</li>
                                 <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
                                 <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
                             </ul>
@@ -227,6 +228,116 @@
                                         報修2
                                         <img src="./assets/close.svg">
                                     </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="startEndWordsModal" tabindex="-1" aria-labelledby="startEndWordsModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">開頭結尾語</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group has-checkbox">
+                                    <input type="text" maxlength="12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="ibSettingCheckbox">
+                                        <label class="custom-control-label" for="ibSettingCheckbox">IB
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="obSettingCheckbox">
+                                        <label class="custom-control-label" for="obSettingCheckbox">OB
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary">新增</button>
+                                </div>
+                                <div class="start-end-words-container">
+                                    <ul>
+                                        <li>
+                                            <div class="start-end-word-group">
+                                                <div class="word">這邊總共會是十二個字展示</div>
+                                                <div class="setting-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordIbSettingCheckbox0">
+                                                        <label class="custom-control-label"
+                                                            for="wordIbSettingCheckbox0">IB
+                                                        </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordObSettingCheckbox0">
+                                                        <label class="custom-control-label"
+                                                            for="wordObSettingCheckbox0">OB
+                                                        </label>
+                                                    </div>
+                                                    <div class="btn delete-btn p-0">
+                                                        <img src="./assets/trash.svg" alt="delete-words">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="start-end-word-group">
+                                                <div class="word">開頭開頭開頭開頭</div>
+                                                <div class="setting-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordIbSettingCheckbox2">
+                                                        <label class="custom-control-label"
+                                                            for="wordIbSettingCheckbox2">IB
+                                                        </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordObSettingCheckbox2">
+                                                        <label class="custom-control-label"
+                                                            for="wordObSettingCheckbox2">OB
+                                                        </label>
+                                                    </div>
+                                                    <div class="btn delete-btn p-0">
+                                                        <img src="./assets/trash.svg" alt="delete-words">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <div class="start-end-word-group">
+                                                <div class="word">開頭開頭開頭</div>
+                                                <div class="setting-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordIbSettingCheckbox1">
+                                                        <label class="custom-control-label"
+                                                            for="wordIbSettingCheckbox1">IB
+                                                        </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordObSettingCheckbox1">
+                                                        <label class="custom-control-label"
+                                                            for="wordObSettingCheckbox1">OB
+                                                        </label>
+                                                    </div>
+                                                    <div class="btn delete-btn p-0">
+                                                        <img src="./assets/trash.svg" alt="delete-words">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -1735,6 +1846,10 @@
 
             $("#skillMaintainBtn").on("click", function () {
                 $("#skillMaintainModal").modal("show")
+            })
+
+            $("#startEndWordsBtn").on("click", function () {
+                $("#startEndWordsModal").modal("show")
             })
 
             $("#editPasswordBtn").on("click", function () {
