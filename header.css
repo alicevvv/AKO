@@ -85,13 +85,29 @@ header {
   align-items: center;
 }
 
+.modal-body .start-end-word-setting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-body .start-end-word-setting .divider,
+.modal-body .setting-group .divider {
+  width: 2px;
+  height: 24px;
+  background-color: var(--bs-gray-200);
+  margin: 0px 8px;
+}
+
 .modal-body .start-end-words-container {
   display: flex;
   gap: 32px;
+  max-height: 345px;
+  overflow-y: scroll;
 }
 
 .modal-body .start-end-words-container ul {
-  width: 50%;
+  width: 100%;
   padding-left: 20px;
 }
 
@@ -99,8 +115,12 @@ header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding: 12px 0 8px 0;
+  padding: 12px 8px 8px 8px;
   border-bottom: 2px solid var(--bg-light-gray);
+}
+
+.modal-body .start-end-word-group:hover {
+  background-color: var(--bg-light-gray);
 }
 
 .modal-body .start-end-word-group .word {

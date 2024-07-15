@@ -249,15 +249,30 @@
                             <div class="modal-body px-4">
                                 <div class="input-group has-checkbox">
                                     <input type="text" maxlength="12">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="ibSettingCheckbox">
-                                        <label class="custom-control-label" for="ibSettingCheckbox">IB
-                                        </label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="obSettingCheckbox">
-                                        <label class="custom-control-label" for="obSettingCheckbox">OB
-                                        </label>
+                                    <div class="start-end-word-setting">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ibSettingCheckbox">
+                                            <label class="custom-control-label" for="ibSettingCheckbox">IB
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="obSettingCheckbox">
+                                            <label class="custom-control-label" for="obSettingCheckbox">OB
+                                            </label>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="startWordSettingCheckbox">
+                                            <label class="custom-control-label" for="startWordSettingCheckbox">開頭語
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="endWordSettingCheckbox">
+                                            <label class="custom-control-label" for="endWordSettingCheckbox">結尾語
+                                            </label>
+                                        </div>
                                     </div>
                                     <button class="btn btn-primary">新增</button>
                                 </div>
@@ -279,6 +294,60 @@
                                                             id="wordObSettingCheckbox0">
                                                         <label class="custom-control-label"
                                                             for="wordObSettingCheckbox0">OB
+                                                        </label>
+                                                    </div>
+                                                    <div class="divider"></div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="startWordSettingCheckbox0">
+                                                        <label class="custom-control-label"
+                                                            for="startWordSettingCheckbox0">開頭語
+                                                        </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="endWordSettingCheckbox0">
+                                                        <label class="custom-control-label"
+                                                            for="endWordSettingCheckbox0">結尾語
+                                                        </label>
+                                                    </div>
+                                                    <div class="btn delete-btn p-0">
+                                                        <img src="./assets/trash.svg" alt="delete-words">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="start-end-word-group">
+                                                <div class="word">開頭開頭開頭</div>
+                                                <div class="setting-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordIbSettingCheckbox1">
+                                                        <label class="custom-control-label"
+                                                            for="wordIbSettingCheckbox1">IB
+                                                        </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="wordObSettingCheckbox1">
+                                                        <label class="custom-control-label"
+                                                            for="wordObSettingCheckbox1">OB
+                                                        </label>
+                                                    </div>
+                                                    <div class="divider"></div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="startWordSettingCheckbox1">
+                                                        <label class="custom-control-label"
+                                                            for="startWordSettingCheckbox1">開頭語
+                                                        </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="endWordSettingCheckbox1">
+                                                        <label class="custom-control-label"
+                                                            for="endWordSettingCheckbox1">結尾語
                                                         </label>
                                                     </div>
                                                     <div class="btn delete-btn p-0">
@@ -305,30 +374,19 @@
                                                             for="wordObSettingCheckbox2">OB
                                                         </label>
                                                     </div>
-                                                    <div class="btn delete-btn p-0">
-                                                        <img src="./assets/trash.svg" alt="delete-words">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <div class="start-end-word-group">
-                                                <div class="word">開頭開頭開頭</div>
-                                                <div class="setting-group">
+                                                    <div class="divider"></div>
                                                     <div class="custom-control custom-checkbox">
                                                         <input type="checkbox" class="custom-control-input"
-                                                            id="wordIbSettingCheckbox1">
+                                                            id="startWordSettingCheckbox2">
                                                         <label class="custom-control-label"
-                                                            for="wordIbSettingCheckbox1">IB
+                                                            for="startWordSettingCheckbox2">開頭語
                                                         </label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
                                                         <input type="checkbox" class="custom-control-input"
-                                                            id="wordObSettingCheckbox1">
+                                                            id="endWordSettingCheckbox2">
                                                         <label class="custom-control-label"
-                                                            for="wordObSettingCheckbox1">OB
+                                                            for="endWordSettingCheckbox2">結尾語
                                                         </label>
                                                     </div>
                                                     <div class="btn delete-btn p-0">
