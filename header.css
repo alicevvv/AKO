@@ -91,18 +91,26 @@ header {
   gap: 12px;
 }
 
+.modal-body .start-word-group .ib-ob-setting,
+.modal-body .end-word-group .ib-ob-setting {
+  display: flex;
+  gap: 12px;
+  margin-left: 28px;
+}
+
 .modal-body .start-end-word-setting .divider,
 .modal-body .setting-group .divider {
   width: 2px;
-  height: 24px;
+  height: 32px;
   background-color: var(--bs-gray-200);
   margin: 0px 8px;
 }
 
 .modal-body .start-end-words-container {
+  width: 100%;
   display: flex;
   gap: 32px;
-  max-height: 345px;
+  max-height: 315px;
   overflow-y: scroll;
 }
 
@@ -113,7 +121,7 @@ header {
 
 .modal-body .start-end-word-group {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   padding: 12px 8px 8px 8px;
   border-bottom: 2px solid var(--bg-light-gray);
@@ -129,6 +137,7 @@ header {
 
 .modal-body .start-end-word-group .setting-group {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-left: 12px;
 }
