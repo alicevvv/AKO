@@ -23,8 +23,19 @@
     <main>
         <div id="header">
             <header>
-                <div class="header py-1 px-3 d-flex justify-content-between">
+                <div class="header py-1 px-3 d-flex justify-content-between align-items-center">
                     <img src="./assets/logo-sm.svg" alt="logo">
+                    <div class="search-input header-search-input input-group">
+                        <span class="search-input-icon input-group-text" id="basic-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D5D5D5"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                        <button class="btn">搜尋</button>
+                    </div>
                     <div class="panel">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
@@ -448,155 +459,142 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-labelledby="editPasswordModal"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">更改密碼</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <img src="./assets/modal-close.svg">
-                                    </button>
+                </div>
+                <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-labelledby="editPasswordModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">更改密碼</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="password-input-group">
+                                    <div>舊密碼：</div>
+                                    <input type="text">
                                 </div>
-                                <div class="modal-body px-4">
-                                    <div class="password-input-group">
-                                        <div>舊密碼：</div>
-                                        <input type="text">
-                                    </div>
-                                    <div class="password-input-group">
-                                        <div>新密碼：</div>
-                                        <input type="text">
-                                    </div>
-                                    <div class="password-input-group">
-                                        <div>確認新密碼：</div>
-                                        <input type="text">
-                                    </div>
+                                <div class="password-input-group">
+                                    <div>新密碼：</div>
+                                    <input type="text">
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+                                <div class="password-input-group">
+                                    <div>確認新密碼：</div>
+                                    <input type="text">
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsModal"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">管理帳號</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <img src="./assets/modal-close.svg">
-                                    </button>
+                </div>
+                <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">管理帳號</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <button class="btn btn-primary" id="addAccountBtn">新增帳號</button>
                                 </div>
-                                <div class="modal-body px-4">
-                                    <div class="input-group">
-                                        <button class="btn btn-primary" id="addAccountBtn">新增帳號</button>
+                                <hr>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        member01
+                                        <button class="btn p-0" id="editAccount0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
                                     </div>
-                                    <hr>
-                                    <div class="badge-container">
-                                        <div class="gray-badge">
-                                            member01
-                                            <button class="btn p-0" id="editAccount0">
-                                                <img src="./assets//pencil.svg">
-                                            </button>
-                                            <img src="./assets/close.svg">
-                                        </div>
-                                        <div class="gray-badge">
-                                            member02
-                                            <button class="btn p-0" id="editAccount1">
-                                                <img src="./assets//pencil.svg">
-                                            </button>
-                                            <img src="./assets/close.svg">
-                                        </div>
+                                    <div class="gray-badge">
+                                        member02
+                                        <button class="btn p-0" id="editAccount1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="addAccountModal" tabindex="-1" aria-labelledby="addAccountModal"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">新增帳號</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <img src="./assets/modal-close.svg">
-                                    </button>
+                </div>
+                <div class="modal fade" id="addAccountModal" tabindex="-1" aria-labelledby="addAccountModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">新增帳號</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="password-input-group">
+                                    <div>帳號：</div>
+                                    <input type="text">
                                 </div>
-                                <div class="modal-body px-4">
-                                    <div class="password-input-group">
-                                        <div>帳號：</div>
-                                        <input type="text">
-                                    </div>
-                                    <div class="password-input-group">
-                                        <div>密碼：</div>
-                                        <input type="text">
-                                    </div>
-                                    <div class="password-input-group">
-                                        <div>確認密碼：</div>
-                                        <input type="text">
-                                    </div>
+                                <div class="password-input-group">
+                                    <div>密碼：</div>
+                                    <input type="text">
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">新增</button>
+                                <div class="password-input-group">
+                                    <div>確認密碼：</div>
+                                    <input type="text">
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">新增</button>
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="editAccountModal" tabindex="-1" aria-labelledby="editAccountModal"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">編輯帳號</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <img src="./assets/modal-close.svg">
-                                    </button>
-                                </div>
-                                <div class="modal-body px-4">
-                                    <div class="input-group">
-                                        <div style="flex-grow: 1;">
-                                            <div>專員姓名</div>
-                                            <input type="text" style="width: 100%;" value="李曉芬">
-                                        </div>
-                                        <div style="flex-grow: 1;">
-                                            <div>專員代碼</div>
-                                            <input type="text" style="width: 100%;" value="2578">
-                                        </div>
+                </div>
+                <div class="modal fade" id="editAccountModal" tabindex="-1" aria-labelledby="editAccountModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯帳號</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>專員姓名</div>
+                                        <input type="text" style="width: 100%;" value="李曉芬">
+                                    </div>
+                                    <div style="flex-grow: 1;">
+                                        <div>專員代碼</div>
+                                        <input type="text" style="width: 100%;" value="2578">
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">新增</button>
-                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">新增</button>
                             </div>
                         </div>
                     </div>
+                </div>
             </header>
         </div>
         <div class="content">
             <div id="searchPanel">
                 <div class="search-panel container">
                     <div class="row" style="width: 100%">
-                        <div class="col">
-                            <div class="search-input input-group mb-3">
-                                <span class="search-input-icon input-group-text" id="basic-addon1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D5D5D5"
-                                        class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                    </svg>
-                                </span>
-                                <input type="text" class="form-control" aria-label="Username"
-                                    aria-describedby="basic-addon1">
-                                <button class="btn">搜尋</button>
-                            </div>
-                        </div>
-                        <div class="col">
+                        <div class="col mb-3">
                             <div class="filter-container">
                                 <div class="dropdown">
                                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
@@ -604,13 +602,13 @@
                                         時間區間
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item active" href="#">當前月份</a>
-                                        <a class="dropdown-item" href="#">上個月</a>
+                                        <a class="dropdown-item" href="#">今天</a>
+                                        <a class="dropdown-item" href="#">昨天</a>
+                                        <a class="dropdown-item" href="#">前天</a>
+                                        <a class="dropdown-item active" href="#">近 7 天</a>
+                                        <a class="dropdown-item" href="#">近 15 天</a>
                                         <a class="dropdown-item" href="#">近 30 天</a>
-                                        <a class="dropdown-item" href="#">近 90 天</a>
-                                        <a class="dropdown-item" href="#">今年以來</a>
-                                        <a class="dropdown-item" href="#">全部期間</a>
-                                        <a class="dropdown-item" href="#" id="customizePeriodBtn">自訂期間</a>
+                                        <a class="dropdown-item" href="#">近 60 天</a>
                                     </div>
                                 </div>
                                 <div class="dropdown">
@@ -786,6 +784,59 @@
                                                 </div>
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        IB/IO
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="IbIo0">
+                                                    <label class="custom-control-label" for="IbIo0">全部
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="IbIo1">
+                                                    <label class="custom-control-label" for="IbIo1">IB
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="IbIo2">
+                                                    <label class="custom-control-label" for="IbIo2">IO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="customize-period">
+                                    <div class="customize-period-title">開始時間</div>
+                                    <div class="input-group date" id="customizeStartDatePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeStartDatePicker" />
+                                        <div class="input-group-append" data-target="#customizeStartDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    -
+                                    <div class="input-group date" id="customizeEndDatePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeEndDatePicker" />
+                                        <div class="input-group-append" data-target="#customizeEndDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <button class="advanced-search-btn btn" id="advancedSearchBtn">進階搜尋</button>
@@ -1015,44 +1066,6 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">搜尋</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="customizePeriodModal" tabindex="-1" aria-labelledby="customizePeriodModal"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">自訂期間</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <img src="./assets/modal-close.svg">
-                            </button>
-                        </div>
-                        <div class="advanced-modal customize-period-modal modal-body px-4">
-                            <div class="advanced-form-group">
-                                <div class="advanced-title">開始時間</div>
-                                <div class="input-group date" id="customizeStartDatePicker" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input"
-                                        data-target="#customizeStartDatePicker" />
-                                    <div class="input-group-append" data-target="#customizeStartDatePicker"
-                                        data-toggle="datetimepicker">
-                                        <div class="input-group-text"><img src="./assets/calendar.svg"></div>
-                                    </div>
-                                </div>
-                                -
-                                <div class="input-group date" id="customizeEndDatePicker" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input"
-                                        data-target="#customizeEndDatePicker" />
-                                    <div class="input-group-append" data-target="#customizeEndDatePicker"
-                                        data-toggle="datetimepicker">
-                                        <div class="input-group-text"><img src="./assets/calendar.svg"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
                         </div>
                     </div>
                 </div>
@@ -2107,9 +2120,6 @@
             $('#recordEndTimePicker').datetimepicker({
                 format: 'LT'
             });
-            $("#customizePeriodBtn").on("click", function () {
-                $("#customizePeriodModal").modal("show")
-            })
             $('#customizeStartDatePicker').datetimepicker({
                 format: 'L'
             });
