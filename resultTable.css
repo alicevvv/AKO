@@ -412,11 +412,13 @@
   margin-left: 4px;
 }
 
-.unusual-container {
+.unusual-container,
+.keyword-container {
   position: relative;
 }
 
-.unusual-info-detail {
+.unusual-info-detail,
+.keyword-detail {
   padding: 8px 20px 8px 0;
   color: var(--dark);
   position: absolute;
@@ -430,11 +432,13 @@
   box-shadow: 2px 2px 8px 0 var(--none-gray);
 }
 
-.unusual-info-detail ul {
+.unusual-info-detail ul,
+.keyword-detail ul {
   margin-bottom: 0;
 }
 
-.unusual-info-detail ul li {
+.unusual-info-detail ul li,
+.keyword-detail ul li {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;

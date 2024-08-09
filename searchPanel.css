@@ -11,12 +11,22 @@
   border-radius: 4px 0 0 4px;
 }
 
+.dropdown-menu .search-input .search-input-icon {
+  padding: 2px 4px;
+}
+
 .search-input input {
   border-top: 2px solid var(--bg-light-gray);
   border-bottom: 2px solid var(--bg-light-gray);
   border-left: 0;
   border-right: 0;
   height: 40px;
+}
+
+.dropdown-menu .search-input input {
+  padding: 6px;
+  height: 32px;
+  border-right: 2px solid var(--bg-light-gray);
 }
 
 .search-input input:focus {
@@ -128,8 +138,42 @@
   border: 1px solid var(--bs-gray-400);
 }
 
+.advanced-form-group .dropdown-toggle {
+  border: 1px solid var(--bs-gray-400);
+  width: 250px;
+  color: black;
+  display: flex;
+  justify-content: start;
+}
+.advanced-form-group .dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  right: 12px;
+}
+
+.advanced-modal .advanced-form-group .search-input input {
+  flex-grow: 1;
+  width: auto;
+}
+
+.advanced-modal .advanced-form-group .search-input {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-bottom: 4px;
+}
+
+.advanced-modal .advanced-form-group .search-input-icon {
+  padding: 6px;
+}
+
+.advanced-checkbox-group {
+  display: flex;
+  gap: 12px;
+}
+
 .customize-period-modal .advanced-form-group input {
-  width: 262;
+  width: 262px;
 }
 
 .advanced-modal .advanced-form-group .advanced-title {
@@ -162,6 +206,16 @@
 .advanced-modal .input-group.date .input-group-text {
   height: 32px;
   background-color: white;
+}
+
+.advanced-form-group .advanced-customize-length {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.advanced-form-group .advanced-customize-length input {
+  width: 80px;
 }
 
 .bootstrap-datetimepicker-widget table td.active,

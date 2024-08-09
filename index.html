@@ -685,6 +685,16 @@
                                         專員
                                     </button>
                                     <div class="dropdown-menu">
+                                        <div class="search-input input-group px-2 pb-2">
+                                            <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="搜尋">
+                                        </div>
                                         <a class="dropdown-item active" href="#">全部</a>
                                         <a class="dropdown-item" href="#">林OO 0001</a>
                                         <a class="dropdown-item" href="#">江OO 0002</a>
@@ -903,12 +913,85 @@
                                     </div>
                                 </div>
                                 <div class="advanced-form-group">
+                                    <div class="advanced-title">長度</div>
+                                    <div class="advanced-checkbox-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lengthCheckbox0">
+                                            <label class="custom-control-label" for="lengthCheckbox0"> &lt;1分鐘
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lengthCheckbox1">
+                                            <label class="custom-control-label" for="lengthCheckbox1"> 1~2分鐘
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lengthCheckbox2">
+                                            <label class="custom-control-label" for="lengthCheckbox2"> 2~3分鐘
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lengthCheckbox3">
+                                            <label class="custom-control-label" for="lengthCheckbox3"> 3~4分鐘
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lengthCheckbox4">
+                                            <label class="custom-control-label" for="lengthCheckbox4"> 4~5分鐘
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lengthCheckbox5">
+                                            <label class="custom-control-label" for="lengthCheckbox5"> &gt;5分鐘
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title"></div>
+                                    <div class="advanced-customize-length">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="lengthCheckboxCustomize">
+                                            <label class="custom-control-label" for="lengthCheckboxCustomize"> 自定義
+                                            </label>
+                                        </div>
+                                        <input type="number" class="form-control">
+                                        <span>分</span>
+                                        <input type="number" class="form-control">
+                                        <span>秒</span>
+                                        <img src="./assets/arrow-right.svg">
+                                        <input type="number" class="form-control">
+                                        <span>分</span>
+                                        <input type="number" class="form-control">
+                                        <span>秒</span>
+                                    </div>
+                                </div>
+
+                                <div class="advanced-form-group">
                                     <div class="advanced-title">客服專員代碼</div>
-                                    <select>
-                                        <option value="0101">0101</option>
-                                        <option value="0102">0102</option>
-                                        <option value="0103">0103</option>
-                                    </select>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>全部</span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <div class="search-input input-group px-2 pb-2">
+                                                <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="搜尋">
+                                            </div>
+                                            <a class="dropdown-item active" href="#">全部</a>
+                                            <a class="dropdown-item" href="#">0101</a>
+                                            <a class="dropdown-item" href="#">0102</a>
+                                            <a class="dropdown-item" href="#">0103</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="advanced-form-group">
                                     <div class="advanced-title">技能</div>
@@ -935,44 +1018,41 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="modal fade" id="customizePeriodModal" tabindex="-1" aria-labelledby="customizePeriodModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">自訂期間</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="advanced-modal customize-period-modal modal-body px-4">
-                                <div class="advanced-form-group">
-                                    <div class="advanced-title">開始時間</div>
-                                    <div class="input-group date" id="customizeStartDatePicker"
-                                        data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            data-target="#customizeStartDatePicker" />
-                                        <div class="input-group-append" data-target="#customizeStartDatePicker"
-                                            data-toggle="datetimepicker">
-                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
-                                        </div>
+            </div>
+            <div class="modal fade" id="customizePeriodModal" tabindex="-1" aria-labelledby="customizePeriodModal"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">自訂期間</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <img src="./assets/modal-close.svg">
+                            </button>
+                        </div>
+                        <div class="advanced-modal customize-period-modal modal-body px-4">
+                            <div class="advanced-form-group">
+                                <div class="advanced-title">開始時間</div>
+                                <div class="input-group date" id="customizeStartDatePicker" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input"
+                                        data-target="#customizeStartDatePicker" />
+                                    <div class="input-group-append" data-target="#customizeStartDatePicker"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text"><img src="./assets/calendar.svg"></div>
                                     </div>
-                                    -
-                                    <div class="input-group date" id="customizeEndDatePicker"
-                                        data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            data-target="#customizeEndDatePicker" />
-                                        <div class="input-group-append" data-target="#customizeEndDatePicker"
-                                            data-toggle="datetimepicker">
-                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
-                                        </div>
+                                </div>
+                                -
+                                <div class="input-group date" id="customizeEndDatePicker" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input"
+                                        data-target="#customizeEndDatePicker" />
+                                    <div class="input-group-append" data-target="#customizeEndDatePicker"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text"><img src="./assets/calendar.svg"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
                         </div>
                     </div>
                 </div>
@@ -1101,11 +1181,26 @@
                                 <td>
                                     <span class="warning-badge">敏感詞-A-1</span>
                                 </td>
-                                <td>
+                                <td class="has-more-keywords">
                                     <div class="badge-group">
                                         <span class="qa-badge qa-badge-normal">斷線</span>
                                         <span class="qa-badge qa-badge-normal">金管會</span>
                                         <span>...</span>
+                                    </div>
+                                    <div class="keyword-container">
+                                        <div class="keyword-detail d-none">
+                                            <ul>
+                                                <li><span class="label">斷線</span></li>
+                                                <li><span class="label">保證獲利</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><span class="label">不能看</span></li>
+                                                <li><span class="label">金管會</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><span class="label">網路不通</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </td>
                                 <td><span class="text-bold">6 / 6 / 5</span></td>
@@ -2099,6 +2194,15 @@
 
             $("#unusualInfo0").on("mouseout", function (event) {
                 $(this).find(".unusual-info-detail").addClass("d-none")
+            })
+
+            $('.has-more-keywords').on("mouseover", function (event) {
+
+                $(this).find(".keyword-detail").removeClass("d-none")
+            })
+
+            $('.has-more-keywords').on("mouseout", function (event) {
+                $(this).find(".keyword-detail").addClass("d-none")
             })
 
             $(".unusual-info-detail").on("click", function (event) {
