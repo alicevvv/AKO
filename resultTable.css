@@ -2,6 +2,7 @@
   background-color: white;
   border: 2px solid var(--bg-light-gray);
   border-radius: 4px;
+  font-size: 14px;
 }
 
 .result-table thead tr th {
@@ -91,6 +92,13 @@
 
 .text-time {
   letter-spacing: 1px;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 .result-pagination .page-item {
@@ -260,6 +268,21 @@
   font-size: 14px;
   color: #878787;
   margin: 0 8px;
+}
+
+.conversation-searching-box {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background-color: var(--bg-light-gray);
+  box-shadow: 0px 0px 6px 0 var(--none-gray);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
 }
 
 .collapse-container {
