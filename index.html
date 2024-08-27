@@ -52,7 +52,7 @@
                                 <li class="dropdown-item" id="commissionersBtn">專員代碼姓名</li>
                                 <li class="dropdown-item" id="skillMaintainBtn">維護技能</li>
                                 <li class="dropdown-item" id="startEndWordsBtn">開頭結尾語</li>
-                                <li class="dropdown-item" id="editPasswordBtn">除外名單</li>
+                                <li class="dropdown-item" id="exceptListBtn">除外名單</li>
                                 <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
                                 <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
                             </ul>
@@ -121,23 +121,67 @@
                                 </button>
                             </div>
                             <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <input type="text">
-                                    <button class="btn btn-primary">新增敏感詞</button>
+                                <div class="input-group" style="align-items: start;">
+                                    <div style="width: 200px;">
+                                        <div>新增名稱</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                    <div style="flex-grow: 1;">
+                                        <div>新增內容</div>
+                                        <textarea class="content-textarea" type="text" style="width: 100%;"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary" style="margin-top: 24px;">
+                                        <div>新增敏感詞</div>
+                                    </button>
                                 </div>
                                 <div class="badge-container">
                                     <div class="yellow-badge">
                                         自訂1
+                                        <button class="btn p-0" id="editCustomizeWords0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
                                         <img src="./assets/close.svg">
                                     </div>
                                     <div class="yellow-badge">
                                         自訂2
+                                        <button class="btn p-0" id="editCustomizeWords1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
                                         <img src="./assets/close.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editCustomizeWordsModal" tabindex="-1"
+                    aria-labelledby="editCustomizeWordsModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯自訂質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group" style="align-items: start;">
+                                    <div style="width: 200px;">
+                                        <div>名稱</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                    <div style="flex-grow: 1;">
+                                        <div>內容</div>
+                                        <textarea type="number" style="width: 100%;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
                             </div>
                         </div>
                     </div>
@@ -216,6 +260,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="modal fade" id="skillMaintainModal" tabindex="-1" aria-labelledby="skillMaintainModal"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -457,6 +502,69 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exceptListModal" tabindex="-1" aria-labelledby="exceptListModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">除外名單</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>電話號碼</div>
+                                        <input type="number" style="width: 100%;">
+                                    </div>
+                                    <button class="btn btn-primary">新增</button>
+                                </div>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        callee-A-2
+                                        <button class="btn p-0" id="editExcept0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        callee-A-4
+                                        <button class="btn p-0" id="editExcept1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editExceptModal" tabindex="-1" aria-labelledby="editExceptModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯除外名單</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>電話號碼</div>
+                                        <input type="number" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
                             </div>
                         </div>
                     </div>
@@ -1652,7 +1760,7 @@
                                                     <div class="message-panel flex-reverse">
                                                         <div class="badge">
                                                             <div>
-                                                                <span>您</span>
+                                                                <span class="playing">您</span>
                                                                 <span>好</span>
                                                             </div>
                                                             <textarea class="badge-input"
@@ -1660,9 +1768,9 @@
                                                         </div>
                                                         <div class="tool-panel">
                                                             <button class="btn play-chat-text">
-                                                                <img src="./assets/play.svg" class="play" alt="play">
-                                                                <img src="./assets/pause.svg" class="pause" alt="pause"
+                                                                <img src="./assets/play.svg" class="play" alt="play"
                                                                     style="display: none;">
+                                                                <img src="./assets/pause.svg" class="pause" alt="pause">
                                                             </button>
                                                             <button class="btn edit-chat-text">
                                                                 <img src="./assets/pencil.svg" alt="edit">
@@ -1872,6 +1980,17 @@
                                                     <div class="time">PM 06:03</div>
                                                     <div class="edited"></div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="conversation-searching-box">
+                                            <div style="display: flex;align-items: center;gap: 8px;">
+                                                <span class="warning-badge">金管會</span>
+                                                <span>2/4</span>
+                                            </div>
+                                            <div style="display: flex;align-items: center;gap: 8px;">
+                                                <img src="./assets/collapse-arrow.svg" style="opacity: 0.6;">
+                                                <img src="./assets/collapse-arrow.svg"
+                                                    style="transform: rotate(180deg);">
                                             </div>
                                         </div>
                                     </div>
@@ -2220,12 +2339,32 @@
                 $("#editCommissionerModal").modal("show")
             })
 
+            $("#editExcept0").on("click", function () {
+                $("#editExceptModal").modal("show")
+            })
+
+            $("#editExcept1").on("click", function () {
+                $("#editExceptModal").modal("show")
+            })
+
+            $("#editCustomizeWords0").on("click", function () {
+                $("#editCustomizeWordsModal").modal("show")
+            })
+
+            $("#editCustomizeWords1").on("click", function () {
+                $("#editCustomizeWordsModal").modal("show")
+            })
+
             $("#skillMaintainBtn").on("click", function () {
                 $("#skillMaintainModal").modal("show")
             })
 
             $("#startEndWordsBtn").on("click", function () {
                 $("#startEndWordsModal").modal("show")
+            })
+
+            $("#exceptListBtn").on("click", function () {
+                $("#exceptListModal").modal("show")
             })
 
             $("#editPasswordBtn").on("click", function () {

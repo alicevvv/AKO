@@ -182,23 +182,25 @@ select:focus-visible {
   box-shadow: none;
 }
 
-input {
+input,
+textarea {
   border: 1px solid var(--bs-gray-300);
   border-radius: 4px;
+  padding: 0px 8px;
 }
 
-input:focus-visible {
+textarea {
+  padding: 6px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
   border-color: var(--bs-gray-600);
   outline: none;
 }
 
 .form-control:focus {
   box-shadow: 0 0 0 0.2rem var(--light-green);
-}
-
-input {
-  padding: 0px 8px;
-  border-radius: 4px;
 }
 
 select {
