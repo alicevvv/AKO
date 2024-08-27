@@ -2,6 +2,7 @@
   background-color: white;
   border: 2px solid var(--bg-light-gray);
   border-radius: 4px;
+  font-size: 14px;
 }
 
 .result-table thead tr th {
@@ -91,6 +92,13 @@
 
 .text-time {
   letter-spacing: 1px;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 .result-pagination .page-item {

@@ -52,6 +52,7 @@
                                 <li class="dropdown-item" id="commissionersBtn">專員代碼姓名</li>
                                 <li class="dropdown-item" id="skillMaintainBtn">維護技能</li>
                                 <li class="dropdown-item" id="startEndWordsBtn">開頭結尾語</li>
+                                <li class="dropdown-item" id="editPasswordBtn">除外名單</li>
                                 <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
                                 <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
                             </ul>
@@ -599,6 +600,158 @@
                                 <div class="dropdown">
                                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
                                         aria-expanded="false">
+                                        專員
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="search-input input-group px-2 pb-2">
+                                            <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="搜尋">
+                                        </div>
+                                        <a class="dropdown-item active" href="#">全部</a>
+                                        <a class="dropdown-item" href="#">林OO 0001</a>
+                                        <a class="dropdown-item" href="#">江OO 0002</a>
+                                        <a class="dropdown-item" href="#">劉OO 0003</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        IB/IO
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="IbIo0">
+                                                    <label class="custom-control-label" for="IbIo0">全部
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="IbIo1">
+                                                    <label class="custom-control-label" for="IbIo1">IB
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="IbIo2">
+                                                    <label class="custom-control-label" for="IbIo2">IO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        敏感詞
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="search-input input-group px-2 pb-2">
+                                            <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="搜尋">
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox0">
+                                                <label class="custom-control-label" for="wordsCheckbox0">全部
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox1">
+                                                <label class="custom-control-label" for="wordsCheckbox1">金管會
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox2">
+                                                <label class="custom-control-label" for="wordsCheckbox2">NCC
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox3">
+                                                <label class="custom-control-label" for="wordsCheckbox3">找主管
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        關鍵詞
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="search-input input-group px-2 pb-2">
+                                            <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="搜尋">
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="keyWords0">
+                                                <label class="custom-control-label" for="keyWords0">全部
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="keyWords1">
+                                                <label class="custom-control-label" for="keyWords1">斷線
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="keyWords2">
+                                                <label class="custom-control-label" for="keyWords2">金管會
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="keyWords3">
+                                                <label class="custom-control-label" for="keyWords3">找主管
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="keyWords4">
+                                                <label class="custom-control-label" for="keyWords4">申訴
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
                                         時間區間
                                     </button>
                                     <div class="dropdown-menu">
@@ -677,146 +830,6 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                        專員
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <div class="search-input input-group px-2 pb-2">
-                                            <span class="search-input-icon input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                                </svg>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="搜尋">
-                                        </div>
-                                        <a class="dropdown-item active" href="#">全部</a>
-                                        <a class="dropdown-item" href="#">林OO 0001</a>
-                                        <a class="dropdown-item" href="#">江OO 0002</a>
-                                        <a class="dropdown-item" href="#">劉OO 0003</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                        敏感詞
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <form>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="wordsCheckbox0">
-                                                    <label class="custom-control-label" for="wordsCheckbox0">全部
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="wordsCheckbox1">
-                                                    <label class="custom-control-label" for="wordsCheckbox1">金管會
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="wordsCheckbox2">
-                                                    <label class="custom-control-label" for="wordsCheckbox2">NCC
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="wordsCheckbox3">
-                                                    <label class="custom-control-label" for="wordsCheckbox3">找主管
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                        關鍵詞
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <form>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="keyWords0">
-                                                    <label class="custom-control-label" for="keyWords0">全部
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="keyWords1">
-                                                    <label class="custom-control-label" for="keyWords1">斷線
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="keyWords2">
-                                                    <label class="custom-control-label" for="keyWords2">金管會
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="keyWords3">
-                                                    <label class="custom-control-label" for="keyWords3">找主管
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="keyWords4">
-                                                    <label class="custom-control-label" for="keyWords4">申訴
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                        IB/IO
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <form>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="IbIo0">
-                                                    <label class="custom-control-label" for="IbIo0">全部
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="IbIo1">
-                                                    <label class="custom-control-label" for="IbIo1">IB
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="IbIo2">
-                                                    <label class="custom-control-label" for="IbIo2">IO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
                                 <div class="customize-period">
                                     <div class="customize-period-title">開始時間</div>
                                     <div class="input-group date" id="customizeStartDatePicker"
@@ -870,6 +883,10 @@
                                 </button>
                             </div>
                             <div class="advanced-modal modal-body px-4">
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">字串搜尋</div>
+                                    <input type="text" placeholder="搜尋篩選後逐字稿內容">
+                                </div>
                                 <div class="advanced-form-group">
                                     <div class="advanced-title">開始時間</div>
                                     <div class="input-group date" id="startDatePicker" data-target-input="nearest">
@@ -1045,14 +1062,64 @@
                                     </div>
                                 </div>
                                 <div class="advanced-form-group">
-                                    <div class="advanced-title">技能</div>
+                                    <div class="advanced-title">敏感詞</div>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>全部</span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <div class="search-input input-group px-2 pb-2">
+                                                <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="搜尋">
+                                            </div>
+                                            <a class="dropdown-item active" href="#">全部</a>
+                                            <a class="dropdown-item" href="#">金管會</a>
+                                            <a class="dropdown-item" href="#">NCC</a>
+                                            <a class="dropdown-item" href="#">找主管</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">關鍵詞</div>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>全部</span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <div class="search-input input-group px-2 pb-2">
+                                                <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="搜尋">
+                                            </div>
+                                            <a class="dropdown-item active" href="#">全部</a>
+                                            <a class="dropdown-item" href="#">金管會</a>
+                                            <a class="dropdown-item" href="#">斷線</a>
+                                            <a class="dropdown-item" href="#">找主管</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advanced-form-group">
+                                    <div class="advanced-title">skill</div>
                                     <select>
                                         <option value="報修1">報修1</option>
                                         <option value="報修2">報修2</option>
                                     </select>
                                 </div>
                                 <div class="advanced-form-group">
-                                    <div class="advanced-title">主叫號碼</div>
+                                    <div class="advanced-title">來電號碼</div>
                                     <input type="text">
                                 </div>
                                 <div class="advanced-form-group">
@@ -1075,6 +1142,15 @@
                     <table class="result-table table table-hover">
                         <thead>
                             <tr>
+                                <th scope="col" class="sort-available">
+                                    <div class="table-head-container">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="checkbox-all">
+                                            <label class="custom-control-label" for="checkbox-all">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </th>
                                 <th scope="col" class="sort-available">
                                     <div class="table-head-container">
                                         <div>專員</div>
@@ -1113,7 +1189,7 @@
                                 </th>
                                 <th scope="col">
                                     <div class="table-head-container">
-                                        <div>技能</div>
+                                        <div>skill</div>
                                         <div class="sort-icon-group">
                                             <img src="./assets/arrow-up.svg">
                                             <img src="./assets/arrow-down.svg">
@@ -1195,7 +1271,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">李OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow0">
+                                        <label class="custom-control-label" for="checkboxRow0">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">李OO</span></td>
                                 <td><span class="text-bold">callee-A-2</span></td>
                                 <td><span class="text-bold">callee-A-2</span></td>
                                 <td><span class="text-bold">IB</span></td>
@@ -1233,7 +1316,14 @@
                                 <td><span class="text-time">2023/11/12 09:22</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">張OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow1">
+                                        <label class="custom-control-label" for="checkboxRow1">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">張OO</span></td>
                                 <td><span class="text-bold">callee-A-3</span></td>
                                 <td><span class="text-bold">callee-A-3</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1279,7 +1369,14 @@
                                 <td><span class="text-time">2023/11/12 09:35</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">陳OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow2">
+                                        <label class="custom-control-label" for="checkboxRow2">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">陳OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1294,7 +1391,14 @@
                                 <td><span class="text-time">2023/11/12 09:44</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">李OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow3">
+                                        <label class="custom-control-label" for="checkboxRow3">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">李OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1309,7 +1413,14 @@
                                 <td><span class="text-time">2023/11/12 11:23</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">張OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow4">
+                                        <label class="custom-control-label" for="checkboxRow4">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">張OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1324,7 +1435,14 @@
                                 <td><span class="text-time">2023/11/12 12:25</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">陳OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow5">
+                                        <label class="custom-control-label" for="checkboxRow5">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">陳OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">IB</span></td>
@@ -1339,7 +1457,14 @@
                                 <td><span class="text-time">2023/11/12 14:25</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">李OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow6">
+                                        <label class="custom-control-label" for="checkboxRow6">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">李OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1354,7 +1479,14 @@
                                 <td><span class="text-time">2023/11/12 16:52</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">張OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow7">
+                                        <label class="custom-control-label" for="checkboxRow7">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">張OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1369,7 +1501,14 @@
                                 <td><span class="text-time">2023/11/12 19:38</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">陳OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow8">
+                                        <label class="custom-control-label" for="checkboxRow8">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">陳OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">IB</span></td>
@@ -1384,7 +1523,14 @@
                                 <td><span class="text-time">2023/11/12 21:21</span></td>
                             </tr>
                             <tr>
-                                <th scope="row">林OO</th>
+                                <td class="checkbox-td">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkboxRow9">
+                                        <label class="custom-control-label" for="checkboxRow9">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td><span class="text-bold">林OO</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">callee-A-4</span></td>
                                 <td><span class="text-bold">OB</span></td>
@@ -1400,8 +1546,9 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <div class="mr-2">找到共 285 筆</div>
+                    <div class="table-footer">
+                        <div>找到共 285 筆</div>
+                        <div>共 12 頁</div>
                         <nav aria-label="Page navigation">
                             <ul class="result-pagination pagination flex-wrap mb-0">
                                 <li class="page-item disabled">
@@ -1433,7 +1580,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <select class="result-select mx-3">
+                        <select class="result-select">
                             <option value="10">10 / 頁</option>
                             <option value="20">20 / 頁</option>
                             <option value="50">50 / 頁</option>
@@ -2151,6 +2298,10 @@
             $('#customizeEndTimePicker').datetimepicker({
                 format: 'LT'
             });
+
+            $('.checkbox-td').on("click", function (event) {
+                event.stopPropagation();
+            })
 
             // result table
             $('.play-chat-text').on("click", function () {
