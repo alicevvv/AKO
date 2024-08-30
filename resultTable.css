@@ -62,6 +62,11 @@
   white-space: nowrap;
 }
 
+.qa-badge:hover,
+.warning-badge:hover {
+  cursor: pointer;
+}
+
 .qa-badge-normal {
   background-color: var(--bg-gray);
 }
@@ -195,6 +200,10 @@
   gap: 6px;
 }
 
+.conversation .message-area .message-panel .badge.last-seen {
+  border: 2px solid #8bc4f0;
+}
+
 .conversation .message-area .message-panel .badge-input {
   width: 240px;
 }
@@ -270,6 +279,37 @@
   margin: 0 8px;
 }
 
+.conversation .play-chat-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+}
+
+.conversation .play-chat-container .play-chat-text {
+  padding: 4px;
+}
+
+.conversation .play-chat-container .playing-length {
+  width: 80px;
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  background-color: var(--bg-gray);
+  cursor: pointer;
+}
+
+.conversation .play-chat-container .playing-progress {
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
 .conversation-searching-box {
   position: absolute;
   top: 40px;
@@ -282,7 +322,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 200px;
+  min-width: 260px;
+}
+
+.conversation-searching-box .group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.conversation-searching-box .group .disabled {
+  opacity: 0.6;
+}
+
+.conversation-searching-box input {
+  width: 100px;
+  height: 40px;
 }
 
 .collapse-container {
