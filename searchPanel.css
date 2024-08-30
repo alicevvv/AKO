@@ -235,13 +235,15 @@
   background-color: white;
 }
 
-.advanced-form-group .advanced-customize-length {
+.advanced-form-group .advanced-customize-length,
+.advanced-form-group .score-group {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.advanced-form-group .advanced-customize-length input {
+.advanced-form-group .advanced-customize-length input,
+.advanced-form-group .score-group input {
   width: 80px;
 }
 
