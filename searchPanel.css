@@ -89,6 +89,8 @@
   background-color: var(--primary);
   color: white;
   border-radius: 200px;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .remit-btn:hover,
@@ -202,12 +204,12 @@
 }
 
 .customize-period .input-group {
-  width: 180px;
+  width: 160px;
 }
 
 .customize-period-title {
   font-size: 16px;
-  width: 80px;
+  width: 70px;
   font-weight: bold;
   text-wrap: nowrap;
   margin-left: 8px;

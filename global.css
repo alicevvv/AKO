@@ -92,9 +92,18 @@ main {
   height: 100vh;
 }
 
+@media (max-width: 1439px) {
+  .container {
+    /* min-width: 1120px; */
+    max-width: 1400px;
+    margin: 0;
+  }
+}
+
 @media (min-width: 1440px) {
   .container {
     max-width: 1360px;
+    margin: auto;
   }
 }
 
@@ -102,10 +111,6 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-#searchPanel {
-  padding-top: 1rem;
 }
 
 .btn {
