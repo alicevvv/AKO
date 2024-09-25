@@ -54,6 +54,7 @@
                                 <li class="dropdown-item" id="skillMaintainBtn">維護技能</li>
                                 <li class="dropdown-item" id="startEndWordsBtn">開頭結尾語</li>
                                 <li class="dropdown-item" id="exceptListBtn">排除電話</li>
+                                <li class="dropdown-item" id="emailNotification">通知 email 名單</li>
                                 <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
                                 <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
                             </ul>
@@ -527,6 +528,69 @@
                                     <div style="flex-grow: 1;">
                                         <div>電話號碼</div>
                                         <input type="number" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="emailNotificationModal" tabindex="-1" aria-labelledby="emailNotificationModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">通知 email 名單</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>email</div>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                    <button class="btn btn-primary">新增</button>
+                                </div>
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        <span>test1@email.com</span>
+                                        <button class="btn p-0" id="editEmailNotification0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        <span>test2@email.com</span>
+                                        <button class="btn p-0" id="editEmailNotification1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editEmailNotificationModal" tabindex="-1" aria-labelledby="editEmailNotificationModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯 email</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group">
+                                    <div style="flex-grow: 1;">
+                                        <div>email</div>
+                                        <input type="text" style="width: 100%;">
                                     </div>
                                 </div>
                             </div>
@@ -2275,6 +2339,18 @@
 
             $("#exceptListBtn").on("click", function () {
                 $("#exceptListModal").modal("show")
+            })
+
+            $("#emailNotification").on("click", function () {
+                $("#emailNotificationModal").modal("show")
+            })
+            
+            $("#editEmailNotification0").on("click", function () {
+                $("#editEmailNotificationModal").modal("show")
+            })
+
+            $("#editEmailNotification1").on("click", function () {
+                $("#editEmailNotificationModal").modal("show")
             })
 
             $("#editPasswordBtn").on("click", function () {
