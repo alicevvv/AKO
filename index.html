@@ -55,6 +55,7 @@
                                 <li class="dropdown-item" id="startEndWordsBtn">開頭結尾語</li>
                                 <li class="dropdown-item" id="exceptListBtn">排除電話</li>
                                 <li class="dropdown-item" id="emailNotification">通知 email 名單</li>
+                                <li class="dropdown-item" id="vipPhoneNotification">VIP電話通知與質檢</li>
                                 <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
                                 <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
                             </ul>
@@ -591,6 +592,96 @@
                                     <div style="flex-grow: 1;">
                                         <div>email</div>
                                         <input type="text" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="vipPhoneNotificationModal" tabindex="-1" aria-labelledby="vipPhoneNotificationModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">VIP電話通知與質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="input-group" style="display: flex;align-items: center;">
+                                    <div style="display: flex;flex-direction:column;flex-grow: 1;">
+                                        <div class="input-group" style="display: flex;">
+                                            <div style="flex-grow: 1;">
+                                                <div>電話</div>
+                                                <input type="text" style="width: 100%;">
+                                            </div>
+                                            <div style="flex-grow: 1;">
+                                                <div>對象</div>
+                                                <input type="text" style="width: 100%;">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <div style="flex-grow: 1;">
+                                                <div>email 主旨</div>
+                                                <textarea style="width: 100%;"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary">新增</button>
+                                </div>
+                                
+                                <div class="badge-container">
+                                    <div class="gray-badge">
+                                        <span>(03)3322101 桃園市政府</span>
+                                        <button class="btn p-0" id="editVipPhoneNotification0">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                    <div class="gray-badge">
+                                        <span>(02)29603456 新北市政府</span>
+                                        <button class="btn p-0" id="editVipPhoneNotification1">
+                                            <img src="./assets//pencil.svg">
+                                        </button>
+                                        <img src="./assets/close.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editVipPhoneNotificationModal" tabindex="-1" aria-labelledby="editVipPhoneNotificationModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">編輯VIP電話通知與質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div style="display: flex;flex-direction:column;flex-grow: 1;">
+                                    <div class="input-group" style="display: flex;">
+                                        <div style="flex-grow: 1;">
+                                            <div>電話</div>
+                                            <input type="text" style="width: 100%;">
+                                        </div>
+                                        <div style="flex-grow: 1;">
+                                            <div>對象</div>
+                                            <input type="text" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <div style="flex-grow: 1;">
+                                            <div>email 主旨</div>
+                                            <textarea style="width: 100%;"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2345,12 +2436,24 @@
                 $("#emailNotificationModal").modal("show")
             })
             
+            $("#vipPhoneNotification").on("click", function () {
+                $("#vipPhoneNotificationModal").modal("show")
+            })
+            
             $("#editEmailNotification0").on("click", function () {
                 $("#editEmailNotificationModal").modal("show")
             })
 
             $("#editEmailNotification1").on("click", function () {
                 $("#editEmailNotificationModal").modal("show")
+            })
+            
+            $("#editVipPhoneNotification0").on("click", function () {
+                $("#editVipPhoneNotificationModal").modal("show")
+            })
+
+            $("#editVipPhoneNotification1").on("click", function () {
+                $("#editVipPhoneNotificationModal").modal("show")
             })
 
             $("#editPasswordBtn").on("click", function () {
@@ -2553,6 +2656,14 @@
             $("#copyButton").on("click", function () {
                 var textToCopy = $('#copyFileName').text();
                 navigator.clipboard.writeText(textToCopy)
+            })
+
+            $(".custom-control-input").on("click", function () {
+                if($(this)[0].checked){
+                    console.log($(this).closest('tr'));
+                    
+                    $(this).closest('tr').addClass("selected")
+                } else $(this).closest("tr").removeClass("selected")
             })
         })
     </script>

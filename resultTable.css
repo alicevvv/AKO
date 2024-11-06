@@ -43,6 +43,10 @@
   text-align: end;
 }
 
+.result-table tr.selected {
+  background-color: var(--selected-green);
+}
+
 .badge-group {
   display: flex;
   flex-wrap: wrap;
