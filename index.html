@@ -2057,11 +2057,19 @@
                                                 <input class="search-input" value="主管" type="text">
                                                 <span>2/4</span>
                                             </div>
-                                            <div class="group ">
+                                            <div class="group">
                                                 <img src="./assets/collapse-arrow.svg" class="disabled">
                                                 <img src="./assets/collapse-arrow.svg"
                                                     style="transform: rotate(180deg);">
+                                                <img src="./assets/close.svg" class="close-button" id="closeConversationSearching">                                                
                                             </div>
+                                        </div>
+                                        <div class="search-button d-none" id="openConversationSearching">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#5c5c5c"
+                                                class="bi bi-search" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                            </svg>  
                                         </div>
                                     </div>
                                     <div class="col">
@@ -2664,6 +2672,16 @@
                     
                     $(this).closest('tr').addClass("selected")
                 } else $(this).closest("tr").removeClass("selected")
+            })
+
+            $("#closeConversationSearching").on("click", function(){
+                $(".conversation-searching-box").addClass("d-none")
+                $(".search-button").removeClass("d-none")
+            })
+
+            $("#openConversationSearching").on("click", function () {
+                $(".conversation-searching-box").removeClass("d-none")
+                $(".search-button").addClass("d-none")
             })
         })
     </script>
