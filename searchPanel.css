@@ -77,6 +77,10 @@
   overflow-y: scroll;
 }
 
+.search-panel .back-button {
+  font-weight: bold;
+  text-decoration: underline;
+}
 .advanced-search-btn {
   font-weight: bold;
   font-size: 16px;
@@ -112,6 +116,26 @@
 
 .search-result-text span {
   color: var(--primary);
+}
+
+.quality-result {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quality-result-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.quality-result-text .high-light {
+  color: var(--primary);
+}
+
+.quality-dropdown {
+  display: flex;
+  gap: 8px;
 }
 
 .search-filter {

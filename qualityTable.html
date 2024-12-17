@@ -24,7 +24,10 @@
         <div id="header">
             <header>
                 <div class="header py-1 px-3 d-flex justify-content-between align-items-center">
-                    <img src="./assets/logo-sm.svg" alt="logo">
+                    <div class="logo">
+                        <img src="./assets/logo-sm.svg" alt="logo">
+                        <span>自訂質檢顯示與統計</span>
+                    </div>
                     <div class="search-input header-search-input input-group">
                         <span class="search-input-icon input-group-text" id="basic-addon1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D5D5D5"
@@ -825,232 +828,52 @@
         <div class="content">
             <div id="searchPanel">
                 <div class="search-panel container">
-                    <div class="row" style="width: 100%">
-                        <div class="col my-3">
-                            <div class="filter-container">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">專員</button>
-                                    <div class="dropdown-menu">
-                                        <div class="search-input input-group px-2 pb-2">
-                                            <span class="search-input-icon input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                                </svg>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="搜尋">
-                                        </div>
-                                        <a class="dropdown-item active" href="#">全部</a>
-                                        <a class="dropdown-item" href="#">林OO 0001</a>
-                                        <a class="dropdown-item" href="#">江OO 0002</a>
-                                        <a class="dropdown-item" href="#">劉OO 0003</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">IB/IO</button>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="IbIo0">
-                                                <label class="custom-control-label" for="IbIo0">全部</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="IbIo1">
-                                                <label class="custom-control-label" for="IbIo1">IB</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="IbIo2">
-                                                <label class="custom-control-label" for="IbIo2">IO</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">敏感詞</button>
-                                    <div class="dropdown-menu">
-                                        <div class="search-input input-group px-2 pb-2">
-                                            <span class="search-input-icon input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                                </svg>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="搜尋">
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox0">
-                                                <label class="custom-control-label" for="wordsCheckbox0">全部</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox1">
-                                                <label class="custom-control-label" for="wordsCheckbox1">金管會</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox2">
-                                                <label class="custom-control-label" for="wordsCheckbox2">NCC</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox3">
-                                                <label class="custom-control-label" for="wordsCheckbox3">找主管</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">關鍵詞</button>
-                                    <div class="dropdown-menu">
-                                        <div class="search-input input-group px-2 pb-2">
-                                            <span class="search-input-icon input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                                </svg>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="搜尋">
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="keyWords0">
-                                                <label class="custom-control-label" for="keyWords0">全部</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="keyWords1">
-                                                <label class="custom-control-label" for="keyWords1">斷線</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="keyWords2">
-                                                <label class="custom-control-label" for="keyWords2">金管會</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="keyWords3">
-                                                <label class="custom-control-label" for="keyWords3">找主管</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="keyWords4">
-                                                <label class="custom-control-label" for="keyWords4">申訴</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">時間區間</button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">今天</a>
-                                        <a class="dropdown-item" href="#">昨天</a>
-                                        <a class="dropdown-item" href="#">前天</a>
-                                        <a class="dropdown-item active" href="#">近 7 天</a>
-                                        <a class="dropdown-item" href="#">近 15 天</a>
-                                        <a class="dropdown-item" href="#">近 30 天</a>
-                                        <a class="dropdown-item" href="#">近 60 天</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">質檢</button>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox0">
-                                                <label class="custom-control-label" for="qualifyCheckbox0">全部</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox6">
-                                                <label class="custom-control-label" for="qualifyCheckbox6">進階質檢全部</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox1">
-                                                <label class="custom-control-label" for="qualifyCheckbox1">基本質檢異常</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox2">
-                                                <label class="custom-control-label" for="qualifyCheckbox2">進階質檢異常</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox3">
-                                                <label class="custom-control-label" for="qualifyCheckbox3">自訂質檢</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox4">
-                                                <label class="custom-control-label" for="qualifyCheckbox4">[自訂1]</label>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="qualifyCheckbox5">
-                                                <label class="custom-control-label" for="qualifyCheckbox5">[自訂2]</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-period">
-                                    <div class="customize-period-title">開始時間</div>
-                                    <div class="input-group date" id="customizeStartDatePicker"
-                                        data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            data-target="#customizeStartDatePicker" />
-                                        <div class="input-group-append" data-target="#customizeStartDatePicker"
-                                            data-toggle="datetimepicker">
-                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
-                                        </div>
-                                    </div>
-                                    -
-                                    <div class="input-group date" id="customizeEndDatePicker"
-                                        data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            data-target="#customizeEndDatePicker" />
-                                        <div class="input-group-append" data-target="#customizeEndDatePicker"
-                                            data-toggle="datetimepicker">
-                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="remit-btn btn">條件搜尋</button>
-                                <button class="advanced-search-btn btn" id="advancedSearchBtn">進階搜尋</button>
+                    <div class="row my-3">
+                        <button class="button btn back-button">
+                            <span>< 返回統計報表</span>
+                        </button>
+                    </div>
+                    <div class="row" style="width: 100%;">
+                        <div class="quality-result col">
+                            <div class="quality-result-text">
+                                <span>自訂質檢：</span>
+                                <span>general</span>
+                                <span>共,</span>
+                                <span class="high-light"> 8 </span>
+                                <span>筆資料</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="search-result col">
-                            <button class="remit-btn btn">匯出</button>
-                            <div class="search-result-text">
-                                共
-                                <span class="">285</span>
-                                筆資料
+                        <div class="quality-dropdown">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">專員</button>
+                                <div class="dropdown-menu">
+                                    <div class="search-input input-group px-2 pb-2">
+                                        <span class="search-input-icon input-group-text" id="basic-addon1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                            </svg>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="搜尋">
+                                    </div>
+                                    <a class="dropdown-item active" href="#">全部</a>
+                                    <a class="dropdown-item" href="#">林OO 0001</a>
+                                    <a class="dropdown-item" href="#">江OO 0002</a>
+                                    <a class="dropdown-item" href="#">劉OO 0003</a>
+                                </div>
                             </div>
-                            <div class="search-filter">
-                                當前月份 / 基本質檢異常、進階質檢異常 / 林OO 0001 / 金管會、NCC、找主管
-                                <button class="btn">取消搜尋</button>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">日期</button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">今天</a>
+                                    <a class="dropdown-item" href="#">昨天</a>
+                                    <a class="dropdown-item" href="#">前天</a>
+                                    <a class="dropdown-item active" href="#">近 7 天</a>
+                                    <a class="dropdown-item" href="#">近 15 天</a>
+                                    <a class="dropdown-item" href="#">近 30 天</a>
+                                    <a class="dropdown-item" href="#">近 60 天</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1321,23 +1144,16 @@
                     </div>
                 </div>
             </div>
-            <div id="resultTable">
+            <div id="quality-table">
                 <div class="container pt-2 mb-4">
-                    <table class="result-table table table-hover">
+                    <table class="quality-table table table-hover">
                         <thead>
                             <tr>
                                 <th scope="col" class="sort-available">
-                                    <div class="table-head-container">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkbox-all">
-                                            <label class="custom-control-label" for="checkbox-all">
-                                            </label>
-                                        </div>
-                                    </div>
                                 </th>
                                 <th scope="col" class="sort-available">
                                     <div class="table-head-container">
-                                        <div>專員</div>
+                                        <div>專員代號</div>
                                         <div class="sort-icon-group">
                                             <img src="./assets/arrow-up-active.svg">
                                             <img src="./assets/arrow-down.svg">
@@ -1346,7 +1162,7 @@
                                 </th>
                                 <th scope="col" class="sort-available">
                                     <div class="table-head-container">
-                                        <div>來電號碼</div>
+                                        <div>專員姓名</div>
                                         <div class="sort-icon-group">
                                             <img src="./assets/arrow-up.svg">
                                             <img src="./assets/arrow-down-active.svg">
@@ -1355,7 +1171,7 @@
                                 </th>
                                 <th scope="col" class="sort-available">
                                     <div class="table-head-container">
-                                        <div>去電號碼</div>
+                                        <div>錄音數量</div>
                                         <div class="sort-icon-group">
                                             <img src="./assets/arrow-up.svg">
                                             <img src="./assets/arrow-down-active.svg">
@@ -1364,7 +1180,7 @@
                                 </th>
                                 <th scope="col">
                                     <div class="table-head-container">
-                                        <div>IB/OB</div>
+                                        <div>質檢數量</div>
                                         <div class="sort-icon-group">
                                             <img src="./assets/arrow-up.svg">
                                             <img src="./assets/arrow-down.svg">
@@ -1373,43 +1189,7 @@
                                 </th>
                                 <th scope="col">
                                     <div class="table-head-container">
-                                        <div>skill</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
-                                <th scope="col">
-                                    <div class="table-head-container">
-                                        <div>基本質檢</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
-                                <th scope="col">
-                                    <div class="table-head-container">
-                                        <div>敏感詞</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
-                                <th scope="col" style="min-width:120px;max-width: 200px;">
-                                    <div class="table-head-container">
-                                        <div>關鍵詞</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
-                                <th scope="col">
-                                    <div class="table-head-container">
-                                        <div>進階質檢</div>
+                                        <div>質檢比例</div>
                                         <div class="sort-icon-group">
                                             <img src="./assets/arrow-up.svg">
                                             <img src="./assets/arrow-down.svg">
@@ -1425,302 +1205,118 @@
                                         </div>
                                     </div>
                                 </th>
-                                <th scope="col">
-                                    <div class="table-head-container">
-                                        <div>自訂質檢</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
-                                <th scope="col">
-                                    <div class="table-head-container">
-                                        <div>長度</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
-                                <th scope="col">
-                                    <div class="table-head-container align-left">
-                                        <div>日期 / 時間</div>
-                                        <div class="sort-icon-group">
-                                            <img src="./assets/arrow-up.svg">
-                                            <img src="./assets/arrow-down.svg">
-                                        </div>
-                                    </div>
-                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow0">
-                                        <label class="custom-control-label" for="checkboxRow0"></label>
-                                    </div>
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
                                 </td>
+                                <td><span class="text-bold">0000011</span></td>
                                 <td><span class="text-bold">李OO</span></td>
-                                <td><span class="text-bold">callee-A-2</span></td>
-                                <td><span class="text-bold">callee-A-2</span></td>
-                                <td><span class="text-bold">IB</span></td>
-                                <td><span class="text-bold">技能-A-1</span></td>
-                                <td><span class="qa-badge qa-badge-normal">有疊話</span></td>
-                                <td>
-                                    <span class="warning-badge">敏感詞-A-1</span>
-                                </td>
-                                <td class="has-more-keywords">
-                                    <div class="badge-group">
-                                        <span class="qa-badge qa-badge-normal">斷線</span>
-                                        <span>...</span>
-                                    </div>
-                                    <div class="keyword-container">
-                                        <div class="keyword-detail d-none">
-                                            <ul>
-                                                <li><span class="label">斷線</span></li>
-                                                <li><span class="label">保證獲利</span></li>
-                                            </ul>
-                                            <ul>
-                                                <li><span class="label">不能看</span></li>
-                                                <li><span class="label">金管會</span></li>
-                                            </ul>
-                                            <ul>
-                                                <li><span class="label">網路不通</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">6 / 6 / 5</span></td>
-                                <td><span class="text-bold">5.1</span></td>
-                                <td><span class="has-data-text" id="qualityTableButton">有</span></td>
-                                <td><span class="text-bold">02"00</span></td>
-                                <td><span class="text-time">2023/11/12 09:22</span></td>
+                                <td><span class="text-bold">2個</span></td>
+                                <td><span class="text-bold">5個</span></td>
+                                <td><span class="text-bold">60%</span></td>
+                                <td><span class="text-bold">60分</span></td>
                             </tr>
                             <tr>
                                 <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow1">
-                                        <label class="custom-control-label" for="checkboxRow1"></label>
-                                    </div>
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
                                 </td>
-                                <td><span class="text-bold">張OO</span></td>
-                                <td><span class="text-bold">callee-A-3</span></td>
-                                <td><span class="text-bold">callee-A-3</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td>
-                                    <div class="qa-badge unusual-badge" id="unusualInfo0">
-                                        <span>異常</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                        </svg>
-                                        <div class="unusual-container">
-                                            <div class="unusual-info-detail d-none">
-                                                <ul>
-                                                    <li><span class="label">疊話</span></li>
-                                                    <li><span class="label">敏感</span></li>
-                                                    <li><span class="label">未3</span></li>
-                                                    <li><span class="label">未6</span></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><span class="label">結尾</span></li>
-                                                    <li><span class="label">未1</span></li>
-                                                    <li><span class="label">未4</span></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><span class="label">開頭</span></li>
-                                                    <li><span class="label">未2</span></li>
-                                                    <li><span class="label">未5</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">7 / 8 / 7</span></td>
-                                <td><span class="text-bold">7.3</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">01"00</span></td>
-                                <td><span class="text-time">2023/11/12 09:35</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow2">
-                                        <label class="custom-control-label" for="checkboxRow2"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">陳OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">7 / 7 / 7</span></td>
-                                <td><span class="text-bold">7</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"45</span></td>
-                                <td><span class="text-time">2023/11/12 09:44</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow3">
-                                        <label class="custom-control-label" for="checkboxRow3"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">李OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">8 / 9 / 8</span></td>
-                                <td><span class="text-bold">8.3</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"45</span></td>
-                                <td><span class="text-time">2023/11/12 11:23</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow4">
-                                        <label class="custom-control-label" for="checkboxRow4"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">張OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="qa-badge qa-badge-normal">金管會</span></td>
-                                <td><span class="text-bold">4 / 5 / 4</span></td>
-                                <td><span class="text-bold">4.3</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"32</span></td>
-                                <td><span class="text-time">2023/11/12 12:25</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow5">
-                                        <label class="custom-control-label" for="checkboxRow5"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">陳OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">IB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="qa-badge qa-badge-normal">找主管…</span></td>
-                                <td><span class="text-bold">6 / 5 / 7</span></td>
-                                <td><span class="text-bold">6</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"55</span></td>
-                                <td><span class="text-time">2023/11/12 14:25</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow6">
-                                        <label class="custom-control-label" for="checkboxRow6"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">李OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="qa-badge qa-badge-normal">申訴</span></td>
-                                <td><span class="text-red text-bold">3 / 2 / 3</span></td>
-                                <td><span class="text-red text-bold">2.7</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"55</span></td>
-                                <td><span class="text-time">2023/11/12 16:52</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow7">
-                                        <label class="custom-control-label" for="checkboxRow7"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">張OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">8 / 6 / 7</span></td>
-                                <td><span class="text-bold">7</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"55</span></td>
-                                <td><span class="text-time">2023/11/12 19:38</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow8">
-                                        <label class="custom-control-label" for="checkboxRow8"></label>
-                                    </div>
-                                </td>
-                                <td><span class="text-bold">陳OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">IB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">6 / 6 / 6</span></td>
-                                <td><span class="text-bold">6</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"55</span></td>
-                                <td><span class="text-time">2023/11/12 21:21</span></td>
-                            </tr>
-                            <tr>
-                                <td class="checkbox-td">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkboxRow9">
-                                        <label class="custom-control-label" for="checkboxRow9"></label>
-                                    </div>
-                                </td>
+                                <td><span class="text-bold">0000012</span></td>
                                 <td><span class="text-bold">林OO</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">callee-A-4</span></td>
-                                <td><span class="text-bold">OB</span></td>
-                                <td><span class="text-bold">技能-A-2</span></td>
-                                <td><span class="qa-badge">正常</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">7 / 9 / 8</span></td>
-                                <td><span class="text-bold">8</span></td>
-                                <td><span class="no-data-text">無</span></td>
-                                <td><span class="text-bold">00"55</span></td>
-                                <td><span class="text-time">2023/11/12 22:56</span></td>
+                                <td><span class="text-bold">2個</span></td>
+                                <td><span class="text-bold">3個</span></td>
+                                <td><span class="text-bold">72%</span></td>
+                                <td><span class="text-bold">65分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-td">
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
+                                </td>
+                                <td><span class="text-bold">0000011</span></td>
+                                <td><span class="text-bold">黃OO</span></td>
+                                <td><span class="text-bold">1個</span></td>
+                                <td><span class="text-bold">7個</span></td>
+                                <td><span class="text-bold">42%</span></td>
+                                <td><span class="text-bold">70分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-td">
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
+                                </td>
+                                <td><span class="text-bold">0000029</span></td>
+                                <td><span class="text-bold">周OO</span></td>
+                                <td><span class="text-bold">6個</span></td>
+                                <td><span class="text-bold">14個</span></td>
+                                <td><span class="text-bold">85%</span></td>
+                                <td><span class="text-bold">75分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-td">
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
+                                </td>
+                                <td><span class="text-bold">0000025</span></td>
+                                <td><span class="text-bold">林OO</span></td>
+                                <td><span class="text-bold">2個</span></td>
+                                <td><span class="text-bold">3個</span></td>
+                                <td><span class="text-bold">52%</span></td>
+                                <td><span class="text-bold">72分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-td">
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
+                                </td>
+                                <td><span class="text-bold">0000006</span></td>
+                                <td><span class="text-bold">江OO</span></td>
+                                <td><span class="text-bold">5個</span></td>
+                                <td><span class="text-bold">20個</span></td>
+                                <td><span class="text-bold">51%</span></td>
+                                <td><span class="text-bold">84分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-td">
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
+                                </td>
+                                <td><span class="text-bold">0000016</span></td>
+                                <td><span class="text-bold">李OO</span></td>
+                                <td><span class="text-bold">12個</span></td>
+                                <td><span class="text-bold">7個</span></td>
+                                <td><span class="text-bold">30%</span></td>
+                                <td><span class="text-bold">52分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-td">
+                                    <button type="button" class="detail-button btn">
+                                        <img src="./assets/detail-button.png">
+                                    </button>
+                                </td>
+                                <td><span class="text-bold">0000019</span></td>
+                                <td><span class="text-bold">林OO</span></td>
+                                <td><span class="text-bold">9個</span></td>
+                                <td><span class="text-bold">11個</span></td>
+                                <td><span class="text-bold">12%</span></td>
+                                <td><span class="text-bold">35分</span></td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="table-footer">
-                        <div>找到共 285 筆</div>
-                        <div>共 12 頁</div>
+                        <div>找到共 8 筆</div>
+                        <div>共 1 頁</div>
                         <nav aria-label="Page navigation">
                             <ul class="result-pagination pagination flex-wrap mb-0">
                                 <li class="page-item disabled">
@@ -1760,505 +1356,6 @@
                         <div class="page-input d-flex align-items-center">
                             <span>前往</span>
                             <input type="text">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">李OO</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="conversation">
-                                            <div class="flex-center">
-                                                <div class="gray-badge">
-                                                    2022/08/25
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-left">
-                                                    <div class="message-panel">
-                                                        <div class="badge">
-                                                            <div>
-                                                                <span>您</span>
-                                                                <span>好</span>
-                                                            </div>
-                                                            <textarea class="badge-input"
-                                                                style="display: none;">您好</textarea>
-                                                        </div>
-                                                        <div class="tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info">
-                                                        <div class="time">PM 06:00</div>
-                                                        <div class="edited">已編輯</div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:02 / 0:10</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-right">
-                                                    <div class="message-panel flex-reverse">
-                                                        <div class="badge">
-                                                            <div>
-                                                                <span class="playing">您</span>
-                                                                <span>好</span>
-                                                            </div>
-                                                            <textarea class="badge-input"
-                                                                style="display: none;">您好</textarea>
-                                                        </div>
-                                                        <div class="tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info flex-reverse">
-                                                        <div class="time">PM 06:00</div>
-                                                        <div class="edited">已編輯</div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:02 / 0:10</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-left">
-                                                    <div class="message-panel">
-                                                        <div class="badge last-seen">
-                                                            <div>
-                                                                <span>有</span>
-                                                                <span>問題想找你們</span>
-                                                                <span class="high-light">主管</span>
-                                                                <span>問</span>
-                                                            </div>
-                                                            <textarea class="badge-input" style="display: none;">有問題想找你們主管問</textarea>
-                                                        </div>
-                                                        <div class="tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info">
-                                                        <div class="time">PM 06:00</div>
-                                                        <div class="edited">已編輯</div>
-                                                        <div class="edited">上次看過</div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:01 / 0:15</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-right">
-                                                    <div class="message-panel flex-reverse">
-                                                        <div class="badge">
-                                                            <div>
-                                                                <span>有什麼問題嗎</span>
-                                                            </div>
-                                                            <textarea class="badge-input" style="display: none;">有什麼問題嗎</textarea>
-                                                        </div>
-                                                        <div class="tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info flex-reverse">
-                                                        <div class="time">PM 06:01</div>
-                                                        <div class="edited"></div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:02 / 0:10</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-left">
-                                                    <div class="message-panel">
-                                                        <div class="badge">
-                                                            <div>
-                                                                <span>有問題想找你們</span>
-                                                                <span class="high-light">主管</span>
-                                                                <span>問</span>
-                                                            </div>
-                                                            <textarea class="badge-input"
-                                                                style="display: none;">有問題想找你們主管問</textarea>
-                                                        </div>
-                                                        <div class="tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info">
-                                                        <div class="time">PM 06:02</div>
-                                                        <div class="edited"></div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:02 / 0:10</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-right">
-                                                    <div class="message-panel flex-reverse">
-                                                        <div class="badge">
-                                                            <div>
-                                                                <span>如果文字比較多的時候的樣式，樣式</span>
-                                                                <span class="high-light">如果</span>
-                                                                <span>文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式。</span>
-                                                            </div>
-                                                            <textarea class="badge-input"
-                                                                style="display: none;">如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式。</textarea>
-                                                        </div>
-                                                        <div class="tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info flex-reverse">
-                                                        <div class="time">PM 06:02</div>
-                                                        <div class="edited"></div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:02 / 0:10</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="message-area">
-                                                <div class="flex-column flex-left">
-                                                    <div class="message-panel">
-                                                        <div class="badge">
-                                                            <div>
-                                                                <span>如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式。</span>
-                                                            </div>
-                                                            <textarea class="badge-input"
-                                                                style="display: none;">如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式，如果文字比較多的時候的樣式。</textarea>
-                                                        </div>
-                                                        <div class="flex-left tool-panel">
-                                                            <button class="btn edit-chat-text">
-                                                                <img src="./assets/pencil.svg" alt="edit">
-                                                            </button>
-                                                        </div>
-                                                        <div class="save-panel" style="display: none;">
-                                                            <button class="btn cancel-text">取消</button>
-                                                            <button class="btn save-text">儲存</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="message-info">
-                                                        <div class="time">PM 06:03</div>
-                                                        <div class="edited"></div>
-                                                    </div>
-                                                    <div class="play-chat-container">
-                                                        <button class="btn play-chat-text">
-                                                            <img src="./assets/play.svg" class="play" alt="play">
-                                                            <img src="./assets/pause.svg" class="pause" alt="pause"
-                                                                style="display: none;">
-                                                        </button>
-                                                        <div class="playing-length">
-                                                            <div class="playing-progress"></div>
-                                                        </div>
-                                                        <div class="">0:02 / 0:10</div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="conversation-searching-box">
-                                            <div class="group">
-                                                <input class="search-input" value="主管" type="text">
-                                                <span>2/4</span>
-                                            </div>
-                                            <div class="group">
-                                                <img src="./assets/collapse-arrow.svg" class="disabled">
-                                                <img src="./assets/collapse-arrow.svg"
-                                                    style="transform: rotate(180deg);">
-                                                <img src="./assets/close.svg" class="close-button" id="closeConversationSearching">                                                
-                                            </div>
-                                        </div>
-                                        <div class="search-button d-none" id="openConversationSearching">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#5c5c5c"
-                                                class="bi bi-search" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>  
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="collapse-container">
-                                            <div class="basic-info-container">
-                                                <button class="btn collapse-button" type="button" data-toggle="collapse"
-                                                    data-target="#basicInfoCollapse" aria-expanded="false"
-                                                    aria-controls="basicInfoCollapse">
-                                                    <div class="collapse-title mb-0">基本資訊</div>
-                                                    <img src="./assets/collapse-arrow.svg">
-                                                </button>
-                                                <div class="collapse" id="basicInfoCollapse">
-                                                    <div class="info-container container">
-                                                        <div class="row px-3">
-                                                            <div class="info">
-                                                                <div class="row">
-                                                                    <div class="col-5">
-                                                                        <div>
-                                                                            <span class="text-bold">專員：</span>
-                                                                            李ＯＯ 0234
-                                                                        </div>
-                                                                        <div>
-                                                                            <span class="text-bold">長度：</span>
-                                                                            02”45
-                                                                        </div>
-                                                                        <div>
-                                                                            <span class="text-bold">技能：</span>
-                                                                            報修
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-7">
-                                                                        <div>
-                                                                            <span class="text-bold">電話：</span>
-                                                                            0968251203
-                                                                        </div>
-                                                                        <div>
-                                                                            <span class="text-bold">日期：</span>
-                                                                            2022/08/05
-                                                                        </div>
-                                                                        <div>
-                                                                            <span class="text-bold">時間：</span>
-                                                                            08:10
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12">
-                                                                        <div class="file-name-container">
-                                                                            <span class="text-bold">檔名：</span>
-                                                                            <span id="copyFileName">2024-06-01</span>
-                                                                            <button class="btn" id="copyButton">
-                                                                                <img src="./assets/copy.svg"
-                                                                                    alt="copy-file-name" />
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="quantity">
-                                                                <div class="collapse-title">基本質檢</div>
-                                                                <span class="qa-badge qa-badge-error">異常</span>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div>
-                                                            <div class="collapse-title">基本質檢異常內容</div>
-                                                            <div class="detail-container">
-                                                                <ul>
-                                                                    <li><span class="label">疊話</span></li>
-                                                                    <li><span class="label">敏感</span></li>
-                                                                    <li><span class="label">未3</span></li>
-                                                                    <li><span class="label">未6</span></li>
-                                                                </ul>
-                                                                <ul>
-                                                                    <li><span class="label">結尾</span></li>
-                                                                    <li><span class="label">未1</span></li>
-                                                                    <li><span class="label">未4</span></li>
-                                                                    <li><span class="label">疑似缺開頭語再長一點再長一點再長一點</span>
-                                                                    </li>
-                                                                </ul>
-                                                                <ul>
-                                                                    <li><span class="label">開頭</span></li>
-                                                                    <li><span class="label">未2</span></li>
-                                                                    <li><span class="label">未5</span></li>
-                                                                    <li><span class="label">疑似缺結尾語</span></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div class="row">
-                                                            <div class="col-7">
-                                                                <div class="collapse-title">敏感詞</div>
-                                                                <div class="words-container">
-                                                                    <span class="warning-badge">金管會</span>
-                                                                    <span class="warning-badge">NCC</span>
-                                                                    <span class="warning-badge">找主管</span>
-                                                                    <span class="warning-badge">消保官</span>
-                                                                    <span class="warning-badge">很爛</span>
-                                                                    <span class="warning-badge">客訴</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-5">
-                                                                <div class="collapse-title">關鍵詞</div>
-                                                                <div class="words-container">
-                                                                    <span class="qa-badge qa-badge-normal">斷線</span>
-                                                                    <span class="qa-badge qa-badge-normal">不能看</span>
-                                                                    <span class="qa-badge qa-badge-normal">網路不通</span>
-                                                                    <span class="qa-badge qa-badge-normal">保證獲利</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="qualify-container mt-2">
-                                                <div class="qualify-header">
-                                                    <div class="collapse-title mb-0">質檢資訊</div>
-                                                    <div class="buttons-group">
-                                                        <button class="btn btn-primary" id="advancedQualifyBtn">進階質檢</button>
-                                                        <button class="btn btn-primary" id="customizeQualifyBtn">自訂質檢</button>
-                                                        <button class="btn btn-download">
-                                                            <img src="./assets/download.svg">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <button class="btn advanced-collapse-btn" type="button"
-                                                    data-toggle="collapse" data-target="#abstractCollapse"
-                                                    aria-expanded="false" aria-controls="abstractCollapse">
-                                                    <div class="collapse-title">
-                                                        <span>摘要（1）</span>
-                                                    </div>
-                                                    <img src="./assets/collapse-arrow.svg">
-                                                </button>
-                                                <div class="collapse show" id="abstractCollapse">
-                                                    <div class="card card-body">
-                                                        <span>
-                                                            A客服在對話中展現了良好的服務態度和業務知識，有效地處理了B客戶的查詢，包括地址確認、帳單繳費周期及金額說明。然而，對話中也顯示出A客服在處理查詢時的效率有待提升。整體而言，客戶對於服務表現感到滿意，但仍有改善空間。
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <button class="btn advanced-collapse-btn" type="button"
-                                                    data-toggle="collapse" data-target="#advancedQualifyCollapse"
-                                                    aria-expanded="false" aria-controls="advancedQualifyCollapse">
-                                                    <div class="collapse-title">
-                                                        <span>進階質檢（1）</span>
-                                                    </div>
-                                                    <img src="./assets/collapse-arrow.svg">
-                                                </button>
-                                                <div class="collapse show" id="advancedQualifyCollapse">
-                                                    <div class="card card-body">
-                                                        <div>
-                                                            [1] A客服的質檢項目如下 a~e, 若有請舉出實例說明
-                                                            a. 服務態度：A客服在對話中始終保持禮貌，例如在對話開
-                                                            始時使用“你好”作為問候，並在結束時說“謝謝你的來電祝
-                                                            你順心再見”，展現了良好的服務態度。
-                                                            b. 問題解決能力：A客服有效地處理了B客戶的查詢...<span class="more-content-btn"
-                                                                id="moreContentBtn">更多</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <button class="btn advanced-collapse-btn" type="button"
-                                                    data-toggle="collapse" data-target="#customizeQualifyCollapse"
-                                                    aria-expanded="false" aria-controls="customizeQualifyCollapse">
-                                                    <div class="collapse-title">
-                                                        <span>自訂質檢（3）</span>
-                                                    </div>
-                                                    <img src="./assets/collapse-arrow.svg">
-                                                </button>
-                                                <div class="collapse show" id="customizeQualifyCollapse">
-                                                    <div class="card card-body">
-                                                        <select class="customize-qualify-select">
-                                                            <option value="自訂質檢1">自訂質檢1</option>
-                                                            <option value="自訂質檢2">自訂質檢2</option>
-                                                            <option value="自訂質檢3">自訂質檢3</option>
-                                                            <option value="自訂質檢4">自訂質檢4</option>
-                                                            <option value="自訂質檢5">自訂質檢5</option>
-                                                            <option value="自訂質檢6">自訂質檢6</option>
-                                                            <option value="自訂質檢7">自訂質檢7</option>
-                                                            <option value="自訂質檢8">自訂質檢8</option>
-                                                            <option value="自訂質檢9">自訂質檢9</option>
-                                                            <option value="自訂質檢10">自訂質檢10</option>
-                                                        </select>
-                                                        <span>
-                                                            在這段對話中，沒有出現明顯的不禮貌語言。客戶和客服之間的對話主要圍繞技術問題和解決方案，雖然客戶表現出一些焦急和不耐煩，但沒有使用粗魯或不適當的語言。因此，可以說這段對話中沒有不禮貌的語言。</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -2576,10 +1673,6 @@
                 $(this).closest('.message-panel').find(".tool-panel").toggle()
             })
 
-            $('tbody tr').on("click", function () {
-                $("#detailModal").modal("show")
-            })
-
             $("#advancedQualifyBtn").on("click", function () {
                 var originalText = $(this).text();
                 $(this).html('<img src="./assets/loading.svg" class="loading-icon" alt="loading">');
@@ -2675,7 +1768,8 @@
             })
 
             $(".has-data-text").on("click", function(){
-                window.location.href="/qualityTable.html"
+                console.log("clicked has data 質檢");
+                
             })
 
             $("#closeConversationSearching").on("click", function(){
@@ -2686,6 +1780,19 @@
             $("#openConversationSearching").on("click", function () {
                 $(".conversation-searching-box").removeClass("d-none")
                 $(".search-button").addClass("d-none")
+            })
+
+            // 自訂質檢 table
+            $(".back-button").on("click", function () {
+                window.location.href = "/index.html"
+            })
+
+            $(".detail-button").on("click", function () {
+                // TODO: new page
+                // window.location.href = "/index.html"
+                console.log('click detail button');
+                
+
             })
         })
     </script>

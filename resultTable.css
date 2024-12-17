@@ -1,22 +1,26 @@
-.result-table {
+.result-table,
+.quality-table {
   background-color: white;
   border: 2px solid var(--bg-light-gray);
   border-radius: 4px;
   font-size: 14px;
 }
 
-.result-table thead tr th {
+.result-table thead tr th,
+.quality-table thead tr th {
   padding: 6px 8px;
   border-bottom-width: 1px;
   text-wrap: nowrap;
   white-space: nowrap;
 }
 
-.result-table thead tr th:hover {
+.result-table thead tr th:hover,
+.quality-table thead tr th:hover {
   opacity: 0.65;
 }
 
-.result-table thead tr th .table-head-container {
+.result-table thead tr th .table-head-container,
+.quality-table thead tr th .table-head-container {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -95,6 +99,13 @@
 .no-data-text {
   color: var(--none-gray);
   border: 2px solid var(--none-gray);
+  padding: 4px;
+  font-weight: bold;
+}
+
+.has-data-text {
+  color: var(--primary);
+  border: 2px solid var(--primary);
   padding: 4px;
   font-weight: bold;
 }
@@ -348,12 +359,17 @@
 
 .search-button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .conversation-searching-box .group {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.conversation-searching-box .group img:hover {
+  cursor: pointer;
 }
 
 .conversation-searching-box .group .disabled {
