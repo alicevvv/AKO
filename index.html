@@ -2668,8 +2668,6 @@
 
             $(".custom-control-input").on("click", function () {
                 if($(this)[0].checked){
-                    console.log($(this).closest('tr'));
-                    
                     $(this).closest('tr').addClass("selected")
                 } else $(this).closest("tr").removeClass("selected")
             })
