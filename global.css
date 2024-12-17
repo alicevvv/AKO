@@ -286,6 +286,16 @@ tbody tr:hover,
   width: 60px;
 }
 
+.upload-file-names {
+  color: var(--none-gray);
+  display: flex;
+  gap: 12px;
+}
+
+.upload-file-names .file-name {
+  border-bottom: 1px solid var(--none-gray);
+}
+
 @keyframes loading {
   from {
     transform: rotate(0deg);
