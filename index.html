@@ -38,6 +38,17 @@
                         <button class="btn">搜尋</button>
                     </div>
                     <div class="panel">
+                        <div class="dropdown page-selector">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="page-selector-text">首頁</span>
+                                <img src="./assets/collapse-arrow.svg" class="disabled">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="./index.html">首頁</a>
+                                <a class="dropdown-item" id="chooseQualityToTable">自訂質檢統計報表</a>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -2280,6 +2291,100 @@
                     </div>
                 </div>
 
+                <div class="modal fade" id="customQualifyDetailModal" tabindex="-1" aria-labelledby="customQualifyDetailModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">李OO 0000011：自訂質檢 general</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered table-fixed custom-qualify-detail-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">分類第一層</th>
+                                            <th class="col-2">分類第二層</th>
+                                            <th class="col-3">規則摘要</th>
+                                            <th class="col-3">分析過程</th>
+                                            <th class="col-2">分數</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <table class="table table-bordered custom-qualify-detail-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-2">5度C-諮詢有溫度</td>
+                                            <td class="col-2">問侯語 (含是否清楚自我介紹)</td>
+                                            <td class="col-3">
+                                                * 開頭 : 您好，敝姓O~  請問有什麼可以為您服務？  /   有什麼地方可以為您服務 ?
+                                                <br>
+                                                * 結尾 : 請問還有什麼可以為您服務的？…謝謝您的來電，再見！
+                                            </td>
+                                            <td class="col-3">專員開場雖有『您好』，但缺乏明確自我介紹（敝姓...請問...），僅僅直接詢問問題，較為直接，扣1分。</td>
+                                            <td class="col-2">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2">5度C-諮詢有溫度</td>
+                                            <td class="col-2">* 語速適中、音量合宜</td>
+                                            <td class="col-3">* 語速適中、音量合宜</td>
+                                            <td class="col-3">專員開場雖有『您好』，但缺乏明確自我介紹（敝姓...請問...），僅僅直接詢問問題，較為直接，扣1分。</td>
+                                            <td class="col-2">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2" scope="row">5度C-滿意有感度</td>
+                                            <td class="col-2">* 了解客戶需求</td>
+                                            <td class="col-3">* 不論銷售、繳費、維修…應瞭解客戶狀況及需求</td>
+                                            <td class="col-3">* 語速適中、了解客戶需求</td>
+                                            <td class="col-2">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2" scope="row">5度C-維繫黏著度</td>
+                                            <td class="col-2">* 服務順銷售</td>
+                                            <td class="col-3">* 每通來電皆應服務順銷售，除抱怨報願來電外</td>
+                                            <td class="col-3">* 服務順銷售</td>
+                                            <td class="col-2">3 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2" scope="row">5度C-服務有暖度</td>
+                                            <td class="col-2">* 詢問客戶是否有其他需服務之處</td>
+                                            <td class="col-3">* 詢問客戶是否有其他需服務之處</td>
+                                            <td class="col-3">* 詢問客戶是否有其他需服務之處</td>
+                                            <td class="col-2">5 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2" scope="row">5度C-成交超速度</td>
+                                            <td class="col-2">* 多次銷售、不輕言放棄</td>
+                                            <td class="col-3">* 多次銷售、不輕言放棄</td>
+                                            <td class="col-3">* 不輕言放棄</td>
+                                            <td class="col-2">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2" scope="row">5度C-成交超速度</td>
+                                            <td class="col-2">* 多次銷售、不輕言放棄</td>
+                                            <td class="col-3">* 多次銷售、不輕言放棄</td>
+                                            <td class="col-3">* 不輕言放棄</td>
+                                            <td class="col-2">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-2" scope="row">5度C-成交超速度</td>
+                                            <td class="col-2">* 多次銷售、不輕言放棄</td>
+                                            <td class="col-3">* 多次銷售、不輕言放棄</td>
+                                            <td class="col-3">* 不輕言放棄</td>
+                                            <td class="col-2">4 分</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="modal fade" id="customizeQualifyModal" tabindex="-1" aria-labelledby="customizeQualifyModal"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -2450,7 +2555,32 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" id="qualityTableButton">進入自訂質檢總表</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" id="qualityTableButton">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="chooseQualifyModal" tabindex="-1" aria-labelledby="chooseQualifyModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">選擇自訂質檢統計報表</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="custom-qualify-buttons">
+                                        <button class="btn btn-primary choose-qualify-to-table-button">general</button>
+                                        <button class="btn btn-primary choose-qualify-to-table-button">general</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                             </div>
                         </div>
                     </div>
@@ -2659,7 +2789,7 @@
                 $(this).closest('.message-panel').find(".tool-panel").toggle()
             })
 
-            $('tbody tr').on("click", function () {
+            $('.result-table tbody tr').on("click", function () {
                 $("#detailModal").modal("show")
             })
 
@@ -2760,8 +2890,16 @@
                 $("#chooseCustomizeQualifyModal").modal("show")
             })
 
-            $("#qualityTableButton").on("click", function () {
+            $("#chooseQualityToTable").on("click", function() {
+                $("#chooseQualifyModal").modal("show")
+            })
+
+            $(".choose-qualify-to-table-button").on("click", function() {
                 window.location.href = "./qualityTable.html"
+            })
+
+            $("#qualityTableButton").on("click", function () {
+                $("#customQualifyDetailModal").modal("show")
             })
 
             $("#closeConversationSearching").on("click", function () {

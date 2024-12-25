@@ -207,3 +207,18 @@ header {
   gap: 4px;
   text-wrap: nowrap;
 }
+
+.header .page-selector button {
+  width: 160px;
+  border: 2px solid var(--bg-light-gray);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .page-selector-text {
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

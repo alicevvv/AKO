@@ -28,19 +28,18 @@
                         <img src="./assets/logo-sm.svg" alt="logo">
                         <span>自訂質檢顯示與統計</span>
                     </div>
-                    <div class="search-input header-search-input input-group">
-                        <span class="search-input-icon input-group-text" id="basic-addon1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D5D5D5"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-                        </span>
-                        <input type="text" class="form-control" placeholder="搜尋篩選後逐字稿內容" aria-label="Username"
-                            aria-describedby="basic-addon1">
-                        <button class="btn">搜尋</button>
-                    </div>
                     <div class="panel">
+                        <div class="dropdown page-selector">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="page-selector-text">自訂質檢統計報表</span>
+                                <img src="./assets/collapse-arrow.svg" class="disabled">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="./index.html">首頁</a>
+                                <a class="dropdown-item active" id="chooseQualityToTable">自訂質檢統計報表</a>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
