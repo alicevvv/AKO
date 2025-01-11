@@ -2239,7 +2239,6 @@
                                                     <div class="collapse-title mb-0">質檢資訊</div>
                                                     <div class="buttons-group">
                                                         <button class="btn btn-primary" id="advancedQualifyBtn">進階質檢</button>
-                                                        <button class="btn btn-primary" id="customizeQualifyBtn">自訂質檢</button>
                                                         <button class="btn btn-download">
                                                             <img src="./assets/download.svg">
                                                         </button>
@@ -2290,20 +2289,14 @@
                                                 </button>
                                                 <div class="collapse show" id="customizeQualifyCollapse">
                                                     <div class="card card-body">
-                                                        <select class="customize-qualify-select">
-                                                            <option value="自訂質檢1">自訂質檢1</option>
-                                                            <option value="自訂質檢2">自訂質檢2</option>
-                                                            <option value="自訂質檢3">自訂質檢3</option>
-                                                            <option value="自訂質檢4">自訂質檢4</option>
-                                                            <option value="自訂質檢5">自訂質檢5</option>
-                                                            <option value="自訂質檢6">自訂質檢6</option>
-                                                            <option value="自訂質檢7">自訂質檢7</option>
-                                                            <option value="自訂質檢8">自訂質檢8</option>
-                                                            <option value="自訂質檢9">自訂質檢9</option>
-                                                            <option value="自訂質檢10">自訂質檢10</option>
-                                                        </select>
-                                                        <span>
-                                                            在這段對話中，沒有出現明顯的不禮貌語言。客戶和客服之間的對話主要圍繞技術問題和解決方案，雖然客戶表現出一些焦急和不耐煩，但沒有使用粗魯或不適當的語言。因此，可以說這段對話中沒有不禮貌的語言。</span>
+                                                        <div class="qualify-collapse-buttons">
+                                                            <button class="btn btn-primary openQualityTableButton">自訂質檢1</button>
+                                                            <button class="btn btn-primary openQualityTableButton">自訂質檢2</button>
+                                                            <button class="btn btn-primary openQualityTableButton">自訂質檢3</button>
+                                                            <button class="btn btn-primary openQualityTableButton">自訂質檢4</button>
+                                                            <button class="btn btn-primary openQualityTableButton">自訂質檢5</button>
+                                                            <button class="btn btn-primary openQualityTableButton">自訂質檢6</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2923,6 +2916,10 @@
             })
 
             $("#qualityTableButton").on("click", function () {
+                $("#customQualifyDetailModal").modal("show")
+            })
+
+            $(".openQualityTableButton").on("click", function(){
                 $("#customQualifyDetailModal").modal("show")
             })
 

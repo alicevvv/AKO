@@ -482,6 +482,17 @@
   color: black;
 }
 
+.collapse-container .qualify-collapse-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.collapse-container .qualify-collapse-buttons button {
+  border-radius: 100px;
+  text-wrap: nowrap;
+}
+
 .qualify-header {
   display: flex;
   justify-content: space-between;
