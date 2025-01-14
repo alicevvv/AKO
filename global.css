@@ -296,6 +296,24 @@ tbody tr:hover,
   border-bottom: 1px solid var(--none-gray);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--none-gray);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #858585;
+}
+
 @keyframes loading {
   from {
     transform: rotate(0deg);
