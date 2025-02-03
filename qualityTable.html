@@ -40,128 +40,10 @@
                                 <a class="dropdown-item active" id="chooseQualityToTable">自訂質檢統計報表</a>
                             </div>
                         </div>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                    class="bi bi-list" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                                </svg>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li class="dropdown-item" id="wordsSettingBtn">設定敏感詞與關鍵字</li>
-                                <li class="dropdown-item" id="customizeWordsSettingBtn">自訂質檢</li>
-                                <li class="dropdown-item" id="commissionersBtn">專員代碼姓名</li>
-                                <li class="dropdown-item" id="skillMaintainBtn">維護技能</li>
-                                <li class="dropdown-item" id="startEndWordsBtn">開頭結尾語</li>
-                                <li class="dropdown-item" id="exceptListBtn">排除電話</li>
-                                <li class="dropdown-item" id="emailNotification">通知 email 名單</li>
-                                <li class="dropdown-item" id="vipPhoneNotification">VIP電話通知與質檢</li>
-                                <li class="dropdown-item" id="editPasswordBtn">更改密碼</li>
-                                <li class="dropdown-item" id="manageAccountsBtn">管理帳號</li>
-                            </ul>
-                        </div>
                         <button class="logout-btn p-2" id="logoutBtn">登出</button>
                     </div>
                 </div>
-                <div class="modal fade" id="wordsSettingModal" tabindex="-1" aria-labelledby="wordsSettingModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">設定敏感詞與關鍵字</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <input type="text">
-                                    <button class="btn btn-primary">新增敏感詞</button>
-                                    <button class="btn btn-primary">新增關鍵詞</button>
-                                </div>
-                                <div class="badge-title">
-                                    敏感詞
-                                </div>
-                                <div class="badge-container">
-                                    <div class="yellow-badge">
-                                        壞掉
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="yellow-badge">
-                                        金管會
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="badge-title">
-                                    關鍵詞
-                                </div>
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        NCC
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        申訴
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="customizeWordsSettingModal" tabindex="-1"
-                    aria-labelledby="customizeWordsSettingModal" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">自訂質檢</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group" style="align-items: start;">
-                                    <div style="width: 200px;">
-                                        <div>新增名稱</div>
-                                        <input type="text" style="width: 100%;">
-                                    </div>
-                                    <div style="flex-grow: 1;">
-                                        <div>新增內容</div>
-                                        <textarea class="content-textarea" type="text" style="width: 100%;"></textarea>
-                                    </div>
-                                    <button class="btn btn-primary" style="margin-top: 24px;">
-                                        <div>新增敏感詞</div>
-                                    </button>
-                                </div>
-                                <div class="badge-container">
-                                    <div class="yellow-badge">
-                                        自訂1
-                                        <button class="btn p-0" id="editCustomizeWords0">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="yellow-badge">
-                                        自訂2
-                                        <button class="btn p-0" id="editCustomizeWords1">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="modal fade" id="editCustomizeWordsModal" tabindex="-1"
                     aria-labelledby="editCustomizeWordsModal" aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -187,54 +69,6 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="commissionersModal" tabindex="-1" aria-labelledby="commissionersModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">專員代碼姓名</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <div style="flex-grow: 1;">
-                                        <div>專員姓名</div>
-                                        <input type="text" style="width: 100%;">
-                                    </div>
-                                    <div style="flex-grow: 1;">
-                                        <div>專員代碼</div>
-                                        <input type="text" style="width: 100%;">
-                                    </div>
-                                    <button class="btn btn-primary">新增專員</button>
-                                    <label class="btn btn-primary import-button">匯入
-                                        <input type="file">
-                                    </label>
-                                </div>
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        member01 2578
-                                        <button class="btn p-0" id="editCommissioner0">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        member02 5432
-                                        <button class="btn p-0" id="editCommissioner1">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                             </div>
                         </div>
                     </div>
@@ -268,254 +102,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="modal fade" id="skillMaintainModal" tabindex="-1" aria-labelledby="skillMaintainModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">維護技能</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <input type="text">
-                                    <button class="btn btn-primary">新增</button>
-                                </div>
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        報修
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        報修2
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="startEndWordsModal" tabindex="-1" aria-labelledby="startEndWordsModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">開頭結尾語</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group has-checkbox">
-                                    <input type="text" maxlength="12">
-                                    <div class="start-end-word-setting">
-                                        <div class="start-word-group">
-                                            <div>開頭語</div>
-                                            <div class="ib-ob-setting">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="ibSettingCheckbox">
-                                                    <label class="custom-control-label" for="ibSettingCheckbox">IB</label>
-                                                </div>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="obSettingCheckbox">
-                                                    <label class="custom-control-label" for="obSettingCheckbox">OBs</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="divider"></div>
-                                        <div class="end-word-group">
-                                            <div>結尾語</div>
-                                            <div class="ib-ob-setting">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="endIbSettingCheckbox">
-                                                    <label class="custom-control-label" for="endIbSettingCheckbox">IB</label>
-                                                </div>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="endObSettingCheckbox">
-                                                    <label class="custom-control-label" for="endObSettingCheckbox">OB</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary">新增</button>
-                                    </div>
-                                    <div class="start-end-words-container">
-                                        <ul>
-                                            <li>
-                                                <div class="start-end-word-group">
-                                                    <div class="word">這邊總共會是十二個字展示</div>
-                                                    <div class="setting-group">
-                                                        <div class="start-word-group">
-                                                            <div>開頭語</div>
-                                                            <div class="ib-ob-setting">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="wordIbSettingCheckbox0">
-                                                                    <label class="custom-control-label" for="wordIbSettingCheckbox0">IB</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="wordObSettingCheckbox0">
-                                                                    <label class="custom-control-label" for="wordObSettingCheckbox0">OB</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                        <div class="end-word-group">
-                                                            <div>結尾語</div>
-                                                            <div class="ib-ob-setting">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="endWordIbSettingCheckbox0">
-                                                                    <label class="custom-control-label" for="endWordIbSettingCheckbox0">IB</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="endWordObSettingCheckbox0">
-                                                                    <label class="custom-control-label" for="endWordObSettingCheckbox0">OB</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                        <div class="btn delete-btn p-2">
-                                                            <img src="./assets/trash.svg" alt="delete-words">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="start-end-word-group">
-                                                    <div class="word">開頭開頭開頭</div>
-                                                    <div class="setting-group">
-                                                        <div class="start-word-group">
-                                                            <div>開頭語</div>
-                                                            <div class="ib-ob-setting">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="wordIbSettingCheckbox1">
-                                                                    <label class="custom-control-label" for="wordIbSettingCheckbox1">IB</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="wordObSettingCheckbox1">
-                                                                    <label class="custom-control-label" for="wordObSettingCheckbox1">OB</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                        <div class="start-word-group">
-                                                            <div>結尾語</div>
-                                                            <div class="ib-ob-setting">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="endWordIbSettingCheckbox1">
-                                                                    <label class="custom-control-label" for="endWordIbSettingCheckbox1">IB</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="endWordObSettingCheckbox1">
-                                                                    <label class="custom-control-label" for="endWordObSettingCheckbox1">OB</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                        <div class="btn delete-btn p-2">
-                                                            <img src="./assets/trash.svg" alt="delete-words">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="start-end-word-group">
-                                                    <div class="word">開頭開頭開頭開頭</div>
-                                                    <div class="setting-group">
-                                                        <div class="start-word-group">
-                                                            <div>開頭語</div>
-                                                            <div class="ib-ob-setting">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="wordIbSettingCheckbox2">
-                                                                    <label class="custom-control-label" for="wordIbSettingCheckbox2">IB</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="wordObSettingCheckbox2">
-                                                                    <label class="custom-control-label" for="wordObSettingCheckbox2">OB</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                        <div class="end-word-group">
-                                                            <div>結尾語</div>
-                                                            <div class="ib-ob-setting">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="endWordIbSettingCheckbox2">
-                                                                    <label class="custom-control-label" for="endWordIbSettingCheckbox2">IB</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="endWordObSettingCheckbox2">
-                                                                    <label class="custom-control-label" for="endWordObSettingCheckbox2">OB</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="divider"></div>
-                                                        <div class="btn delete-btn p-2">
-                                                            <img src="./assets/trash.svg" alt="delete-words">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="exceptListModal" tabindex="-1" aria-labelledby="exceptListModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">排除電話</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <div style="flex-grow: 1;">
-                                        <div>電話號碼</div>
-                                        <input type="number" style="width: 100%;">
-                                    </div>
-                                    <button class="btn btn-primary">新增</button>
-                                    <label class="btn btn-primary import-button">
-                                        <span>上傳所有手機號碼</span>
-                                        <input type="file">
-                                    </label>
-                                </div>
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        <span>callee-A-2</span>
-                                        <button class="btn p-0" id="editExcept0">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        <span>callee-A-4</span>
-                                        <button class="btn p-0" id="editExcept1">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="modal fade" id="editExceptModal" tabindex="-1" aria-labelledby="editExceptModal"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -541,44 +127,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="emailNotificationModal" tabindex="-1" aria-labelledby="emailNotificationModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">通知 email 名單</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <div style="flex-grow: 1;">
-                                        <div>email</div>
-                                        <input type="text" style="width: 100%;">
-                                    </div>
-                                    <button class="btn btn-primary">新增</button>
-                                </div>
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        <span>test1@email.com</span>
-                                        <button class="btn p-0" id="editEmailNotification0">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        <span>test2@email.com</span>
-                                        <button class="btn p-0" id="editEmailNotification1">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="modal fade" id="editEmailNotificationModal" tabindex="-1" aria-labelledby="editEmailNotificationModal"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -600,59 +148,6 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="vipPhoneNotificationModal" tabindex="-1" aria-labelledby="vipPhoneNotificationModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">VIP電話通知與質檢</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group" style="display: flex;align-items: center;">
-                                    <div style="display: flex;flex-direction:column;flex-grow: 1;">
-                                        <div class="input-group" style="display: flex;">
-                                            <div style="flex-grow: 1;">
-                                                <div>電話</div>
-                                                <input type="text" style="width: 100%;">
-                                            </div>
-                                            <div style="flex-grow: 1;">
-                                                <div>對象</div>
-                                                <input type="text" style="width: 100%;">
-                                            </div>
-                                        </div>
-                                        <div class="input-group">
-                                            <div style="flex-grow: 1;">
-                                                <div>email 主旨</div>
-                                                <textarea style="width: 100%;"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-primary">新增</button>
-                                </div>
-                                
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        <span>(03)3322101 桃園市政府</span>
-                                        <button class="btn p-0" id="editVipPhoneNotification0">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        <span>(02)29603456 新北市政府</span>
-                                        <button class="btn p-0" id="editVipPhoneNotification1">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -690,74 +185,6 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-labelledby="editPasswordModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">更改密碼</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="password-input-group">
-                                    <div>舊密碼：</div>
-                                    <input type="text">
-                                </div>
-                                <div class="password-input-group">
-                                    <div>新密碼：</div>
-                                    <input type="text">
-                                </div>
-                                <div class="password-input-group">
-                                    <div>確認新密碼：</div>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">管理帳號</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <img src="./assets/modal-close.svg">
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <div class="input-group">
-                                    <button class="btn btn-primary" id="addAccountBtn">新增帳號</button>
-                                </div>
-                                <hr>
-                                <div class="badge-container">
-                                    <div class="gray-badge">
-                                        <span>member01</span>
-                                        <button class="btn p-0" id="editAccount0">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                    <div class="gray-badge">
-                                        <span>member02</span>
-                                        <button class="btn p-0" id="editAccount1">
-                                            <img src="./assets//pencil.svg">
-                                        </button>
-                                        <img src="./assets/close.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                             </div>
                         </div>
                     </div>
@@ -827,17 +254,22 @@
         <div class="content">
             <div id="searchPanel">
                 <div class="search-panel container">
-                    <div class="row my-3">
-                        <button class="button btn back-button">
-                            <span>< 返回統計報表</span>
-                        </button>
-                    </div>
-                    <div class="row" style="width: 100%;">
+                    <div class="row my-3" style="width: 100%;">
                         <div class="quality-result col">
-                            <div class="quality-result-text">
+                            <div class="quality-result-text flex align-items-center">
                                 <span>自訂質檢：</span>
-                                <span>general</span>
-                                <span>共,</span>
+                                <div class="dropdown page-selector">
+                                    <button class="btn" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <span class="page-selector-text">general</span>
+                                        <img src="./assets/collapse-arrow.svg" class="disabled">
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item active">general</a>
+                                        <a class="dropdown-item">general2</a>
+                                    </div>
+                                </div>
+                                <span>共</span>
                                 <span class="high-light"> 8 </span>
                                 <span>筆資料</span>
                             </div>
@@ -1488,17 +920,6 @@
     <script>
         $(document).ready(function () {
             // header
-            $("#wordsSettingBtn").on("click", function () {
-                $("#wordsSettingModal").modal("show")
-            })
-
-            $("#customizeWordsSettingBtn").on("click", function () {
-                $("#customizeWordsSettingModal").modal("show")
-            })
-
-            $("#commissionersBtn").on("click", function () {
-                $("#commissionersModal").modal("show")
-            })
 
             $("#editCommissioner0").on("click", function () {
                 $("#editCommissionerModal").modal("show")
@@ -1523,26 +944,7 @@
             $("#editCustomizeWords1").on("click", function () {
                 $("#editCustomizeWordsModal").modal("show")
             })
-
-            $("#skillMaintainBtn").on("click", function () {
-                $("#skillMaintainModal").modal("show")
-            })
-
-            $("#startEndWordsBtn").on("click", function () {
-                $("#startEndWordsModal").modal("show")
-            })
-
-            $("#exceptListBtn").on("click", function () {
-                $("#exceptListModal").modal("show")
-            })
-
-            $("#emailNotification").on("click", function () {
-                $("#emailNotificationModal").modal("show")
-            })
             
-            $("#vipPhoneNotification").on("click", function () {
-                $("#vipPhoneNotificationModal").modal("show")
-            })
             
             $("#editEmailNotification0").on("click", function () {
                 $("#editEmailNotificationModal").modal("show")
@@ -1558,14 +960,6 @@
 
             $("#editVipPhoneNotification1").on("click", function () {
                 $("#editVipPhoneNotificationModal").modal("show")
-            })
-
-            $("#editPasswordBtn").on("click", function () {
-                $("#editPasswordModal").modal("show")
-            })
-
-            $("#manageAccountsBtn").on("click", function () {
-                $("#manageAccountsModal").modal("show")
             })
 
             $("#addAccountBtn").on("click", function () {
