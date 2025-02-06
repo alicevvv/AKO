@@ -41,11 +41,6 @@
   cursor: default;
 }
 
-.custom-qualify-detail-table thead tr th,
-.custom-qualify-detail-table tbody tr :last-child {
-  text-wrap: nowrap;
-}
-
 .result-table thead tr th .table-head-container.align-left {
   justify-content: end;
 }
