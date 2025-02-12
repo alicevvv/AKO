@@ -31,10 +31,22 @@
 }
 
 .custom-qualify-detail-table tbody {
-  width: calc(100% + 8px);
+  width: calc(100% + 7px);
   display: block;
   max-height: 60vh;
   overflow-y: scroll;
+}
+
+.custom-qualify-detail-table thead .custom-qualify-sm,
+.custom-qualify-detail-table tbody .custom-qualify-sm {
+  max-width: 127px;
+  width: 127px;
+}
+
+.custom-qualify-detail-table thead .custom-qualify-md,
+.custom-qualify-detail-table tbody .custom-qualify-md {
+  max-width: 190px;
+  width: 190px;
 }
 
 .custom-qualify-detail-table tbody tr:hover {
