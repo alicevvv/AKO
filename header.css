@@ -209,16 +209,20 @@ header {
 }
 
 .header .page-selector button {
-  width: 160px;
+  min-width: 160px;
+  width: fit-content;
   border: 2px solid var(--bg-light-gray);
   color: black;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .header .page-selector-text {
-  max-width: 120px;
+  max-width: 256px;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;
 }

@@ -28,6 +28,7 @@
 
 .custom-qualify-detail-table thead tr {
   box-shadow: 0px 4px 3px 0px #00000038;
+  font-size: 14px;
 }
 
 .custom-qualify-detail-table tbody {
@@ -39,8 +40,14 @@
 
 .custom-qualify-detail-table thead .custom-qualify-sm,
 .custom-qualify-detail-table tbody .custom-qualify-sm {
-  max-width: 127px;
-  width: 127px;
+  max-width: 91px;
+  width: 91px;
+}
+
+.custom-qualify-detail-table thead .custom-qualify-md,
+.custom-qualify-detail-table tbody .custom-qualify-md {
+  max-width: 190px;
+  width: 190px;
 }
 
 .custom-qualify-detail-table thead .custom-qualify-md,
