@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKO</title>
+    <link rel="icon" type="image/x-icon" href="./assets/ako_icon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css"
+        integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg=="
+        crossorigin="anonymous" />
+    <link href="./global.css" rel="stylesheet">
+    <link href="./header.css" rel="stylesheet">
+    <link href="./searchPanel.css" rel="stylesheet">
+    <link href="./resultTable.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="header">
+            <header>
+                <div class="header py-1 px-3 d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="./assets/logo-sm.svg" alt="logo">
+                        <span>統計報表-敏感詞</span>
+                    </div>
+                    <div class="panel">
+                        <div class="dropdown page-selector">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="page-selector-text">統計報表-敏感詞</span>
+                                <img src="./assets/collapse-arrow.svg" class="disabled">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="./index.html">首頁</a>
+                                <a class="dropdown-item active" href="./reports.html">統計報表-敏感詞</a>
+                                <a class="dropdown-item" id="chooseQualityToTable">自訂質檢統計報表</a>
+                            </div>
+                        </div>
+                        <button class="logout-btn p-2" id="logoutBtn">登出</button>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="content">
+            <div id="searchPanel">
+                <div class="search-panel container">
+                    <div class="row" style="width: 100%">
+                        <div class="search-result col my-3">
+                            <div class="search-result-text">
+                                共
+                                <span class="">285</span>
+                                筆資料
+                            </div>
+                            <div class="search-filter">
+                                <span>敏感詞：</span>
+                                <span>金管會、NCC、找主管</span>
+                                <button class="btn">取消搜尋</button>
+                            </div>
+                        </div>
+                        <div class="col my-3">
+                            <div class="filter-container">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">敏感詞</button>
+                                    <div class="dropdown-menu">
+                                        <div class="search-input input-group px-2 pb-2">
+                                            <span class="search-input-icon input-group-text" id="basic-addon1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#D5D5D5" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="搜尋">
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox0">
+                                                <label class="custom-control-label" for="wordsCheckbox0">全部</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox1">
+                                                <label class="custom-control-label" for="wordsCheckbox1">金管會</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox2">
+                                                <label class="custom-control-label" for="wordsCheckbox2">NCC</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="wordsCheckbox3">
+                                                <label class="custom-control-label" for="wordsCheckbox3">找主管</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-period">
+                                    <div class="customize-period-title">開始時間</div>
+                                    <div class="input-group date" id="customizeStartDatePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeStartDatePicker" />
+                                        <div class="input-group-append" data-target="#customizeStartDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                    -
+                                    <div class="input-group date" id="customizeEndDatePicker"
+                                        data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            data-target="#customizeEndDatePicker" />
+                                        <div class="input-group-append" data-target="#customizeEndDatePicker"
+                                            data-toggle="datetimepicker">
+                                            <div class="input-group-text"><img src="./assets/calendar.svg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="remit-btn btn">條件搜尋</button>
+                                <button class="btn btn-download">
+                                    <img src="./assets/download.svg">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="reportTable">
+                <div class="container pt-2 mb-4">
+                    <table class="result-table table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="sort-available">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up-active.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="sort-available">
+                                    <div class="table-head-container">
+                                        <div>1999</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down-active.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="sort-available">
+                                    <div class="table-head-container">
+                                        <div>NCC</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down-active.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>公平會</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>公平交易委員會</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" style="min-width:120px;max-width: 200px;">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>敏感詞</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="table-head-container">
+                                        <div>平均</div>
+                                        <div class="sort-icon-group">
+                                            <img src="./assets/arrow-up.svg">
+                                            <img src="./assets/arrow-down.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-bold">李OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">張OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">陳OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">李OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">張OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">陳OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">李OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">張OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">陳OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-bold">林OO</span></td>
+                                <td><span class="text-bold">3.6</span></td>
+                                <td><span class="text-bold">7</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">3</span></td>
+                                <td><span class="text-bold">5</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">5.1</span></td>
+                                <td><span class="text-bold">5.2</span></td>
+                                <td><span class="text-bold">6</span></td>
+                                <td><span class="text-bold">2</span></td>
+                                <td><span class="text-bold">4</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <div>找到共 285 筆</div>
+                        <div>共 12 頁</div>
+                        <nav aria-label="Page navigation">
+                            <ul class="result-pagination pagination flex-wrap mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link pagination-nav">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0DC66C"
+                                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item">
+                                    <a class="page-link pagination-nav" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0DC66C"
+                                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <select class="result-select">
+                            <option value="10">10 / 頁</option>
+                            <option value="20">20 / 頁</option>
+                            <option value="50">50 / 頁</option>
+                        </select>
+                        <div class="page-input d-flex align-items-center">
+                            <span>前往</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">李OO</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered table-fixed custom-reports-detail-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-4">來電號碼</th>
+                                            <th class="col-2">敏感詞</th>
+                                            <th class="col-2">平均分數</th>
+                                            <th class="col-4">日期/時間</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <table class="table table-bordered table-fixed custom-reports-detail-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx
+                                            </td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-md">0974xxxxxx</td>
+                                            <td class="custom-qualify-sm">很爛</td>
+                                            <td class="custom-qualify-sm">8.7</td>
+                                            <td class="custom-qualify-md">2025/2/12 22:52</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="customQualifyDetailModal" tabindex="-1" aria-labelledby="customQualifyDetailModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">李OO 0000011：自訂質檢 general</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered table-fixed custom-qualify-detail-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="custom-qualify-sm">分類第一層</th>
+                                            <th class="custom-qualify-md">分類第二層</th>
+                                            <th class="custom-qualify-xl">規則摘要</th>
+                                            <th class="custom-qualify-xl">分析過程</th>
+                                            <th class="custom-qualify-sm">分數</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <table class="table table-bordered table-fixed custom-qualify-detail-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="custom-qualify-sm">5度C-諮詢有溫度</td>
+                                            <td class="custom-qualify-md">* 問侯語 (含是否清楚自我介紹)</td>
+                                            <td class="custom-qualify-xl">* 開頭 : 您好，敝姓O~  請問有什麼可以為您服務？  /   有什麼地方可以為您服務 ? 
+                                                * 結尾 : 請問還有什麼可以為您服務的？…謝謝您的來電，再見！
+                                            </td>
+                                            <td class="custom-qualify-xl">問候語方面，專員雖有使用『您好』開場，但缺乏明確自我介紹（公司/職稱），且結尾未有完整、標準的感謝語句及再見問候，流於簡短。\n</td>
+                                            <td class="custom-qualify-sm">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm">整體</td>
+                                            <td class="custom-qualify-md">改善空間</td>
+                                            <td class="custom-qualify-xl">專員還有哪些可以改善的地方?</td>
+                                            <td class="custom-qualify-xl">專員在引導客戶重啟訊號時，缺乏更明確的步驟說明，例如重啟方式（機上盒、電視還是路由器）、重啟時間是否需確實等候十分鐘等，可提升指引精準度。此外，在確認客戶狀況前，未明確告知客戶待機時間結束後應如何聯繫，可加強流程明確性。</td>
+                                            <td class="custom-qualify-sm">本次通話中，專員有效掌握客戶問題（電視無法觀看，顯示錯誤碼1004），並引導客戶重啟訊號以排除故障。然而，重啟步驟缺乏細節說明，且未明確告知後續聯繫方式，存在些許流程不夠完善的空間。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm">5度C-諮詢有溫度</td>
+                                            <td class="custom-qualify-md">問侯語 (含是否清楚自我介紹)</td>
+                                            <td class="custom-qualify-xl">
+                                                * 開頭 : 您好，敝姓O~  請問有什麼可以為您服務？  /   有什麼地方可以為您服務 ?
+                                                <br>
+                                                * 結尾 : 請問還有什麼可以為您服務的？…謝謝您的來電，再見！
+                                            </td>
+                                            <td class="custom-qualify-xl">專員開場雖有『您好』，但缺乏明確自我介紹（敝姓...請問...），僅僅直接詢問問題，較為直接，扣1分。</td>
+                                            <td class="custom-qualify-sm">analysis": "客戶服務人員在對話中使用了一些敬語（例如：請問、謝謝、好的），但仍有過度使用贅語及非正式用語（如「嗯」、「嘿」、「哦」、「ㄟ」、「呃」等），影響專業度。此外，部分語句冗長且重複，可簡化表達。\n\nresult": 3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm">5度C-諮詢有溫度</td>
+                                            <td class="custom-qualify-md">* 語速適中、音量合宜</td>
+                                            <td class="custom-qualify-xl">* 語速適中、音量合宜</td>
+                                            <td class="custom-qualify-xl">專員開場雖有『您好』，但缺乏明確自我介紹（敝姓...請問...），僅僅直接詢問問題，較為直接，扣1分。</td>
+                                            <td class="custom-qualify-sm">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm">5度C-諮詢有溫度</td>
+                                            <td class="custom-qualify-md">* 語速適中、音量合宜</td>
+                                            <td class="custom-qualify-xl">* 勿冷漠、勿長時間靜默不出聲、互動良好 * 親切且專業的服務口吻，勿過於口語化而顯得層次低落不專業 (EX：剛就叫你拔掉了啊 * 同理心、耐心傾聽、有禮、不搶話、妥善安撫來電者情緒、立場堅定、態度婉轉) </td>
+                                            <td class="custom-qualify-xl">客服整體表現良好，口吻親切專業，互動自然流暢，耐心解答客戶問題並引導選擇，未出現冷漠、搶話或過於口語化等問題。具體表現如下：\n\n* **主動確認身份及資訊：** 一開始確認客戶身份並核對資料，展現專業態度。\n* **清晰說明方案與費用：** 詳細說明不同方案的費用差異，並以易懂的語言解釋，幫助客戶理解。\n* **引導選擇，尊重意願：** 針對音樂台的續訂，引導客戶思考並尊重其最終決定，而非強迫性推銷。\n* **解答疑問，消除疑慮：** 針對網路速度差異、合約細節等問題耐心解答，消除客戶疑慮。\n* **妥善處理繳費方式：** 清楚說明季繳方式、緩衝時間及未來繳費流程，避免客戶混淆。</td>
+                                            <td class="custom-qualify-sm">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm" scope="row">5度C-滿意有感度</td>
+                                            <td class="custom-qualify-md">* 了解客戶需求</td>
+                                            <td class="custom-qualify-xl">* 不論銷售、繳費、維修…應瞭解客戶狀況及需求</td>
+                                            <td class="custom-qualify-xl">* 語速適中、了解客戶需求</td>
+                                            <td class="custom-qualify-sm">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm" scope="row">5度C-維繫黏著度</td>
+                                            <td class="custom-qualify-md">* 服務順銷售</td>
+                                            <td class="custom-qualify-xl">* 每通來電皆應服務順銷售，除抱怨報願來電外</td>
+                                            <td class="custom-qualify-xl">* 服務順銷售</td>
+                                            <td class="custom-qualify-sm">3 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm" scope="row">5度C-服務有暖度</td>
+                                            <td class="custom-qualify-md">* 詢問客戶是否有其他需服務之處</td>
+                                            <td class="custom-qualify-xl">* 詢問客戶是否有其他需服務之處</td>
+                                            <td class="custom-qualify-xl">* 詢問客戶是否有其他需服務之處</td>
+                                            <td class="custom-qualify-sm">5 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm" scope="row">5度C-成交超速度</td>
+                                            <td class="custom-qualify-md">* 多次銷售、不輕言放棄</td>
+                                            <td class="custom-qualify-xl">* 多次銷售、不輕言放棄</td>
+                                            <td class="custom-qualify-xl">* 不輕言放棄</td>
+                                            <td class="custom-qualify-sm">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm" scope="row">5度C-成交超速度</td>
+                                            <td class="custom-qualify-md">* 多次銷售、不輕言放棄</td>
+                                            <td class="custom-qualify-xl">* 多次銷售、不輕言放棄</td>
+                                            <td class="custom-qualify-xl">* 不輕言放棄</td>
+                                            <td class="custom-qualify-sm">4 分</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="custom-qualify-sm" scope="row">5度C-成交超速度</td>
+                                            <td class="custom-qualify-md">* 多次銷售、不輕言放棄</td>
+                                            <td class="custom-qualify-xl">* 多次銷售、不輕言放棄</td>
+                                            <td class="custom-qualify-xl">* 不輕言放棄</td>
+                                            <td class="custom-qualify-sm">4 分</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="customizeQualifyModal" tabindex="-1" aria-labelledby="customizeQualifyModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">自訂質檢</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox0">
+                                                <label class="custom-control-label" for="checkbox0">全部</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox3">
+                                                <label class="custom-control-label" for="checkbox3">自訂質檢2</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox1">
+                                                <label class="custom-control-label" for="checkbox1">自訂質檢1</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox4">
+                                                <label class="custom-control-label" for="checkbox4">自訂質檢3</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                                <label class="custom-control-label" for="checkbox2">自訂質檢2</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox5">
+                                                <label class="custom-control-label" for="checkbox5">自訂質檢4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="chooseQualifyModal" tabindex="-1" aria-labelledby="chooseQualifyModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">選擇自訂質檢統計報表</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="custom-qualify-buttons">
+                                        <button class="btn btn-primary choose-qualify-to-table-button">general</button>
+                                        <button class="btn btn-primary choose-qualify-to-table-button">general</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="loading"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"
+        integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA=="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // header
+            $("#logoutBtn").on("click", function () {
+                window.location.href = "./login.html";
+            })
+
+            // search panel
+            $('#startDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#startTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#endDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#endTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#phoneStartDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#phoneStartTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#phoneEndDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#phoneEndTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#recordStartTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#recordEndTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#customizeStartDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#customizeStartTimePicker').datetimepicker({
+                format: 'LT'
+            });
+            $('#customizeEndDatePicker').datetimepicker({
+                format: 'L'
+            });
+            $('#customizeEndTimePicker').datetimepicker({
+                format: 'LT'
+            });
+
+            $('.checkbox-td').on("click", function (event) {
+                event.stopPropagation();
+            })
+
+            // result table
+            $('.play-chat-text').on("click", function () {
+                $(this).find('.play').toggle();
+                $(this).find('.pause').toggle();
+                if ($(this).find('.play').is(':visible')) {
+                    $(this).closest('.message-panel').find('.playing').removeClass('playing');
+                } else {
+                    $(this).closest('.message-panel').find('.badge span:first').addClass('playing');
+                }
+            })
+
+            $('.edit-chat-text').on("click", function () {
+                if (!$(this).parent().find('.play').is(':visible')) {
+                    $(this).parent().find('.play').toggle();
+                    $(this).parent().find('.pause').toggle();
+                    $(this).closest('.message-panel').find('.playing').removeClass('playing');
+                }
+                $(this).closest('.message-panel').find(".badge-input").toggle()
+                $(this).closest('.message-panel').find(".badge span").toggle()
+                $(this).closest('.message-panel').find(".save-panel").toggle()
+                $(this).closest('.message-panel').find(".tool-panel").toggle()
+            })
+
+            $('.cancel-text').on("click", function () {
+                $(this).closest('.message-panel').find(".badge-input").toggle()
+                $(this).closest('.message-panel').find(".badge span").toggle()
+                $(this).closest('.message-panel').find(".save-panel").toggle()
+                $(this).closest('.message-panel').find(".tool-panel").toggle()
+            })
+
+            $('.save-text').on("click", function () {
+                $(this).closest('.message-panel').find(".badge-input").toggle()
+                $(this).closest('.message-panel').find(".badge span").toggle()
+                $(this).closest('.message-panel').find(".save-panel").toggle()
+                $(this).closest('.message-panel').find(".tool-panel").toggle()
+            })
+
+            $('#reportTable tbody tr').on("click", function () {
+                $("#detailModal").modal("show")
+            })
+
+            $("#advancedQualifyBtn").on("click", function () {
+                var originalText = $(this).text();
+                $(this).html('<img src="./assets/loading.svg" class="loading-icon" alt="loading">');
+
+                setTimeout(function () {
+                    $("#advancedQualifyBtn").text(originalText);
+                }, 2000);
+            })
+
+            $("#customizeQualifyBtn").on("click", function () {
+                var originalText = $(this).text();
+                $(this).html('<img src="./assets/loading.svg" class="loading-icon" alt="loading">');
+
+                setTimeout(function () {
+                    $("#customizeQualifyBtn").text(originalText);
+                    $("#customizeQualifyModal").modal("show")
+                }, 2000);
+
+            })
+
+            $("#unusualInfo0").on("mouseover", function (event) {
+                $(this).find(".unusual-info-detail").removeClass("d-none")
+            })
+
+            $("#unusualInfo0").on("mouseout", function (event) {
+                $(this).find(".unusual-info-detail").addClass("d-none")
+            })
+
+            $('.has-more-keywords').on("mouseover", function (event) {
+
+                $(this).find(".keyword-detail").removeClass("d-none")
+            })
+
+            $('.has-more-keywords').on("mouseout", function (event) {
+                $(this).find(".keyword-detail").addClass("d-none")
+            })
+
+            $(".unusual-info-detail").on("click", function (event) {
+                event.stopPropagation()
+            })
+
+            $(".collapse").each(function () {
+                if ($(this).hasClass("show")) {
+                    var arrowIcon = $(this).prev('button').find("img")
+                    arrowIcon.css({
+                        'transform': 'rotate(180deg)',
+                        'transition': 'transform 0.3s ease'
+                    })
+                } else {
+                    $(this).prev('button').find("img").css('transform', '');
+                }
+            })
+
+            $(".collapse-button").on("click", function () {
+                if (!$(this).next("div").hasClass("show")) {
+                    var arrowIcon = $(this).find("img")
+                    arrowIcon.css({
+                        'transform': 'rotate(180deg)',
+                        'transition': 'transform 0.3s ease'
+                    })
+                } else {
+                    $(this).find("img").css('transform', '');
+                }
+            })
+
+            $(".advanced-collapse-btn").on("click", function () {
+                if (!$(this).next("div").hasClass("show")) {
+                    var arrowIcon = $(this).find("img")
+                    arrowIcon.css({
+                        'transform': 'rotate(180deg)',
+                        'transition': 'transform 0.3s ease'
+                    })
+                } else {
+                    $(this).find("img").css('transform', '');
+                }
+            })
+
+            $("#copyButton").on("click", function () {
+                var textToCopy = $('#copyFileName').text();
+                navigator.clipboard.writeText(textToCopy)
+            })
+
+            $(".custom-control-input").on("click", function () {
+                if($(this)[0].checked){
+                    $(this).closest('tr').addClass("selected")
+                } else $(this).closest("tr").removeClass("selected")
+            })
+
+            $("#chooseQualityToTable").on("click", function() {
+                $("#chooseQualifyModal").modal("show")
+            })
+
+            $(".choose-qualify-to-table-button").on("click", function() {
+                window.location.href = "./qualityTable.html"
+            })
+
+            $("#qualityTableButton").on("click", function () {
+                $("#customQualifyDetailModal").modal("show")
+            })
+
+            $(".openQualityTableButton").on("click", function(){
+                $("#customQualifyDetailModal").modal("show")
+            })
+
+            $("#closeConversationSearching").on("click", function () {
+                $(".conversation-searching-box").addClass("d-none")
+                $(".search-button").removeClass("d-none")
+            })
+
+            $("#openConversationSearching").on("click", function () {
+                $(".conversation-searching-box").removeClass("d-none")
+                $(".search-button").addClass("d-none")
+            })
+        })
+    </script>
+</body>
+
+</html>
