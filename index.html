@@ -173,17 +173,95 @@
                                 </div>
                                 <hr>
                                 <div class="badge-container">
-                                    <div class="yellow-badge">
+                                    <div class="yellow-badge words-detail-badge">
                                         自訂1
                                         <button class="btn p-0" id="editCustomizeWords0">
                                             <img src="./assets//pencil.svg">
                                         </button>
                                     </div>
-                                    <div class="yellow-badge">
+                                    <div class="yellow-badge words-detail-badge">
                                         自訂2
                                         <button class="btn p-0" id="editCustomizeWords1">
                                             <img src="./assets//pencil.svg">
                                         </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="viewCustomizeWordsSettingModal" tabindex="-1"
+                    aria-labelledby="viewCustomizeWordsSettingModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">新質檢(質檢名稱)</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./assets/modal-close.svg">
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <div class="container">
+                                    <div class="row my-3">
+                                        <div class="col-3 d-flex align-items-center">
+                                            <div class="upload-file-names">
+                                                <div class="file-name">
+                                                    <span>rules.xlsx</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 d-flex align-items-center">
+                                            <div class="">
+                                                <span>2025.06.01</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 d-flex align-items-center">
+                                            <button class="btn btn-download">
+                                                <img src="./assets/download.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-divider"></div>
+                                    <div class="row my-3">
+                                        <div class="col-3 d-flex align-items-center">
+                                            <div class="upload-file-names">
+                                                <div class="file-name">
+                                                    <span>assign.xlsx</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 d-flex align-items-center">
+                                            <div class="">
+                                                <span>2025.06.01</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 d-flex align-items-center">
+                                            <button class="btn btn-download">
+                                                <img src="./assets/download.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col-3 d-flex align-items-center">
+                                            <div class="upload-file-names">
+                                                <div class="file-name">
+                                                    <span>assign.xlsx</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 d-flex align-items-center">
+                                            <div class="">
+                                                <span>2025.06.01</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 d-flex align-items-center">
+                                            <button class="btn btn-download">
+                                                <img src="./assets/download.svg">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2656,6 +2734,10 @@
                 $("#customizeWordsSettingModal").modal("show")
             })
 
+            $(".words-detail-badge").on("click", function () {
+                $("#viewCustomizeWordsSettingModal").modal("show")
+            })
+
             $("#commissionersBtn").on("click", function () {
                 $("#commissionersModal").modal("show")
             })
@@ -2676,11 +2758,13 @@
                 $("#editExceptModal").modal("show")
             })
 
-            $("#editCustomizeWords0").on("click", function () {
+            $("#editCustomizeWords0").on("click", function (event) {
+                event.stopPropagation();
                 $("#editCustomizeWordsModal").modal("show")
             })
 
-            $("#editCustomizeWords1").on("click", function () {
+            $("#editCustomizeWords1").on("click", function (event) {
+                event.stopPropagation();
                 $("#editCustomizeWordsModal").modal("show")
             })
 

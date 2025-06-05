@@ -260,9 +260,19 @@ select {
 }
 
 tbody tr:hover,
+.words-detail-badge,
 .yellow-badge img:hover,
 .gray-badge img:hover {
   cursor: pointer;
+}
+
+.words-detail-badge:hover {
+  opacity: 0.8;
+}
+
+.yellow-badge img:hover,
+.gray-badge img:hover {
+  opacity: 0.6;
 }
 
 .loading-icon {
