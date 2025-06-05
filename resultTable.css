@@ -57,10 +57,10 @@
   width: 190px;
 }
 
-.custom-qualify-detail-table thead .custom-qualify-md,
-.custom-qualify-detail-table tbody .custom-qualify-md {
-  max-width: 190px;
-  width: 190px;
+.custom-qualify-detail-table thead .custom-qualify-xl,
+.custom-qualify-detail-table tbody .custom-qualify-xl {
+  max-width: 364px;
+  width: 364px;
 }
 
 .custom-reports-detail-table thead .custom-qualify-sm,
@@ -73,6 +73,10 @@
 .custom-reports-detail-table tbody .custom-qualify-md {
   max-width: 255px;
   width: 255px;
+}
+
+.custom-reports-detail-table tbody tr td:hover {
+  cursor: pointer;
 }
 
 .result-table thead tr th .table-head-container.align-left {

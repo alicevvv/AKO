@@ -296,6 +296,16 @@ tbody tr:hover,
   border-bottom: 1px solid var(--none-gray);
 }
 
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 70%;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
