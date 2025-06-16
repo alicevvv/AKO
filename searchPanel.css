@@ -102,6 +102,20 @@
   color: white;
 }
 
+.chart-all-btn {
+  border: 1.5px solid var(--secondary);
+  width: 38px;
+  height: 38px;
+  color: white;
+  border-radius: 200px;
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.chart-all-btn:hover {
+  border: 1.5px solid var(--secondary);
+}
+
 .search-result {
   display: flex;
   align-items: baseline;

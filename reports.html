@@ -129,6 +129,9 @@
                                 <button class="btn btn-download">
                                     <img src="./assets/download.svg">
                                 </button>
+                                <button class="btn chart-all-btn">
+                                    <img src="./assets/chart-all.svg">
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1015,6 +1018,11 @@
             })
 
             $(".chart-button").on("click", function (event) {
+                event.stopPropagation();
+                $("#statisticalChartModal").modal("show");
+            })
+            
+            $(".chart-all-btn").on("click", function (event) {
                 event.stopPropagation();
                 $("#statisticalChartModal").modal("show");
             })
