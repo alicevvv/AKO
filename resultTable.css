@@ -104,6 +104,14 @@
   background-color: var(--selected-green);
 }
 
+.sensitive-table tr td {
+  cursor: default;
+}
+
+.sensitive-table tr td span:hover {
+  cursor: pointer;
+}
+
 .badge-group {
   display: flex;
   flex-wrap: wrap;
