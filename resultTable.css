@@ -47,20 +47,20 @@
 
 .custom-qualify-detail-table thead .custom-qualify-sm,
 .custom-qualify-detail-table tbody .custom-qualify-sm {
-  max-width: 91px;
-  width: 91px;
+  max-width: 70px;
+  width: 70px;
 }
 
 .custom-qualify-detail-table thead .custom-qualify-md,
 .custom-qualify-detail-table tbody .custom-qualify-md {
-  max-width: 190px;
-  width: 190px;
+  max-width: 176px;
+  width: 176px;
 }
 
 .custom-qualify-detail-table thead .custom-qualify-xl,
 .custom-qualify-detail-table tbody .custom-qualify-xl {
-  max-width: 364px;
-  width: 364px;
+  max-width: 263px;
+  width: 263px;
 }
 
 .custom-reports-detail-table thead .custom-qualify-sm,

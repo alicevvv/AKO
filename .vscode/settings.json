@@ -1,0 +1,56 @@
+{
+    "workbench.tree.indent": 16,
+    "editor.fontSize": 15,
+    "window.zoomLevel": 1,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit"
+  },
+    "editor.detectIndentation": false,
+    "eslint.enable": true,
+    "editor.tabSize": 4,
+    "files.eol": "\n",
+    "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+    "prettier.useEditorConfig": false,
+    "[html]": {
+      "editor.defaultFormatter": "mohd-akram.vscode-html-format",
+      "editor.formatOnSave": false,
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features",
+      "editor.formatOnSave": true
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features",
+      "editor.formatOnSave": true
+    },
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features",
+      "editor.formatOnSave": true
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features",
+      "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+      "editor.formatOnSave": true
+    },
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "cSpell.words": [
+        "datetimepicker"
+    ],
+    "html.format.enable": true,
+    "html.format.contentUnformatted": "",
+    "html.format.wrapLineLength": 0,
+    "html.format.maxPreserveNewLines": 0,
+    "html.format.wrapAttributes": "aligned-multiple",
+    "editor.wordWrap": "off"
+  }
